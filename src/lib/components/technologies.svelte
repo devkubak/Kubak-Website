@@ -2,11 +2,11 @@
     import { Tabs, TabItem } from 'flowbite-svelte';
   </script>
 
-  <div class="container mx-auto w-full md:w-1/2  flex justify-center items-center h-auto bg-[#e3e3e3] dark:bg-[#212121] rounded-3xl p-5">
+  <div class="container mx-auto w-full md:w-1/2  flex flex-col   md:flex-row justify-center items-center h-auto bg-[#e3e3e3] dark:bg-[#212121] rounded-3xl p-5">
 
-      <Tabs style="pill" class="flex" defaultClass="flex flex-col gap-3" contentClass=" w-full h-[410px] bg-white dark:bg-[#363636] rounded-2xl flex items-center justify-center">
+      <Tabs style="pill" class="flex" defaultClass="flex flex-row md:flex-col gap-3 mb-4 md:mb-0 flex-wrap justify-center" contentClass=" w-full h-[410px] bg-white dark:bg-[#363636] rounded-2xl flex items-center justify-center">
 
-        <TabItem open activeClasses="bg-white dark:bg-[#363636] w-full rounded-l-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out" inactiveClasses="hover:bg-[#f1f1f1] dark:hover:bg-[#404040] w-full rounded-l-xl py-5 w-full px-4 text-black dark:text-white font-bold duration-300 ease-in-out">
+        <TabItem open activeClasses="bg-white dark:bg-[#363636] w-full rounded-lg md:rounded-l-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out" inactiveClasses="hover:bg-[#f1f1f1] dark:hover:bg-[#404040] w-full rounded-lg md:rounded-l-xl py-5 w-full px-4 text-black dark:text-white font-bold duration-300 ease-in-out">
           <span slot="title" class="text-sm">App Development</span>
           <div class="flex flex-wrap w-full h-auto justify-center items-center p-4 gap-3">
 
@@ -53,7 +53,7 @@
 
 
 
-        <TabItem open activeClasses="bg-white w-full dark:bg-[#363636]  rounded-l-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out" inactiveClasses="hover:bg-[#f1f1f1] dark:hover:bg-[#404040] w-full rounded-l-xl py-5 w-full px-4 text-black dark:text-white font-bold duration-300 ease-in-out">
+        <TabItem open activeClasses="bg-white w-full dark:bg-[#363636]  rounded-lg md:rounded-l-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out" inactiveClasses="hover:bg-[#f1f1f1] dark:hover:bg-[#404040] w-full rounded-lg md:rounded-l-xl py-5 w-full px-4 text-black dark:text-white font-bold duration-300 ease-in-out">
             <span slot="title" class="text-sm">Front-End</span>
             <div class="flex flex-wrap w-full h-auto justify-center items-center p-4 gap-3">
   
@@ -92,7 +92,7 @@
           </TabItem>
 
 
-          <TabItem open activeClasses="bg-white dark:bg-[#363636]  w-full rounded-l-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out" inactiveClasses="hover:bg-[#f1f1f1] dark:hover:bg-[#404040] w-full rounded-l-xl py-5 w-full px-4 text-black dark:text-white font-bold duration-300 ease-in-out">
+          <TabItem open activeClasses="bg-white dark:bg-[#363636]  w-full rounded-lg md:rounded-l-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out" inactiveClasses="hover:bg-[#f1f1f1] dark:hover:bg-[#404040] w-full rounded-lg md:rounded-l-xl py-5 w-full px-4 text-black dark:text-white font-bold duration-300 ease-in-out">
             <span slot="title" class="text-sm">Back-End</span>
             <div class="flex flex-wrap w-full h-auto justify-center items-center p-4 gap-3">
   
@@ -129,7 +129,7 @@
 
 
 
-          <TabItem open activeClasses="bg-white dark:bg-[#363636]  w-full rounded-l-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out" inactiveClasses="hover:bg-[#f1f1f1] dark:hover:bg-[#404040] w-full rounded-l-xl py-5 w-full px-4 text-black font-bold dark:text-white duration-300 ease-in-out">
+          <TabItem open activeClasses="bg-white dark:bg-[#363636]  w-full rounded-lg md:rounded-l-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out" inactiveClasses="hover:bg-[#f1f1f1] dark:hover:bg-[#404040] w-full rounded-lg md:rounded-l-xl py-5 w-full px-4 text-black font-bold dark:text-white duration-300 ease-in-out">
             <span slot="title" class="text-sm">Database</span>
             <div class="flex flex-wrap w-full h-auto justify-center items-center p-4 gap-3">
   
@@ -162,7 +162,7 @@
 
 
 
-          <TabItem open activeClasses="bg-white dark:bg-[#363636]  w-full rounded-l-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out" inactiveClasses="hover:bg-[#f1f1f1] dark:hover:bg-[#404040] w-full rounded-l-xl py-5 w-full px-4 text-black dark:text-white font-bold duration-300 ease-in-out">
+          <TabItem open activeClasses="bg-white dark:bg-[#363636]  w-full rounded-lg md:rounded-l-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out" inactiveClasses="hover:bg-[#f1f1f1] dark:hover:bg-[#404040] w-full rounded-lg md:rounded-l-xl py-5 w-full px-4 text-black dark:text-white font-bold duration-300 ease-in-out">
             <span slot="title" class="text-sm">Cloud and DevOps</span>
             <div class="flex flex-wrap w-full h-auto justify-center items-center p-4 gap-3">
   
