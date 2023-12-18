@@ -77,11 +77,10 @@
   
   <div class="w-80 h-96 bg-white dark:bg-[#212121] rounded-2xl flex flex-col justify-end items-center gap-3 border-2 border-[#f17f18]">
     <div class="w-full h-full p-3 relative flex justify-center">
-      <div class="w-60 rounded-b-3xl absolute flex justify-center bg-[#f17f18] py-2 z-[3] text-white font-bold border-2 border-white">SulyExpo</div>
-      <div class="absolute w-[293px] h-[268px] rounded-2xl bg-[#ffffff71] z-[2]">
+      <!-- <div class="absolute w-[293px] h-[268px] rounded-2xl bg-[#ffffff71] z-[2]">
 
-      </div>
-        <img src="/images/cover1.jpg" class="w-full h-full rounded-2xl object-cover" alt="">
+      </div> -->
+        <img src="/images/sulyExpo.png" class="w-60 h-60 rounded-2xl object-cover" alt="">
     </div>
    
       <p class="font-bold h-20 text-xl dark:text-white mt-4">SulyExpo</p>
@@ -95,11 +94,10 @@
 
   <div class="w-80 h-96 bg-white dark:bg-[#212121] rounded-2xl flex flex-col justify-end items-center gap-3 border-2 border-[#f17f18]">
     <div class="w-full h-full p-3 relative flex justify-center">
-      <div class="w-60 rounded-b-3xl absolute flex justify-center bg-[#f17f18] py-2 z-[3] text-white font-bold border-2 border-white">Kurdbun</div>
-      <div class="absolute w-[293px] h-[268px] rounded-2xl bg-[#ffffff71] z-[2]">
+      <!-- <div class="absolute w-[293px] h-[268px] rounded-2xl bg-[#ffffff71] z-[2]">
 
-      </div>
-        <img src="/images/cover1.jpg" class="w-full h-full rounded-2xl object-cover" alt="">
+      </div> -->
+        <img src="/images/kurdbun.png" class="w-60 h-60 rounded-2xl object-cover" alt="">
     </div>
 
       <p class="font-bold h-20 text-xl dark:text-white mt-4">Kurdbun</p>
