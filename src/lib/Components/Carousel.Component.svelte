@@ -1,5 +1,4 @@
 <script lang="ts">
-  import type { CarouselVideo } from "$lib/Models/Requests/Carousel.Request.Model.ts";
   //@ts-ignore
   import Carousel from "svelte-carousel";
   import { browser } from "$app/environment";
