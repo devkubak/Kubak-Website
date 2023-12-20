@@ -14,7 +14,6 @@ const createCarouselStore = () => {
     data: [],
     total: 0,
   });
-
   return {
     subscribe,
     set: (value: Store<CarouselDto>) => set(value),

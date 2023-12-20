@@ -12,7 +12,6 @@ const createDevelopmentStore = () => {
     data: [],
     total: 0,
   });
-
   return {
     subscribe,
     set: (value: Store<DevelopmentDto>) => set(value),

@@ -12,7 +12,6 @@ const createProjectStore = () => {
     data: [],
     total: 0,
   });
-
   return {
     subscribe,
     set: (value: Store<ProjectDto>) => set(value),
