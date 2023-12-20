@@ -1,7 +1,17 @@
-<script>
+<script lang="ts">
   import Carousel from "$lib/Components/Carousel.Component.svelte";
   import Technologies from "$lib/Components/Technologies.Component.svelte";
   import DevelopmentProcess from "$lib/Components/DevelopmentProcess.Component.svelte";
+  import { onMount } from "svelte";
+  import { projectStore } from "$lib/Store/Project.Store";
+
+  onMount(async () => {
+    try {
+      await projectStore.getAll();
+    } catch (e) {
+      console.log(e);
+    }
+  });
 </script>
 
 <Carousel />
@@ -86,37 +96,22 @@
 <div
   class="container mx-auto flex flex-wrap h-auto justify-center items-center mt-3 gap-2"
 >
-  <div
-    class="w-80 h-96 bg-white dark:bg-[#212121] rounded-2xl flex flex-col justify-end items-center gap-3 border-2 border-[#f17f18]"
-  >
-    <div class="w-full h-full p-3 relative flex justify-center">
-      <!-- <div class="absolute w-[293px] h-[268px] rounded-2xl bg-[#ffffff71] z-[2]">
+  {#each $projectStore.data as project}
+    <div
+      class="w-80 h-96 bg-white dark:bg-[#212121] rounded-2xl flex flex-col justify-end items-center gap-3 border-2 border-[#f17f18]"
+    >
+      <div class="w-full h-full p-3 relative flex justify-center">
+        <!-- <div class="absolute w-[293px] h-[268px] rounded-2xl bg-[#ffffff71] z-[2]">
 
       </div> -->
-      <img
-        src="/images/sulyExpo.png"
-        class="w-60 h-60 rounded-2xl object-cover"
-        alt=""
-      />
+        <img
+          src={project.image}
+          class="w-60 h-60 rounded-2xl object-cover"
+          alt=""
+        />
+      </div>
+
+      <p class="font-bold h-20 text-xl dark:text-white mt-4">{project.name}</p>
     </div>
-
-    <p class="font-bold h-20 text-xl dark:text-white mt-4">SulyExpo</p>
-  </div>
-
-  <div
-    class="w-80 h-96 bg-white dark:bg-[#212121] rounded-2xl flex flex-col justify-end items-center gap-3 border-2 border-[#f17f18]"
-  >
-    <div class="w-full h-full p-3 relative flex justify-center">
-      <!-- <div class="absolute w-[293px] h-[268px] rounded-2xl bg-[#ffffff71] z-[2]">
-
-      </div> -->
-      <img
-        src="/images/kurdbun.png"
-        class="w-60 h-60 rounded-2xl object-cover"
-        alt=""
-      />
-    </div>
-
-    <p class="font-bold h-20 text-xl dark:text-white mt-4">Kurdbun</p>
-  </div>
+  {/each}
 </div>

@@ -1,35 +1,27 @@
 <script lang="ts">
+  import type { CarouselVideo } from "$lib/Models/Requests/Carousel.Request.Model.ts";
   //@ts-ignore
   import Carousel from "svelte-carousel";
   import { browser } from "$app/environment";
+  import { onMount } from "svelte";
+  import { carouselStore } from "$lib/Store/Carousel.Store";
 
-  export const videos = [
-    {
-      alt: "Cosmic timetraveler",
-      src: "/videos/vid1.mp4",
-      duration: 50000,
-      url: "www.youtube.com",
-      title: "Kubak is a Best way to taking a Taxi",
-    },
-    {
-      alt: "Cosmic timetraveler",
-      src: "/videos/vid2.mp4",
-      duration: 45000,
-      url: "www.google.com",
-      title: "Kubak An Easier Life",
-    },
-  ];
-
-  let currentSlide = 0;
+  onMount(async () => {
+    try {
+      await carouselStore.getAll();
+    } catch (e) {
+      console.log(e);
+    }
+  });
 </script>
 
 <div class="w-full flex flex-col justify-end gap-5">
   <div class="w-full mt-14 md:mt-0 rounded-none">
     {#if browser}
       <Carousel autoplay autoplayDuration={50000} autoplayProgressVisible>
-        {#each videos as video}
+        {#each $carouselStore.data as carousel}
           <!-- svelte-ignore a11y-missing-attribute -->
-          <a title={video.title} class="block relative">
+          <a title={carousel.title} class="block relative">
             <!-- svelte-ignore a11y-media-has-caption -->
             <video
               class="cursor-pointer w-full h-[400px] md:h-[900px] object-cover"
@@ -37,7 +29,7 @@
               loop
               muted
             >
-              <source src={video.src} type="video/mp4" />
+              <source src={carousel.video} type="video/mp4" />
             </video>
 
             <div
@@ -46,7 +38,7 @@
               <div class="flex items-center gap-2">
                 <a
                   class="text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl text-[#d1d1d1]"
-                  href={video.src}>View More</a
+                  href={carousel.video}>View More</a
                 >
                 <div
                   class="w-4 h-4 sm:w-6 sm:h-6 xl:w-9 xl:h-9 2xl:w-12 2xl:h-12 rounded-full bg-[#f17f18] flex justify-center items-center"
@@ -58,7 +50,7 @@
                   />
                 </div>
               </div>
-              {video.title}
+              {carousel.title}
             </div>
           </a>
         {/each}

@@ -4,4 +4,5 @@ export interface DevelopmentDto{
 	id:string | null,
 	description:string,
 	image:string,
+	title:string,
 }
