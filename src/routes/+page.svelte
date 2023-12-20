@@ -1,25 +1,33 @@
 <script>
-    import { Tabs, TabItem } from 'flowbite-svelte';
-    import Carousel from '$lib/Components/Carousel.Component.svelte';
-    import Technologies from '$lib/Components/Technologies.Component.svelte';
-    import DevelopmentProcess from '$lib/Components/DevelopmentProcess.Component.svelte';
-
-
-
+  import Carousel from "$lib/Components/Carousel.Component.svelte";
+  import Technologies from "$lib/Components/Technologies.Component.svelte";
+  import DevelopmentProcess from "$lib/Components/DevelopmentProcess.Component.svelte";
 </script>
 
 <Carousel />
 
-
-<div class="container mx-auto text-center dark:text-white text-xs md:text-xl bg-white dark:bg-[#212121] rounded-2xl p-3">
-  <p>Kubak is a software development company that offers IT solutions to businesses all around the world. Kubak provides a variety of software development solutions, including e-business solutions, enterprise applications, professional websites, design, product engineering, CMS Software, Payment Gateway solutions, Time and Attendance Tracking Software, Debt Collection Software, Appointment Reminder Solutions, Medical Transcription Services, and more.
-  
-    We research, design, develop, enhance, customize, implement, support, and maintain many parts of information technology.We are a professionally acknowledged software development company with vast experience in producing custom software and application development to meet your specific demands and specifications.</p>
-
+<div
+  class="container mx-auto text-center dark:text-white text-xs md:text-xl bg-white dark:bg-[#212121] rounded-2xl p-3"
+>
+  <p>
+    Kubak is a software development company that offers IT solutions to
+    businesses all around the world. Kubak provides a variety of software
+    development solutions, including e-business solutions, enterprise
+    applications, professional websites, design, product engineering, CMS
+    Software, Payment Gateway solutions, Time and Attendance Tracking Software,
+    Debt Collection Software, Appointment Reminder Solutions, Medical
+    Transcription Services, and more. We research, design, develop, enhance,
+    customize, implement, support, and maintain many parts of information
+    technology.We are a professionally acknowledged software development company
+    with vast experience in producing custom software and application
+    development to meet your specific demands and specifications.
+  </p>
 </div>
 
 <div class="w-full flex justify-center items-center text-center mt-12">
-  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl">DEVELOPMENT PROCESS</p>
+  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl">
+    DEVELOPMENT PROCESS
+  </p>
 </div>
 
 <DevelopmentProcess />
@@ -57,60 +65,58 @@
    
   </Tabs> -->
 
-
-
-
-<div class="w-full h-12 flex justify-center items-center text-center mt-12 mb-3">
-  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl">TECHNOLOGIES WE USE</p>
+<div
+  class="w-full h-12 flex justify-center items-center text-center mt-12 mb-3"
+>
+  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl">
+    TECHNOLOGIES WE USE
+  </p>
 </div>
 
 <Technologies />
 
-
-
-
-<div class="w-full h-12 flex justify-center items-center text-center mt-12 mb-3">
-  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl">OUR PROJECTS</p>
+<div
+  class="w-full h-12 flex justify-center items-center text-center mt-12 mb-3"
+>
+  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl">
+    OUR PROJECTS
+  </p>
 </div>
 
-<div class="container mx-auto flex flex-wrap h-auto justify-center items-center mt-3 gap-2">
-  
-  <div class="w-80 h-96 bg-white dark:bg-[#212121] rounded-2xl flex flex-col justify-end items-center gap-3 border-2 border-[#f17f18]">
+<div
+  class="container mx-auto flex flex-wrap h-auto justify-center items-center mt-3 gap-2"
+>
+  <div
+    class="w-80 h-96 bg-white dark:bg-[#212121] rounded-2xl flex flex-col justify-end items-center gap-3 border-2 border-[#f17f18]"
+  >
     <div class="w-full h-full p-3 relative flex justify-center">
       <!-- <div class="absolute w-[293px] h-[268px] rounded-2xl bg-[#ffffff71] z-[2]">
 
       </div> -->
-        <img src="/images/sulyExpo.png" class="w-60 h-60 rounded-2xl object-cover" alt="">
+      <img
+        src="/images/sulyExpo.png"
+        class="w-60 h-60 rounded-2xl object-cover"
+        alt=""
+      />
     </div>
-   
-      <p class="font-bold h-20 text-xl dark:text-white mt-4">SulyExpo</p>
-      
 
-
-
-
+    <p class="font-bold h-20 text-xl dark:text-white mt-4">SulyExpo</p>
   </div>
 
-
-  <div class="w-80 h-96 bg-white dark:bg-[#212121] rounded-2xl flex flex-col justify-end items-center gap-3 border-2 border-[#f17f18]">
+  <div
+    class="w-80 h-96 bg-white dark:bg-[#212121] rounded-2xl flex flex-col justify-end items-center gap-3 border-2 border-[#f17f18]"
+  >
     <div class="w-full h-full p-3 relative flex justify-center">
       <!-- <div class="absolute w-[293px] h-[268px] rounded-2xl bg-[#ffffff71] z-[2]">
 
       </div> -->
-        <img src="/images/kurdbun.png" class="w-60 h-60 rounded-2xl object-cover" alt="">
+      <img
+        src="/images/kurdbun.png"
+        class="w-60 h-60 rounded-2xl object-cover"
+        alt=""
+      />
     </div>
 
-      <p class="font-bold h-20 text-xl dark:text-white mt-4">Kurdbun</p>
-      
-    
-    
-
-
-
+    <p class="font-bold h-20 text-xl dark:text-white mt-4">Kurdbun</p>
   </div>
-  
-
-  
 </div>
-
-
