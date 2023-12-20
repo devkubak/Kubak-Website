@@ -1,7 +1,7 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Img } from 'flowbite-svelte';
-    import Carousel from '$lib/components/Carousel.svelte';
+    import Carousel from '$lib/Components/Carousel.Component.svelte';
     import { DarkMode } from 'flowbite-svelte';
     $: activeUrl = $page.url.pathname;
 

@@ -1,8 +1,8 @@
 <script>
     import { Tabs, TabItem } from 'flowbite-svelte';
-    import Carousel from '$lib/components/Carousel.svelte';
-    import Technologies from '$lib/components/technologies.svelte';
-    import DevelopmentProcess from '$lib/components/developmentProcess.svelte';
+    import Carousel from '$lib/Components/Carousel.Component.svelte';
+    import Technologies from '$lib/Components/Technologies.Component.svelte';
+    import DevelopmentProcess from '$lib/Components/DevelopmentProcess.Component.svelte';
 
 
 
