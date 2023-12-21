@@ -32,23 +32,9 @@
             </video>
 
             <div
-              class="absolute bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse pl-24 md:pl-44 md:text-2xl items-start p-2 bg-black bg-opacity-50 text-white gap-4 text-sm sm:text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
+              class="absolute bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse text-center md:pl-44 md:text-2xl items-center md:items-start p-2 bg-black bg-opacity-50 text-white gap-4 text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
             >
-              <div class="flex items-center gap-2">
-                <a
-                  class="text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl text-[#d1d1d1]"
-                  href={carousel.video}>View More</a
-                >
-                <div
-                  class="w-4 h-4 sm:w-6 sm:h-6 xl:w-9 xl:h-9 2xl:w-12 2xl:h-12 rounded-full bg-[#f17f18] flex justify-center items-center"
-                >
-                  <img
-                    src="/images/arrow.png"
-                    class="w-[4px] sm:w-[6px] md:w-2 xl:w-3 2xl:w-4"
-                    alt=""
-                  />
-                </div>
-              </div>
+            
               {carousel.title}
             </div>
           </a>
