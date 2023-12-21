@@ -10,8 +10,7 @@ export class ProjectRepository implements IProjectRepository {
 	try{
 		let { documents, total } = (await databases.listDocuments(
 		  appwrite_database,
-		  appwrite_collection_projects,
-		  [Query.limit(3)]
+		  appwrite_collection_projects
 		)) as AppwriteResponse<Project>;
 	
 		return { documents, total };

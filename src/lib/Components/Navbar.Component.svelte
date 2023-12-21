@@ -37,7 +37,7 @@
       <div class="w-full md:flex md:justify-around">
         <div class="w-full md:gap-5 md:flex justify-center items-center">
           <NavLi href="/">Home</NavLi>
-          <NavLi href="/products">Product</NavLi>
+          <NavLi href="/products">Products</NavLi>
           <NavLi href="/aboutUs">About Us</NavLi>
           <NavLi href="/privacy">Privacy Policy</NavLi>
           <NavLi href="/terms">Terms of Use</NavLi>

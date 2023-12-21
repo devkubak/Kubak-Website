@@ -12,7 +12,7 @@ export class DevelopmentRepository implements IDevelopmentRepository {
     let { documents, total } = (await databases.listDocuments(
       appwrite_database,
       appwrite_collection_development,
-      [Query.isNull("deletedAt")]
+      [Query.isNull("deletedAt"), Query.limit(8)]
     )) as AppwriteResponse<Development>;
 
     return { documents, total };
