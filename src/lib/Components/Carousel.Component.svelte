@@ -16,7 +16,7 @@
 
 <div class="w-full flex flex-col justify-end gap-5">
   <div class="w-full mt-14 md:mt-0 rounded-none">
-    {#if browser}
+    {#if browser && $carouselStore.data.length > 0}
       <Carousel autoplay autoplayDuration={50000} autoplayProgressVisible>
         {#each $carouselStore.data as carousel}
           <!-- svelte-ignore a11y-missing-attribute -->
