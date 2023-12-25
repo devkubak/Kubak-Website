@@ -61,7 +61,7 @@ export class Dto {
                 technologyAttribute
               ) as TechnologyAttributeDto;
             })
-          : null;
+          : [];
 
       let dto: TechnologyDto = {
         id: technology.$id,

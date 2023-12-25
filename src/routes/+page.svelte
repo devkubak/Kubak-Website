@@ -13,10 +13,6 @@
       console.log(e);
     }
   });
-
-
-
-
 </script>
 
 <Carousel />
@@ -46,40 +42,6 @@
 </div>
 
 <DevelopmentProcess />
-<!-- <Tabs style="pill" defaultClass="flex justify-center gap-5 " contentClass="dark:bg-[#363636] py-5 my-4">
-    <TabItem open activeClasses="bg-[#f17f18] h-5 w-5 rounded-full text-white flex justify-center items-center duration-300 ease-in-out" inactiveClasses="bg-[#f1f1f1] h-5 w-5 rounded-full text-white flex justify-center items-center duration-300 ease-in-out">
-      <div  slot="title" class="w-3 h-3 rounded-full text-4xl text-center bg-white"></div>
-   
-        <div class="md:w-1/2 h-auto flex flex-col md:flex-row justify-center items-center gap-2 bg-[#f1f1f1] dark:bg-[#212121] dark:text-white text-center border-[1px] border-[#f17f18] mx-auto container ">
-            <img src="/images/cover1.jpg" class="w-full md:w-1/2 h-96 object-cover bg-center duration-300 ease-in-out" alt="">
-            <p class="w-full h-96 text-sm md:text-md duration-300 ease-in-out text-center flex items-center justify-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, maiores?</p>
-        </div>
-    </TabItem>
-
-    
-    <TabItem open activeClasses="bg-[#f17f18] h-5 w-5 rounded-full text-white flex justify-center items-center duration-300 ease-in-out" inactiveClasses="bg-[#f1f1f1] h-5 w-5 rounded-full text-white flex justify-center items-center duration-300 ease-in-out">
-      <div  slot="title" class="w-3 h-3 rounded-full text-4xl text-center bg-white"></div>
-   
-        <div class="md:w-1/2 h-auto flex flex-col md:flex-row justify-center items-center gap-2 bg-[#f1f1f1] dark:bg-[#212121] dark:text-white text-center border-[1px] border-[#f17f18] mx-auto container ">
-            <img src="/images/cover1.jpg" class="w-full md:w-1/2 h-96 object-cover bg-center duration-300 ease-in-out" alt="">
-            <p class="w-full h-96 text-sm md:text-md duration-300 ease-in-out text-center flex items-center justify-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
-        </div>
-    </TabItem>
-
-
-    <TabItem open activeClasses="bg-[#f17f18] h-5 w-5 rounded-full text-white flex justify-center items-center duration-300 ease-in-out" inactiveClasses="bg-[#f1f1f1] h-5 w-5 rounded-full text-white flex justify-center items-center duration-300 ease-in-out">
-      <div  slot="title" class="w-3 h-3 rounded-full text-4xl text-center bg-white"></div>
-   
-        <div class="md:w-1/2 h-auto flex flex-col md:flex-row justify-center items-center gap-2 bg-[#f1f1f1] dark:bg-[#212121] dark:text-white text-center border-[1px] border-[#f17f18] mx-auto container ">
-            <img src="/images/cover1.jpg" class="w-full md:w-1/2 h-96 object-cover bg-center duration-300 ease-in-out" alt="">
-            <p class="w-full h-96 text-sm md:text-md duration-300 ease-in-out text-center flex items-center justify-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, maiores? adipisicing elit. Aspernatur, maiores?adipisicing elit. Aspernatur, maiores?</p>
-        </div>
-    </TabItem>
-
-   
-   
-  </Tabs> -->
-
 <div
   class="w-full h-12 flex justify-center items-center text-center mt-12 mb-3"
 >
@@ -101,29 +63,30 @@
 <div
   class="container mx-auto flex flex-wrap h-auto justify-center items-center mt-3 gap-2"
 >
+  {#each $projectStore.data.slice(0, 3) as project}
+    <div
+      class="w-80 h-96 bg-white dark:bg-[#212121] rounded-2xl flex flex-col justify-end items-center gap-3 border-2 border-[#f17f18]"
+    >
+      <div class="w-full h-full p-3 relative flex justify-center">
+        <img
+          src={project.image}
+          class="w-60 h-60 rounded-2xl object-cover"
+          alt=""
+        />
+      </div>
 
-{#each $projectStore.data.slice(0, 3) as project}
-<div
-class="w-80 h-96 bg-white dark:bg-[#212121] rounded-2xl flex flex-col justify-end items-center gap-3 border-2 border-[#f17f18]"
->
-<div class="w-full h-full p-3 relative flex justify-center">
-
-  <img
-    src={project.image}
-    class="w-60 h-60 rounded-2xl object-cover"
-    alt=""
-  />
-</div>
-
-<p class="font-bold h-20 text-xl dark:text-white mt-4">{project.name}</p>
-</div>
-{/each}
-
+      <p class="font-bold h-20 text-xl dark:text-white mt-4">{project.name}</p>
+    </div>
+  {/each}
 </div>
 {#if $projectStore.data.length > 3}
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="text-lg w-full flex justify-center items-center h-auto">
-  <a href="/viewMore" class="w-34 h-12 flex justify-center items-center text-center my-5 bg-[#f17f18] text-white rounded-xl px-4">View More</a>
-</div>
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <div class="text-lg w-full flex justify-center items-center h-auto">
+    <a
+      href="/viewMore"
+      class="w-34 h-12 flex justify-center items-center text-center my-5 bg-[#f17f18] text-white rounded-xl px-4"
+      >View More</a
+    >
+  </div>
 {/if}

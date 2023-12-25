@@ -3,5 +3,5 @@ import type { TechnologyAttributeDto } from "$lib/Models/DTO/TechnologyAttribute
 export interface TechnologyDto {
     id: string;
     title: string;
-    technologyAttributes: TechnologyAttributeDto[] | null;
+    technologyAttributes: TechnologyAttributeDto[];
 }
