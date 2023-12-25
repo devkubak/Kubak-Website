@@ -33,7 +33,7 @@
       </p>
 
       <div
-        class="w-full flex justify-between items-center mt-12 text-center text-gray-800 dark:text-white text-xs md:text-md px-4"
+        class="w-full flex justify-between items-center mt-12 text-center text-gray-800 dark:text-white text-[8px] md:text-[12px] px-4 gap-3"
       >
         <p>Kori Building, 2nd Floor Erbil, Iraq +964 (750) 139 - 4042</p>
         <p>Mako Mall, 2nd Floor, Sulaymani, Iraq +964 (773) 079 - 7475</p>
