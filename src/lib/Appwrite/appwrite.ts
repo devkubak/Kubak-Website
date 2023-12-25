@@ -1,4 +1,4 @@
-import { Client, Account, Databases, Storage, Functions } from "appwrite";
+import { Client, Account, Databases, Storage } from "appwrite";
 import { Environment } from "$lib/Env/Environment";
 
 export namespace Appwrite {

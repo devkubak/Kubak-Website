@@ -1,4 +1,4 @@
-import type { IDevelopmentRepository } from "$lib/Repositories/Interface/I.Development.repository";
+import type { IDevelopmentRepository } from "$lib/Repositories/Interface/I.Development.Repository";
 import type { Development } from "$lib/Models/Entities/Development.Entities.Model";
 import { Query } from "appwrite";
 import { Environment } from "$lib/Env/Environment";

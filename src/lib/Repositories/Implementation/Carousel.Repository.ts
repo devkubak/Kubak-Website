@@ -1,4 +1,4 @@
-import type { ICarouselRepository } from "$lib/Repositories/Interface/I.Carousel.repository";
+import type { ICarouselRepository } from "$lib/Repositories/Interface/I.Carousel.Repository";
 import type { Carousel } from "$lib/Models/Entities/Carousel.Entities.Model";
 import { Query } from "appwrite";
 import { Environment } from '$lib/Env/Environment';

@@ -1,7 +1,5 @@
 import type { Store } from "$lib/Models/Requests/Store.Request.Model";
 import { CarouselRepository } from "$lib/Repositories/Implementation/Carousel.Repository";
-import { databases } from "$lib/Appwrite/appwrite";
-import { Query } from "appwrite";
 import { writable } from "svelte/store";
 import type { CarouselDto } from "$lib/Models/DTO/Carousel.Dto.Model";
 import { Dto } from "$lib/Models/Conversion/Conversion.Model";
