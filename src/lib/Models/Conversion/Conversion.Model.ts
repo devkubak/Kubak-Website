@@ -4,6 +4,10 @@ import type { ProjectDto } from "../DTO/Project.Dto.Model";
 import type { Carousel } from "$lib/Models/Entities/Carousel.Entities.Model";
 import type { Development } from "$lib/Models/Entities/Development.Entities.Model";
 import type { Project } from "$lib/Models/Entities/Project.Entity.Model";
+import type { Technology } from "../Entities/Technology.Entity.Model";
+import type { TechnologyDto } from "../DTO/Technology.Dto.Model";
+import type { TechnologyAttributeDto } from "../DTO/TechnologyAttribute.Dto.Model";
+import type { TechnologyAttribute } from "../Entities/TechnologyAttribute.Entity.Model";
 export class Dto {
   static ToCarouselDto(carousel: Carousel): CarouselDto | null {
     try {
@@ -40,6 +44,46 @@ export class Dto {
         id: project.$id,
         name: project.name as string,
         image: project.image,
+      };
+
+      return dto;
+    } catch (e: any) {
+      throw new Error(e);
+    }
+  }
+
+  static ToTechnologyDto(technology: Technology): TechnologyDto | null {
+    try {
+      const technologyAttributes =
+        technology.technologyAttributes.length > 0
+          ? technology.technologyAttributes.map((technologyAttribute) => {
+              return Dto.ToTechnologyAttributeDto(
+                technologyAttribute
+              ) as TechnologyAttributeDto;
+            })
+          : null;
+
+      let dto: TechnologyDto = {
+        id: technology.$id,
+        title: technology.title as string,
+        technologyAttributes: technologyAttributes,
+      };
+
+      return dto;
+    } catch (e: any) {
+      throw new Error(e);
+    }
+  }
+
+  static ToTechnologyAttributeDto(
+    technologyAttribute: TechnologyAttribute
+  ): TechnologyAttributeDto | null {
+    try {
+      let dto: TechnologyAttributeDto = {
+        id: technologyAttribute.$id,
+        techId: technologyAttribute.techId as string,
+        title: technologyAttribute.title as string,
+        image: technologyAttribute.image,
       };
 
       return dto;
