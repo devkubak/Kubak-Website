@@ -1,0 +1,68 @@
+<script lang="ts">
+  //@ts-ignore
+  import Carousel from "svelte-carousel";
+  import { browser } from "$app/environment";
+  import { onMount } from "svelte";
+  import { carouselStore } from "$lib/Store/Carousel.Store";
+
+  onMount(async () => {
+    try {
+      await carouselStore.getAll();
+    } catch (e) {
+      console.log(e);
+    }
+  });
+</script>
+
+<div class="w-full flex flex-col justify-end gap-5">
+  <div class="w-full mt-14 md:mt-0 rounded-none">
+    {#if browser && $carouselStore.data.length > 0}
+      <Carousel autoplay autoplayDuration={50000} autoplayProgressVisible>
+        {#each $carouselStore.data as carousel}
+          <!-- svelte-ignore a11y-missing-attribute -->
+          <a title={carousel.title} class="block relative">
+            <!-- svelte-ignore a11y-media-has-caption -->
+            <video
+              class="cursor-pointer w-full h-[400px] md:h-[900px] object-cover"
+              autoplay
+              loop
+              muted
+            >
+              <source src={carousel.video} type="video/mp4" />
+            </video>
+
+            <div
+              class="absolute bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse text-center md:pl-44 md:text-2xl items-center md:items-start p-2 bg-black bg-opacity-50 text-white gap-4 text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
+            >
+            
+              {carousel.title}
+            </div>
+          </a>
+        {/each}
+      </Carousel>
+    {/if}
+  </div>
+</div>
+
+<style>
+  .see_more {
+    display: none;
+  }
+  .see_more_cont:hover .see_more {
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .see_more_cont:hover {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .see_more_cont:hover .seemore_txt {
+    color: #f17f18;
+    font-weight: bold;
+  }
+
+  .seemore_txt {
+    font-weight: bold;
+  }
+</style>
