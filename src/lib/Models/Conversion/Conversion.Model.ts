@@ -8,6 +8,8 @@ import type { Technology } from "../Entities/Technology.Entity.Model";
 import type { TechnologyDto } from "../DTO/Technology.Dto.Model";
 import type { TechnologyAttributeDto } from "../DTO/TechnologyAttribute.Dto.Model";
 import type { TechnologyAttribute } from "../Entities/TechnologyAttribute.Entity.Model";
+import type { Footer } from "../Entities/Footer.Entity.Model";
+import type { FooterDto } from "../DTO/Footer.DTO.Model";
 export class Dto {
   static ToCarouselDto(carousel: Carousel): CarouselDto | null {
     try {
@@ -89,6 +91,20 @@ export class Dto {
       return dto;
     } catch (e: any) {
       throw new Error(e);
+    }
+  }
+
+  static ToFooterDto(footer: Footer): FooterDto {
+    try {
+      return {
+        id: footer.$id,
+        description: footer.description,
+        image: footer.image,
+        address1: footer.address1,
+        address2: footer.address2
+      };
+    } catch (error: any) {
+      throw new Error(error);
     }
   }
 }
