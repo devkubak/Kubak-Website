@@ -20,9 +20,7 @@ function multiColumnRight(): void {
 
 <div class="w-full flex gap-4 items-center container mx-auto justify-center">
 	<!-- Button: Left -->
-	<button type="button" class="btn-icon variant-filled bg-[#f17f18] rounded-full p-4" on:click={multiColumnLeft}>
-		<img src="images/leftArrow.png" alt="" class="w-4 h-4">
-	</button>
+	
 	<!-- Carousel -->
 	<div bind:this={elemMovies} class="snap-x snap-mandatory scroll-smooth flex gap-2 pb-2 justify-start sm:justify-center overflow-x-hidden w-full ">
 		{#each $projectStore.data as project}
@@ -39,8 +37,16 @@ function multiColumnRight(): void {
 			</a>
 		{/each}
 	</div>
+</div>
+
+<div class="container mx-auto w-full flex justify-center items-center gap-2 mt-4">
+
+	<button type="button" class="btn-icon variant-filled bg-[#f17f18] rounded-full p-3" on:click={multiColumnLeft}>
+		<img src="images/leftArrow.png" alt="" class="w-4 h-4">
+	</button>
+	
 	<!-- Button-Right -->
-	<button type="button" class="btn-icon variant-filled bg-[#f17f18] rounded-full p-4" on:click={multiColumnRight}>
+	<button type="button" class="btn-icon variant-filled bg-[#f17f18] rounded-full p-3" on:click={multiColumnRight}>
 		<img src="images/rightArrow.png" alt="" class="w-4 h-4">
 	</button>
 </div>

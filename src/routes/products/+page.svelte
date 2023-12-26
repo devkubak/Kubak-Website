@@ -1,5 +1,6 @@
 <script lang="ts">
   import { DeviceMockup } from "flowbite-svelte";
+  
 </script>
 
 <div
@@ -46,6 +47,10 @@
     />
   </DeviceMockup>
 </div>
+
+
+
+
 
 <div
   class="container mx-auto flex justify-center items-center mt-5 gap-5 md:flex-row flex-col flex-wrap md:flex-nowrap px-4 mb-24"
