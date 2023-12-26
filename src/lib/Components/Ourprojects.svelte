@@ -18,13 +18,13 @@ function multiColumnRight(): void {
 </script>
 
 
-<div class="grid grid-cols-[auto_1fr_auto] gap-4 items-center container mx-auto justify-center">
+<div class="w-full flex gap-4 items-center container mx-auto justify-center">
 	<!-- Button: Left -->
 	<button type="button" class="btn-icon variant-filled bg-[#f17f18] rounded-full p-4" on:click={multiColumnLeft}>
 		<img src="images/leftArrow.png" alt="" class="w-4 h-4">
 	</button>
 	<!-- Carousel -->
-	<div bind:this={elemMovies} class="snap-x snap-mandatory scroll-smooth flex gap-2 pb-2 justify-center overflow-x-auto">
+	<div bind:this={elemMovies} class="snap-x snap-mandatory scroll-smooth flex gap-2 pb-2 justify-start sm:justify-center overflow-x-hidden w-full ">
 		{#each $projectStore.data as project}
 			<a href="#" target="_blank" class="shrink-0  snap-start bg-white dark:bg-[#212121] dark:text-white h-60 w-44  flex justify-around rounded-lg items-center flex-col">
 				<img
