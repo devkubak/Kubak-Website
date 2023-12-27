@@ -1,5 +1,6 @@
 <script lang="ts">
   	import { projectStore } from "$lib/Store/Project.Store";
+	  import { Marquee } from 'flowbite-svelte'
 let elemMovies: HTMLDivElement;
 
 function multiColumnLeft(): void {
@@ -14,6 +15,11 @@ function multiColumnRight(): void {
 	if (elemMovies.scrollLeft < elemMovies.scrollWidth - elemMovies.clientWidth - 1) x = elemMovies.scrollLeft + elemMovies.clientWidth;
 	elemMovies.scroll(x, 0);
 }
+
+
+
+
+
 					
 </script>
 
@@ -22,24 +28,30 @@ function multiColumnRight(): void {
 	<!-- Button: Left -->
 	
 	<!-- Carousel -->
-	<div bind:this={elemMovies} class="snap-x snap-mandatory scroll-smooth flex gap-2 pb-2 justify-start sm:justify-center overflow-x-hidden w-full ">
-		{#each $projectStore.data as project}
-			<a href="#" target="_blank" class="shrink-0  snap-start bg-white dark:bg-[#212121] dark:text-white h-60 w-44  flex justify-around rounded-lg items-center flex-col">
+	<div bind:this={elemMovies} class="snap-x snap-mandatory scroll-smooth flex gap-2 pb-2 justify-start sm:justify-center overflow-x-hidden w-full " id="carousel-container ">
+		<!-- svelte-ignore a11y-distracting-elements -->
+		<div id="marqueeContainer" class="marquee py-16">
+			
+			{#each $projectStore.data as project}
+			
+			<a href="#" target="_blank" id="carousel-card" class="shrink-0  snap-start bg-white dark:bg-[#212121] dark:text-white h-60 w-44  flex justify-around rounded-lg items-center flex-col">
 				<img
-					class="rounded-container-token hover:brightness-125 w-24"
-					src={project.image}
-					alt=""
-					title=""
-					loading="lazy"
-
+				class="rounded-container-token hover:brightness-125 w-24"
+				src={project.image}
+				alt=""
+				title=""
+				loading="lazy"
+				
 				/>
                 <p>{project.name}</p>
 			</a>
-		{/each}
+			{/each}
+		</div>
+
 	</div>
 </div>
 
-<div class="container mx-auto w-full flex justify-center items-center gap-2 mt-4">
+<div class="container mx-auto w-full flex justify-center items-center gap-2 mt-4 ">
 
 	<button type="button" class="btn-icon variant-filled bg-[#f17f18] rounded-full p-3" on:click={multiColumnLeft}>
 		<img src="images/leftArrow.png" alt="" class="w-4 h-4">
@@ -51,3 +63,4 @@ function multiColumnRight(): void {
 	</button>
 </div>
 					
+
