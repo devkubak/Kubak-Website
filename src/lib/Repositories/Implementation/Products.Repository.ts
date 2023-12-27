@@ -3,7 +3,7 @@ import { Environment } from "$lib/Env/Environment";
 import type { Product } from "$lib/Models/Entities/Product.Entity.Model";
 
 import type { IProductsRepository } from "$lib/Repositories/Interface/I.Products.Repository";
-import { ID, Query } from "appwrite";
+import { Query } from "appwrite";
 
 export class ProductsRepository implements IProductsRepository {
   async getProducts(): Promise<AppwriteResponse<Product>> {
