@@ -1,6 +1,7 @@
 <script lang="ts">
   	import { projectStore } from "$lib/Store/Project.Store";
 	  import { Marquee } from 'flowbite-svelte'
+  import { onMount } from "svelte";
 let elemMovies: HTMLDivElement;
 
 function multiColumnLeft(): void {
@@ -16,7 +17,15 @@ function multiColumnRight(): void {
 	elemMovies.scroll(x, 0);
 }
 
-
+onMount(async () => {
+	try {
+	  await projectStore.getAll();
+	  console.log($projectStore.data);
+	  
+	} catch (e) {
+	  console.log(e);
+	}
+  });
 
 
 
@@ -28,9 +37,9 @@ function multiColumnRight(): void {
 	<!-- Button: Left -->
 	
 	<!-- Carousel -->
-	<div bind:this={elemMovies} class="snap-x snap-mandatory scroll-smooth flex gap-2 pb-2 justify-start sm:justify-center overflow-x-hidden w-full " id="carousel-container ">
+	<div bind:this={elemMovies} class="snap-x snap-mandatory scroll-smooth flex gap-2 pb-2 justify-start sm:justify-center overflow-x-hidden w-full ">
 		<!-- svelte-ignore a11y-distracting-elements -->
-		<div id="marqueeContainer" class="marquee py-16">
+
 			
 			{#each $projectStore.data as project}
 			
@@ -49,7 +58,7 @@ function multiColumnRight(): void {
 		</div>
 
 	</div>
-</div>
+
 
 <div class="container mx-auto w-full flex justify-center items-center gap-2 mt-4 ">
 

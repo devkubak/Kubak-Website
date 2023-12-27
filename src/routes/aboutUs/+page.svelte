@@ -1,3 +1,18 @@
+<script lang="ts">
+  import { onMount } from "svelte";
+
+// onMount(async () => {
+//   try {
+//     await aboutAsStore.getAll();
+//     console.log($projectStore.data);
+    
+//   } catch (e) {
+//     console.log(e);
+//   }
+// });
+</script>
+
+
 <div class="container mx-auto flex justify-center text-center items-center flex-col bg-white dark:bg-[#212121] dark:text-white rounded-br-3xl  rounded-bl-3xl p-4 gap-5">
     <img src="/images/kubak2.png" alt="" class="w-96 pt-28">
     <p class="pb-4 md:text-2xl">Kubak is a software development company that offers IT solutions to businesses all around the world. Kubak provides a variety of software development solutions, including e-business solutions, enterprise applications, professional websites, design, product engineering, CMS Software, Payment Gateway solutions, Time and Attendance Tracking Software, Debt Collection Software, Appointment Reminder Solutions, Medical Transcription Services, and more.
