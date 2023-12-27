@@ -55,6 +55,7 @@
 <div
   class="container mx-auto flex justify-center items-center mt-5 gap-5 md:flex-row flex-col flex-wrap md:flex-nowrap px-4 mb-24"
 >
+<div >
   <DeviceMockup device="ios">
     <img
       src="/images/phone2.jpg"
@@ -67,6 +68,8 @@
       alt="default example 2"
     />
   </DeviceMockup>
+
+</div>
 
   <p class="md:text-xl dark:text-white">
     Our Chat feature also helps users connect with each other, working as a
