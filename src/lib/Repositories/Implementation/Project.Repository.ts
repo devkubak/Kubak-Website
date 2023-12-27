@@ -9,7 +9,7 @@ export class ProjectRepository implements IProjectRepository {
     try {
       let { documents, total } = (await Appwrite.databases.listDocuments(
         Environment.appwrite_database,
-        Environment.appwrite_collection_projects,
+        Environment.appwrite_collection_our_projects,
         [Query.limit(100), Query.isNull("deletedAt")]
       )) as AppwriteResponse<Project>;
 
@@ -21,7 +21,7 @@ export class ProjectRepository implements IProjectRepository {
   async getProject(id: string): Promise<Project> {
     let document = (await Appwrite.databases.getDocument(
       Environment.appwrite_database,
-      Environment.appwrite_collection_projects,
+      Environment.appwrite_collection_our_projects,
       id
     )) as Project;
 

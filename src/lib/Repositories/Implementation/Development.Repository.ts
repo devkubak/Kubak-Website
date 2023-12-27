@@ -8,7 +8,7 @@ export class DevelopmentRepository implements IDevelopmentRepository {
   async getDevelopments(): Promise<AppwriteResponse<Development>> {
     let { documents, total } = (await Appwrite.databases.listDocuments(
       Environment.appwrite_database,
-      Environment.appwrite_collection_development,
+      Environment.appwrite_collection_development_process,
       [Query.isNull("deletedAt"), Query.limit(8)]
     )) as AppwriteResponse<Development>;
 
@@ -17,7 +17,7 @@ export class DevelopmentRepository implements IDevelopmentRepository {
   async getDevelopment(id: string): Promise<Development> {
     let document = (await Appwrite.databases.getDocument(
       Environment.appwrite_database,
-      Environment.appwrite_collection_development,
+      Environment.appwrite_collection_development_process,
       id
     )) as Development;
 
