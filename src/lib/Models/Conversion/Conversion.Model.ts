@@ -52,6 +52,7 @@ export class Dto {
         id: project.$id,
         name: project.name as string,
         image: project.image,
+        link: project.link as string,
       };
 
       return dto;

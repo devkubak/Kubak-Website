@@ -4,4 +4,5 @@ export interface ProjectDto{
 	id:string | null,
 	name:string,
 	image:string,
+	link:string | null,
 }

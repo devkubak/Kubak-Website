@@ -43,7 +43,7 @@ onMount(async () => {
 			
 			{#each $projectStore.data as project}
 			
-			<a href="#" target="_blank" id="carousel-card" class="shrink-0  snap-start bg-white dark:bg-[#212121] dark:text-white h-60 w-44  flex justify-around rounded-lg items-center flex-col">
+			<a href={project.link} target="_blank" id="carousel-card" class="shrink-0  snap-start bg-white dark:bg-[#212121] dark:text-white h-60 w-44  flex justify-around rounded-lg items-center flex-col">
 				<img
 				class="rounded-container-token hover:brightness-125 w-24"
 				src={project.image}

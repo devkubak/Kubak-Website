@@ -14,6 +14,7 @@ const createProductStore = () => {
     get: async () => {
       try {
         const { documents, total } = await productsRepository.getProducts();
+        console.log(documents);
         const dto: ProductDto = Dto.ToProductDto(documents[0]);
         set(dto);
       } catch (e) {

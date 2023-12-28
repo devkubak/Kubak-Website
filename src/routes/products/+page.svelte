@@ -5,15 +5,17 @@
   import { onMount } from "svelte";
 
   onMount(async () => {
-    try {
-      await productAttributeStore.getAll();
-      await productStore.get();
-    } catch (e) {
-      console.log(e);
-    }
-  });
+  try {
+    await productStore.get();
+    console.log($productStore);
+    
+  } catch (e) {
+    console.log(e);
+  }
+});
 </script>
 
+<!-- {#if $productStore}
 <div
   class="w-full bg-white dark:bg-[#212121] dark:text-white pb-12 pt-32 flex justify-center items-center text-center"
 >
@@ -26,25 +28,10 @@
 <div
   class="container mx-auto flex justify-center items-center mt-5 gap-5 md:flex-row flex-col-reverse flex-wrap md:flex-nowrap px-4 mb-24"
 >
+{#each $productStore.productAttribute as productAttribute}
   <p class="md:text-xl dark:text-white">
-    Are you tired of waiting for taxis on the street, only to be charged
-    exorbitant fees and worry about your safety during the ride? Look no further
-    than our innovative online taxi app, which connects both passengers and
-    drivers quickly and seamlessly for a safe, reliable, and affordable trip
-    every time. With our app, both passengers and drivers can easily connect to
-    each other using only their smart devices, without any delay, and at the
-    most reasonable price possible. The process is simple: the passenger sends a
-    request, the driver accepts the request, and they head to the passenger’s
-    pickup location. After picking up the passenger, they head to the desired
-    destination and end the trip there. This benefits both parties because the
-    driver doesn’t have to search around town for a passenger, and the passenger
-    doesn’t have to worry about their safety. But that’s not all – our online
-    taxi app offers several additional services that make your trip even more
-    convenient and enjoyable. For example, our Wallet feature allows both
-    drivers and passengers to make their trips without the need for any physical
-    currency. This is just one of many uses in the app.
+   {productAttribute.description}
   </p>
-  <!-- svelte-ignore missing-declaration -->
   <DeviceMockup device="ios">
     <img
       src="/images/phone1.jpg"
@@ -58,6 +45,11 @@
     />
   </DeviceMockup>
 </div>
+{/if} -->
+
+
+
+
 
 <div
   class="container mx-auto flex justify-center items-center mt-5 gap-5 md:flex-row flex-col flex-wrap md:flex-nowrap px-4 mb-24"
@@ -131,6 +123,7 @@
       alt="default example 2"
     />
   </DeviceMockup>
+</div>
 </div>
 
 <div class="w-full container mx-auto flex items-center px-4">

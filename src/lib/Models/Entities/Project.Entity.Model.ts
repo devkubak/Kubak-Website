@@ -4,5 +4,6 @@ export interface Project extends Database {
   userId: string;
   name: string | null;
   image: string;
+  link: string | null;
   deletedAt: Date | null;
 }
