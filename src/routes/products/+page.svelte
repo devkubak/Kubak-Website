@@ -51,23 +51,74 @@
 
 
 
+
+<div
+  class="w-full bg-white dark:bg-[#212121] dark:text-white pb-12 pt-32 flex justify-center items-center text-center"
+>
+  <p class="md:text-4xl container mx-auto">
+    Introducing Our Revolutionary Online Taxi App: A Safe, Reliable, and
+    Affordable Solution for All Your Transportation Needs
+  </p>
+</div>
+
+<div
+  class="container mx-auto flex justify-center items-center mt-5 gap-5 md:flex-row flex-col-reverse flex-wrap md:flex-nowrap px-4 mb-24"
+>
+  <p class="md:text-xl dark:text-white">
+    Are you tired of waiting for taxis on the street, only to be charged
+    exorbitant fees and worry about your safety during the ride? Look no further
+    than our innovative online taxi app, which connects both passengers and
+    drivers quickly and seamlessly for a safe, reliable, and affordable trip
+    every time. With our app, both passengers and drivers can easily connect to
+    each other using only their smart devices, without any delay, and at the
+    most reasonable price possible. The process is simple: the passenger sends a
+    request, the driver accepts the request, and they head to the passenger’s
+    pickup location. After picking up the passenger, they head to the desired
+    destination and end the trip there. This benefits both parties because the
+    driver doesn’t have to search around town for a passenger, and the passenger
+    doesn’t have to worry about their safety. But that’s not all – our online
+    taxi app offers several additional services that make your trip even more
+    convenient and enjoyable. For example, our Wallet feature allows both
+    drivers and passengers to make their trips without the need for any physical
+    currency. This is just one of many uses in the app.
+  </p>
+  <!-- svelte-ignore missing-declaration -->
+  <DeviceMockup device="ios">
+    <img
+      src="/images/phone1.jpg"
+      class="dark:hidden w-[272px] h-[572px]"
+      alt="default example 1"
+    />
+    <img
+      src="/images/phone1.jpg"
+      class="hidden dark:block w-[272px] h-[572px]"
+      alt="default example 2"
+    />
+  </DeviceMockup>
+</div>
+
+
+
+
+
 <div
   class="container mx-auto flex justify-center items-center mt-5 gap-5 md:flex-row flex-col flex-wrap md:flex-nowrap px-4 mb-24"
 >
-  <div>
-    <DeviceMockup device="ios">
-      <img
-        src="/images/phone2.jpg"
-        class="dark:hidden w-[272px] h-[572px]"
-        alt="default example 1"
-      />
-      <img
-        src="/images/phone2.jpg"
-        class="hidden dark:block w-[272px] h-[572px]"
-        alt="default example 2"
-      />
-    </DeviceMockup>
-  </div>
+<div >
+  <DeviceMockup device="ios">
+    <img
+      src="/images/phone2.jpg"
+      class="dark:hidden w-[272px] h-[572px]"
+      alt="default example 1"
+    />
+    <img
+      src="/images/phone2.jpg"
+      class="hidden dark:block w-[272px] h-[572px]"
+      alt="default example 2"
+    />
+  </DeviceMockup>
+
+</div>
 
   <p class="md:text-xl dark:text-white">
     Our Chat feature also helps users connect with each other, working as a
@@ -125,7 +176,6 @@
   </DeviceMockup>
 </div>
 
-
 <div class="w-full container mx-auto flex items-center px-4">
   <a
     href="https://play.google.com/store/search?q=kubak+taxi&c=apps&hl=en&gl=US"
@@ -140,3 +190,4 @@
     <img src="/images/appLight.png" class="w-52" alt="" />
   </a>
 </div>
+
