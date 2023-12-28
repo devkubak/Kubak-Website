@@ -5,14 +5,13 @@
   import { onMount } from "svelte";
 
   onMount(async () => {
-  try {
-    await productStore.get();
-    console.log($productStore);
-    
-  } catch (e) {
-    console.log(e);
-  }
-});
+    try {
+      await productStore.get();
+      console.log($productStore);
+    } catch (e) {
+      console.log(e);
+    }
+  });
 </script>
 
 <!-- {#if $productStore}
@@ -46,11 +45,6 @@
   </DeviceMockup>
 </div>
 {/if} -->
-
-
-
-
-
 
 <div
   class="w-full bg-white dark:bg-[#212121] dark:text-white pb-12 pt-32 flex justify-center items-center text-center"
@@ -97,28 +91,23 @@
   </DeviceMockup>
 </div>
 
-
-
-
-
 <div
   class="container mx-auto flex justify-center items-center mt-5 gap-5 md:flex-row flex-col flex-wrap md:flex-nowrap px-4 mb-24"
 >
-<div >
-  <DeviceMockup device="ios">
-    <img
-      src="/images/phone2.jpg"
-      class="dark:hidden w-[272px] h-[572px]"
-      alt="default example 1"
-    />
-    <img
-      src="/images/phone2.jpg"
-      class="hidden dark:block w-[272px] h-[572px]"
-      alt="default example 2"
-    />
-  </DeviceMockup>
-
-</div>
+  <div>
+    <DeviceMockup device="ios">
+      <img
+        src="/images/phone2.jpg"
+        class="dark:hidden w-[272px] h-[572px]"
+        alt="default example 1"
+      />
+      <img
+        src="/images/phone2.jpg"
+        class="hidden dark:block w-[272px] h-[572px]"
+        alt="default example 2"
+      />
+    </DeviceMockup>
+  </div>
 
   <p class="md:text-xl dark:text-white">
     Our Chat feature also helps users connect with each other, working as a
@@ -190,4 +179,3 @@
     <img src="/images/appLight.png" class="w-52" alt="" />
   </a>
 </div>
-
