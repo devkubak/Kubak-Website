@@ -30,31 +30,35 @@
   </p>
 </div>
 
-{#each $aboutUsStore.data as aboutUs}
-  <div
-    class="w-full container mx-auto h-auto p-5 flex justify-center items-center flex-col mt-24 bg-white dark:bg-[#212121] dark:text-white gap-12 rounded-3xl"
-  >
-  {#if aboutUs.image}
+{#if $aboutUsStore}
+  {#each $aboutUsStore.data as aboutUs}
     <div
-      class="bg-[#f17f18] h-24 w-24 rounded-full flex justify-center items-center"
+      class="w-full container mx-auto h-auto p-5 flex justify-center items-center flex-col mt-24 bg-white dark:bg-[#212121] dark:text-white gap-12 rounded-3xl"
     >
-        <img src="{aboutUs.image}" alt="" class="w-16 h-16" />
-    </div>
-    {:else}{/if}
-    <div class="w-full h-auto flex flex-col justify-center items-center gap-3">
-      <p class="text-[#f17f18] text-2xl font-bold">{aboutUs.title}</p>
-      <p class="text-lg">
-        {aboutUs.description}
-      </p>
-      <!-- <p class="text-lg">
+      {#if aboutUs.image}
+        <div
+          class="bg-[#f17f18] h-24 w-24 rounded-full flex justify-center items-center"
+        >
+          <img src={aboutUs.image} alt="" class="w-16 h-16" />
+        </div>
+      {:else}{/if}
+      <div
+        class="w-full h-auto flex flex-col justify-center items-center gap-3"
+      >
+        <p class="text-[#f17f18] text-2xl font-bold">{aboutUs.title}</p>
+        <p class="text-lg">
+          {aboutUs.description}
+        </p>
+        <!-- <p class="text-lg">
         Our mission is to provide cost-effective, efficient and optimal
         technological solutions on an enterprise level, through our
         highly-skilled and motivated team of developers using their cutting-edge
         technologies to maintain the growth and stability of our solutions.
       </p> -->
+      </div>
     </div>
-  </div>
-{/each}
+  {/each}
+{/if}
 
 <!-- <div
   class="w-full container mx-auto h-auto p-5 flex justify-center items-center flex-col mt-24 bg-white dark:bg-[#212121] dark:text-white gap-12 rounded-3xl"
