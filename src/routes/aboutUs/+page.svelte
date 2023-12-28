@@ -11,26 +11,35 @@
   });
 </script>
 
-<div class="container mx-auto flex justify-center text-center items-center flex-col bg-white dark:bg-[#212121] dark:text-white rounded-br-3xl  rounded-bl-3xl p-4 gap-5">
-    <img src="/images/kubak2.png" alt="" class="w-96 pt-28">
-    <p class="pb-4 md:text-2xl">Kubak is a software development company that offers IT solutions to businesses all around the world. Kubak provides a variety of software development solutions, including e-business solutions, enterprise applications, professional websites, design, product engineering, CMS Software, Payment Gateway solutions, Time and Attendance Tracking Software, Debt Collection Software, Appointment Reminder Solutions, Medical Transcription Services, and more.
-        We research, design, develop, enhance, customize, implement, support, and maintain many parts of information technology.We are a professionally acknowledged software development company with vast experience in producing custom software and application development to meet your specific demands and specifications.</p>
-</div> 
+<div
+  class="container mx-auto flex justify-center text-center items-center flex-col bg-white dark:bg-[#212121] dark:text-white rounded-br-3xl rounded-bl-3xl p-4 gap-5"
+>
+  <img src="/images/kubak2.png" alt="" class="w-96 pt-28" />
+  <p class="pb-4 md:text-2xl">
+    Kubak is a software development company that offers IT solutions to
+    businesses all around the world. Kubak provides a variety of software
+    development solutions, including e-business solutions, enterprise
+    applications, professional websites, design, product engineering, CMS
+    Software, Payment Gateway solutions, Time and Attendance Tracking Software,
+    Debt Collection Software, Appointment Reminder Solutions, Medical
+    Transcription Services, and more. We research, design, develop, enhance,
+    customize, implement, support, and maintain many parts of information
+    technology.We are a professionally acknowledged software development company
+    with vast experience in producing custom software and application
+    development to meet your specific demands and specifications.
+  </p>
+</div>
 
 {#if $aboutUsStore}
-{#each $aboutUsStore.data as aboutUs}
-<div class="w-full container mx-auto h-auto p-5  flex justify-center items-center flex-col mt-24 bg-white dark:bg-[#212121] dark:text-white gap-12 rounded-3xl">
-
-  {#if aboutUs.image}
-    <div class="bg-[#f17f18] h-24 w-24 rounded-full flex justify-center items-center">
-        <img src="{aboutUs.image?? ""}" alt="" class="w-16 h-16">
-      </div>
-      {/if}
-        <div class="w-full h-auto flex flex-col justify-center items-center gap-3">
-    
-      
-            <p class="text-[#f17f18] text-2xl font-bold">{aboutUs.title?? ""}</p>
-            <p class="text-lg">{aboutUs.description}</p>
+  {#each $aboutUsStore.data as aboutUs}
+    <div
+      class="w-full container mx-auto h-auto p-5 flex justify-center items-center flex-col mt-24 bg-white dark:bg-[#212121] dark:text-white gap-12 rounded-3xl"
+    >
+      {#if aboutUs.image}
+        <div
+          class="bg-[#f17f18] h-24 w-24 rounded-full flex justify-center items-center"
+        >
+          <img src={aboutUs.image ?? ""} alt="" class="w-16 h-16" />
         </div>
       {/if}
       <div
