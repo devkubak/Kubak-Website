@@ -124,7 +124,7 @@
     />
   </DeviceMockup>
 </div>
-</div>
+
 
 <div class="w-full container mx-auto flex items-center px-4">
   <a
