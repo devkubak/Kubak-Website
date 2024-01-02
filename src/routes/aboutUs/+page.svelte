@@ -48,10 +48,7 @@
           <div
           class="w-full h-auto flex flex-col justify-center items-center gap-3"
           >
-          <p class="text-[#f17f18] text-2xl font-bold">{aboutUs.title}</p>
-          <p class="text-lg">
-            {aboutUs.description}
-          </p>
+        
           <!-- <p class="text-lg">
             Our mission is to provide cost-effective, efficient and optimal
             technological solutions on an enterprise level, through our

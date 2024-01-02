@@ -3,6 +3,7 @@
   import { productStore } from "$lib/Store/Product.Store";
   import { DeviceMockup } from "flowbite-svelte";
   import { onMount } from "svelte";
+  import { ImagePosition } from "$lib/Models/Enums/Image-Position.Enum.Model";
 
   onMount(async () => {
     try {
@@ -14,39 +15,35 @@
   });
 </script>
 
-<!-- {#if $productStore}
+{#if $productStore}
 <div
   class="w-full bg-white dark:bg-[#212121] dark:text-white pb-12 pt-32 flex justify-center items-center text-center"
 >
   <p class="md:text-4xl container mx-auto">
-    Introducing Our Revolutionary Online Taxi App: A Safe, Reliable, and
-    Affordable Solution for All Your Transportation Needs
+   {$productStore.title}
   </p>
 </div>
 
-<div
-  class="container mx-auto flex justify-center items-center mt-5 gap-5 md:flex-row flex-col-reverse flex-wrap md:flex-nowrap px-4 mb-24"
->
 {#each $productStore.productAttribute as productAttribute}
+<div
+  class="container mx-auto flex justify-center items-center mt-5 gap-5  {productAttribute.image_position == ImagePosition.LEFT ? "md:flex-row-reverse" : "md:flex-row" } flex-col-reverse flex-wrap md:flex-nowrap px-4 mb-24"
+>
   <p class="md:text-xl dark:text-white">
    {productAttribute.description}
   </p>
   <DeviceMockup device="ios">
     <img
-      src="/images/phone1.jpg"
-      class="dark:hidden w-[272px] h-[572px]"
+      src={productAttribute.image || "/images/phone1.jpg"}
+      class="object-cover w-[272px] h-[572px]"
       alt="default example 1"
     />
-    <img
-      src="/images/phone1.jpg"
-      class="hidden dark:block w-[272px] h-[572px]"
-      alt="default example 2"
-    />
+   
   </DeviceMockup>
 </div>
-{/if} -->
+{/each}
+{/if}
 
-<div
+<!-- <div
   class="w-full bg-white dark:bg-[#212121] dark:text-white pb-12 pt-32 flex justify-center items-center text-center"
 >
   <p class="md:text-4xl container mx-auto">
@@ -76,7 +73,7 @@
     drivers and passengers to make their trips without the need for any physical
     currency. This is just one of many uses in the app.
   </p>
-  <!-- svelte-ignore missing-declaration -->
+  
   <DeviceMockup device="ios">
     <img
       src="/images/phone1.jpg"
@@ -93,8 +90,8 @@
 
 <div
   class="container mx-auto flex justify-center items-center mt-5 gap-5 md:flex-row flex-col flex-wrap md:flex-nowrap px-4 mb-24"
->
-  <div>
+> -->
+  <!-- <div>
     <DeviceMockup device="ios">
       <img
         src="/images/phone2.jpg"
@@ -126,9 +123,9 @@
     time is valuable, which is why we’ve designed our app to be as efficient and
     streamlined as possible.
   </p>
-</div>
+</div> -->
 
-<div
+<!-- <div
   class="container mx-auto flex justify-center items-center mt-5 gap-5 md:flex-row flex-col-reverse flex-wrap md:flex-nowrap px-4 mb-5"
 >
   <p class="md:text-xl dark:text-white">
@@ -150,8 +147,8 @@
     additional features like our Wallet, Chat, and Prizes, we’re committed to
     providing an exceptional experience for our customers. Download our app
     today and experience the future of transportation.
-  </p>
-  <DeviceMockup device="ios">
+  </p> -->
+  <!-- <DeviceMockup device="ios">
     <img
       src="/images/phone3.jpg"
       class="dark:hidden w-[272px] h-[572px]"
@@ -162,8 +159,8 @@
       class="hidden dark:block w-[272px] h-[572px]"
       alt="default example 2"
     />
-  </DeviceMockup>
-</div>
+  </DeviceMockup> -->
+<!-- </div> -->
 
 <div class="w-full container mx-auto flex items-center px-4">
   <a

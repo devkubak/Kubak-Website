@@ -1,8 +1,9 @@
 import type { ProductAttributeDto } from "$lib/Models/DTO/ProductAttribute.DTO.Model";
+import type { Language } from "$lib/Models/common/Language.Common.Model";
 
 export interface ProductDto {
     id: string;
-    title: string;
+    title: Language;
     appLinksImage:{
         google: string;
         apple: string;

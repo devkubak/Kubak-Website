@@ -1,8 +1,9 @@
 import type { Datetime } from "../Extensions/Datetime.Extension.Model";
+import type { Language } from "$lib/Models/common/Language.Common.Model";
 
 export interface DevelopmentDto{
 	id:string | null,
-	description:string,
+	description:Language,
 	image:string,
-	title:string,
+	title:Language,
 }

@@ -1,4 +1,4 @@
-import type { IProjectRepository } from "$lib/Repositories/Interface/I.Project.Repository";
+import type { IProjectRepository } from "$lib/Repositories/Interface/I.Project.repository";
 import type { Project } from "$lib/Models/Entities/Project.Entity.Model";
 import { Query } from "appwrite";
 import { Appwrite } from "$lib/Appwrite/appwrite";

@@ -20,7 +20,7 @@
       <Carousel autoplay autoplayDuration={50000} autoplayProgressVisible>
         {#each $carouselStore.data as carousel}
           <!-- svelte-ignore a11y-missing-attribute -->
-          <a title={carousel.title} class="block relative">
+          <a title = {carousel.title.en} class="block relative">
             <!-- svelte-ignore a11y-media-has-caption -->
             <video
               class="cursor-pointer w-full h-[400px] md:h-[900px] object-cover"

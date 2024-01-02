@@ -16,12 +16,18 @@ import type { ProductAttributeDto } from "$lib/Models/DTO/ProductAttribute.DTO.M
 import type { ProductAttribute } from "$lib/Models/Entities/ProductAttribute.Entity.Model";
 import type { AboutUs } from "$lib/Models/Entities/AboutUs.Entity.Model";
 import type { AboutUsDto } from "$lib/Models/DTO/AboutUs.DTO.Model";
+import { IndexOrder } from "../Enums/Index-Order.Enum.Model";
+import { ImagePosition } from "../Enums/Image-Position.Enum.Model";
 export class Dto {
   static ToCarouselDto(carousel: Carousel): CarouselDto | null {
     try {
       let dto: CarouselDto = {
         id: carousel.$id,
-        title: carousel.title as string,
+        title: {
+          en: carousel.title as string,
+          kr: carousel.title as string,
+          ar: carousel.title as string,
+        },
         video: carousel.video,
       };
 
@@ -35,9 +41,18 @@ export class Dto {
     try {
       let dto: DevelopmentDto = {
         id: development.$id,
-        description: development.description as string,
+        description: {
+          en: development.description as string,
+          kr: development.description as string,
+          ar: development.description as string,
+        },
         image: development.image,
-        title: development.title as string,
+        title: {
+          en: development.title as string,
+          kr: development.title as string,
+          ar: development.title as string,
+        },
+       
       };
 
       return dto;
@@ -74,7 +89,11 @@ export class Dto {
 
       let dto: TechnologyDto = {
         id: technology.$id,
-        title: technology.title as string,
+        title: {
+          en: technology.title as string,
+          kr: technology.title as string,
+          ar: technology.title as string,
+        },
         technologyAttributes: technologyAttributes,
       };
 
@@ -105,7 +124,12 @@ export class Dto {
     try {
       return {
         id: product.$id,
-        title: product.title,
+        title: {
+          en: product.title as string,
+          kr: product.title as string,
+          ar: product.title as string,
+        },
+    
         appLinksImage: {
           google: product.appLinkGoogleImage,
           apple: product.appLinkAppleImage,
@@ -127,11 +151,19 @@ export class Dto {
     try {
       return {
         id: productAttribute.$id,
-        title: productAttribute.title,
-        description: productAttribute.description,
+        title: {
+          en: productAttribute.title as string,
+          kr: productAttribute.title as string,
+          ar: productAttribute.title as string,
+        },
+        description: {
+          en: productAttribute.description as string,
+          kr: productAttribute.description as string,
+          ar: productAttribute.description as string,
+        },
         image: productAttribute.image,
-        index_order: productAttribute.index_order,
-        image_position: productAttribute.image_position
+        index_order: IndexOrder[productAttribute.index_order as keyof typeof IndexOrder],
+        image_position: ImagePosition[productAttribute.image_position as keyof typeof ImagePosition],
       };
     } catch (error: any) {
       throw new Error(error);
@@ -142,10 +174,23 @@ export class Dto {
     try {
       return {
         id: footer.$id,
-        description: footer.description,
+        description: {
+          en: footer.description as string,
+          kr: footer.description as string,
+          ar: footer.description as string,
+        },
         image: footer.image,
-        address1: footer.address1,
-        address2: footer.address2
+        address1: {
+          en: footer.address1 as string,
+          kr: footer.address1 as string,
+          ar: footer.address1 as string,
+        },
+        address2: {
+          en: footer.address2 as string,
+          kr: footer.address2 as string,
+          ar: footer.address2 as string,
+   
+        }
       };
     } catch (error: any) {
       throw new Error(error);
@@ -156,8 +201,16 @@ export class Dto {
     try {
       return {
         id: aboutUs.$id,
-        title: aboutUs.title,
-        description: aboutUs.description,
+        title: {
+          en: aboutUs.title as string,
+          kr: aboutUs.title as string,
+          ar: aboutUs.title as string,
+        },
+        description: {
+          en: aboutUs.description as string,
+          kr: aboutUs.description as string,
+          ar: aboutUs.description as string,
+        },
         image: aboutUs.image
       };
     } catch (error: any) {
