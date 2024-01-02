@@ -1,8 +1,8 @@
-import type { IDevelopmentRepository } from "$lib/Repositories/Interface/I.Development.repository";
 import type { Development } from "$lib/Models/Entities/Development.Entities.Model";
 import { Query } from "appwrite";
 import { Environment } from "$lib/Env/Environment";
 import { Appwrite } from "$lib/Appwrite/appwrite";
+import type { IDevelopmentRepository } from "$lib/Repositories/Interface/I.Development.Repository";
 
 export class DevelopmentRepository implements IDevelopmentRepository {
   async getDevelopments(): Promise<AppwriteResponse<Development>> {

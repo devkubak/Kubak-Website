@@ -1,16 +1,13 @@
 import { Appwrite } from "$lib/Appwrite/appwrite";
 import { Environment } from "$lib/Env/Environment";
 import type { ProductAttribute } from "$lib/Models/Entities/ProductAttribute.Entity.Model";
-
 import type { IProductAttributesRepository } from "$lib/Repositories/Interface/I.ProductAttributes.Repository";
-import { ID, Query } from "appwrite";
+import { Query } from "appwrite";
 
 export class ProductAttributesRepository
   implements IProductAttributesRepository
 {
-  
-  async getProductAttributes(
-  ): Promise<AppwriteResponse<ProductAttribute>> {
+  async getProductAttributes(): Promise<AppwriteResponse<ProductAttribute>> {
     try {
       const query = this.filterQuery([]);
       const { documents, total } = (await Appwrite.databases.listDocuments(
@@ -36,12 +33,9 @@ export class ProductAttributesRepository
       throw error;
     }
   }
-  
+
   private filterQuery(query: string[]): string[] {
-    query = [
-      Query.orderAsc( "index_order"),
-      Query.limit(3),
-    ];
+    query = [Query.orderAsc("index_order"), Query.limit(3)];
     return query;
   }
 }

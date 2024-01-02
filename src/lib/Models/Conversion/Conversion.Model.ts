@@ -24,9 +24,9 @@ export class Dto {
       let dto: CarouselDto = {
         id: carousel.$id,
         title: {
-          en: carousel.title as string,
-          kr: carousel.title as string,
-          ar: carousel.title as string,
+          en: carousel.carouselLanguages.title_en as string,
+          kr: carousel.carouselLanguages.title_kr as string,
+          ar: carousel.carouselLanguages.title_ar as string,
         },
         video: carousel.video,
       };
@@ -42,17 +42,16 @@ export class Dto {
       let dto: DevelopmentDto = {
         id: development.$id,
         description: {
-          en: development.description as string,
-          kr: development.description as string,
-          ar: development.description as string,
+          en: development.developmentLanguages.description_en as string,
+          kr: development.developmentLanguages.description_kr as string,
+          ar: development.developmentLanguages.description_ar as string,
         },
         image: development.image,
         title: {
-          en: development.title as string,
-          kr: development.title as string,
-          ar: development.title as string,
+          en: development.developmentLanguages.title_en as string,
+          kr: development.developmentLanguages.title_kr as string,
+          ar: development.developmentLanguages.title_ar as string,
         },
-       
       };
 
       return dto;
@@ -90,9 +89,9 @@ export class Dto {
       let dto: TechnologyDto = {
         id: technology.$id,
         title: {
-          en: technology.title as string,
-          kr: technology.title as string,
-          ar: technology.title as string,
+          en: technology.technologiesLanguages.title_en as string,
+          kr: technology.technologiesLanguages.title_kr as string,
+          ar: technology.technologiesLanguages.title_ar as string,
         },
         technologyAttributes: technologyAttributes,
       };
@@ -125,11 +124,11 @@ export class Dto {
       return {
         id: product.$id,
         title: {
-          en: product.title as string,
-          kr: product.title as string,
-          ar: product.title as string,
+          en: product.productLanguages.title_en as string,
+          kr: product.productLanguages.title_kr as string,
+          ar: product.productLanguages.title_ar as string,
         },
-    
+
         appLinksImage: {
           google: product.appLinkGoogleImage,
           apple: product.appLinkAppleImage,
@@ -138,7 +137,7 @@ export class Dto {
           return this.ToProductAttributeDto(
             productAttribute
           ) as ProductAttributeDto;
-        })
+        }),
       };
     } catch (error: any) {
       throw new Error(error);
@@ -152,18 +151,25 @@ export class Dto {
       return {
         id: productAttribute.$id,
         title: {
-          en: productAttribute.title as string,
-          kr: productAttribute.title as string,
-          ar: productAttribute.title as string,
+          en: productAttribute.productAttributesLanguages.title_en as string,
+          kr: productAttribute.productAttributesLanguages.title_kr as string,
+          ar: productAttribute.productAttributesLanguages.title_ar as string,
         },
         description: {
-          en: productAttribute.description as string,
-          kr: productAttribute.description as string,
-          ar: productAttribute.description as string,
+          en: productAttribute.productAttributesLanguages
+            .description_en as string,
+          kr: productAttribute.productAttributesLanguages
+            .description_kr as string,
+          ar: productAttribute.productAttributesLanguages
+            .description_ar as string,
         },
         image: productAttribute.image,
-        index_order: IndexOrder[productAttribute.index_order as keyof typeof IndexOrder],
-        image_position: ImagePosition[productAttribute.image_position as keyof typeof ImagePosition],
+        index_order:
+          IndexOrder[productAttribute.index_order as keyof typeof IndexOrder],
+        image_position:
+          ImagePosition[
+            productAttribute.image_position as keyof typeof ImagePosition
+          ],
       };
     } catch (error: any) {
       throw new Error(error);
@@ -175,22 +181,21 @@ export class Dto {
       return {
         id: footer.$id,
         description: {
-          en: footer.description as string,
-          kr: footer.description as string,
-          ar: footer.description as string,
+          en: footer.footerLanguages.description_en as string,
+          kr: footer.footerLanguages.description_kr as string,
+          ar: footer.footerLanguages.description_ar as string,
         },
         image: footer.image,
         address1: {
-          en: footer.address1 as string,
-          kr: footer.address1 as string,
-          ar: footer.address1 as string,
+          en: footer.footerLanguages.address1_en as string,
+          kr: footer.footerLanguages.address1_kr as string,
+          ar: footer.footerLanguages.address1_ar as string,
         },
         address2: {
-          en: footer.address2 as string,
-          kr: footer.address2 as string,
-          ar: footer.address2 as string,
-   
-        }
+          en: footer.footerLanguages.address2_en as string,
+          kr: footer.footerLanguages.address2_kr as string,
+          ar: footer.footerLanguages.address2_ar as string,
+        },
       };
     } catch (error: any) {
       throw new Error(error);
@@ -202,16 +207,16 @@ export class Dto {
       return {
         id: aboutUs.$id,
         title: {
-          en: aboutUs.title as string,
-          kr: aboutUs.title as string,
-          ar: aboutUs.title as string,
+          en: aboutUs.aboutUsLanguage.title_en as string,
+          kr: aboutUs.aboutUsLanguage.title_kr as string,
+          ar: aboutUs.aboutUsLanguage.title_ar as string,
         },
         description: {
-          en: aboutUs.description as string,
-          kr: aboutUs.description as string,
-          ar: aboutUs.description as string,
+          en: aboutUs.aboutUsLanguage.description_en as string,
+          kr: aboutUs.aboutUsLanguage.description_kr as string,
+          ar: aboutUs.aboutUsLanguage.description_ar as string,
         },
-        image: aboutUs.image
+        image: aboutUs.image,
       };
     } catch (error: any) {
       throw new Error(error);
