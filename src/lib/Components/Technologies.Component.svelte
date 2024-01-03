@@ -1,4 +1,5 @@
 <script lang="ts">
+  import type { Language } from "$lib/Models/Common/Language.Common.Model";
   import type { TechnologyDto } from "$lib/Models/DTO/Technology.Dto.Model";
   import { technologyStore } from "$lib/Store/Technology.Store";
   import { Tabs, TabItem } from "flowbite-svelte";
@@ -13,6 +14,23 @@
       console.log(e);
     }
   });
+
+  function checkLanguage(
+    selectedLanguage: string,
+    text: Language
+  ): string {
+    console.log(text);
+    if (Object.keys(text).includes(selectedLanguage)) {
+      console.log(text);
+      return text[
+        selectedLanguage as keyof typeof text
+      ] as string;
+    } else {
+      return text.en;
+    }
+    
+  }
+  export let selectedLanguage: string;
 </script>
 
 <div
@@ -30,7 +48,7 @@
         activeClasses="bg-white dark:bg-[#363636] w-full rounded-lg md:rounded-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out mr-2"
         inactiveClasses="hover:bg-[#f1f1f1] dark:hover:bg-[#404040] w-full rounded-lg md:rounded-xl py-5 w-full px-4 text-black dark:text-white font-bold duration-300 ease-in-out"
       >
-        <span slot="title" class="text-sm">{technology.title}</span>
+        <span slot="title" class="text-sm">{checkLanguage(selectedLanguage, technology.title)}</span>
         <div
           class="flex flex-wrap w-full h-auto justify-center items-center p-4 gap-3"
         >

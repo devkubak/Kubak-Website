@@ -1,4 +1,5 @@
 <script lang="ts">
+  import type { Language } from "$lib/Models/Common/Language.Common.Model";
   import { developmentStore } from "$lib/Store/Development.Store";
   import { Tabs, TabItem } from "flowbite-svelte";
   import { onMount } from "svelte";
@@ -11,6 +12,22 @@
       console.log(e);
     }
   });
+  export let selectedLanguage: string;
+  function checkLanguage(
+    selectedLanguage: string,
+    text: Language
+  ): string {
+    console.log(text);
+    if (Object.keys(text).includes(selectedLanguage)) {
+      console.log(text);
+      return text[
+        selectedLanguage as keyof typeof text
+      ] as string;
+    } else {
+      return text.en;
+    }
+    
+  }
 </script>
 
 <div
@@ -28,7 +45,7 @@
         activeClasses="bg-white dark:bg-[#363636] w-full rounded-lg md:rounded-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out"
         inactiveClasses="hover:bg-[#f1f1f1] dark:hover:bg-[#404040] w-full rounded-lg md:rounded-xl py-5 w-full px-4  text-black dark:text-white font-bold duration-300 ease-in-out"
       >
-        <span slot="title" class="text-sm">{development.title}</span>
+        <span slot="title" class="text-sm">{checkLanguage(selectedLanguage, development.title)}</span>
         <div
           class="flex flex-col w-full h-1/2 justify-center items-center p-4 gap-3"
         >
@@ -38,7 +55,7 @@
             alt=""
           />
           <p class="dark:text-white text-sm md:text-lg h-1/2 w-full">
-            {development.description}
+            {checkLanguage(selectedLanguage, development.description)}
           </p>
         </div>
       </TabItem>

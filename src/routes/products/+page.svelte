@@ -4,6 +4,8 @@
   import { DeviceMockup } from "flowbite-svelte";
   import { onMount } from "svelte";
   import { ImagePosition } from "$lib/Models/Enums/Image-Position.Enum.Model";
+  import type { Language } from "$lib/Models/Common/Language.Common.Model";
+  import { locale } from "svelte-i18n";
 
   onMount(async () => {
     try {
@@ -13,6 +15,22 @@
       console.log(e);
     }
   });
+
+  function checkLanguage(
+    text: Language,
+    lang?: string | null,
+  ): string {
+    console.log(text);
+    if (Object.keys(text).includes(lang as string)) {
+      console.log(text);
+      return text[
+        lang as keyof typeof text
+      ] as string;
+    } else {
+      return text.en;
+    }
+    
+  }
 </script>
 
 {#if $productStore}
@@ -20,7 +38,7 @@
   class="w-full bg-white dark:bg-[#212121] dark:text-white pb-12 pt-32 flex justify-center items-center text-center"
 >
   <p class="md:text-4xl container mx-auto">
-   {$productStore.title}
+    {checkLanguage($productStore.title,$locale)}
   </p>
 </div>
 
@@ -29,7 +47,7 @@
   class="container mx-auto flex justify-center items-center mt-5 gap-5  {productAttribute.image_position == ImagePosition.LEFT ? "md:flex-row-reverse" : "md:flex-row" } flex-col-reverse flex-wrap md:flex-nowrap px-4 mb-24"
 >
   <p class="md:text-xl dark:text-white">
-   {productAttribute.description}
+    {checkLanguage( productAttribute.title,$locale)}
   </p>
   <DeviceMockup device="ios">
     <img
