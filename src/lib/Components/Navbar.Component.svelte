@@ -25,7 +25,7 @@
   let selectedLanguage = 'en';
   $: currentLang = langOptions[selectedLanguage];
 
-  const value = {
+   const value = {
       en: "English",
       kr: "Kurdish",
       ar: "Arabic",

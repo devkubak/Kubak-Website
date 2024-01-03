@@ -6,6 +6,7 @@
   import { projectStore } from "$lib/Store/Project.Store";
   import Ourprojects from "$lib/Components/Ourprojects.svelte";
   import { goto } from "$app/navigation";
+  import type { Language } from "$lib/Models/common/Language.Common.Model";
 
   onMount(async () => {
     try {
@@ -14,6 +15,21 @@
       console.log(e);
     }
   });
+
+  function checkLanguage(
+    selectedLanguage: string,
+    text: Language
+  ): string {
+    console.log(text);
+    if (Object.keys(text).includes(selectedLanguage)) {
+      console.log(text);
+      return text[
+        selectedLanguage as keyof typeof text
+      ] as string;
+    } else {
+      return text.en;
+    }
+  }
 </script>
 
 <Carousel />
