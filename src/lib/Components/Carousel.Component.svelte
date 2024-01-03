@@ -4,14 +4,38 @@
   import { browser } from "$app/environment";
   import { onMount } from "svelte";
   import { carouselStore } from "$lib/Store/Carousel.Store";
+  import type { Language } from "$lib/Models/common/Language.Common.Model";
 
   onMount(async () => {
     try {
       await carouselStore.getAll();
+      console.log($carouselStore.data);
+      
     } catch (e) {
       console.log(e);
     }
   });
+
+
+    
+ 
+
+  function checkLanguage(
+    selectedLanguage: string,
+    text: Language
+  ): string {
+    console.log(text);
+    if (Object.keys(text).includes(selectedLanguage)) {
+      console.log(text);
+      return text[
+        selectedLanguage as keyof typeof text
+      ] as string;
+    } else {
+      return text.en;
+    }
+    
+  }
+  export let selectedLanguage: string;
 </script>
 
 <div class="w-full flex flex-col justify-end gap-5">
@@ -35,7 +59,7 @@
               class="absolute bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse text-center md:pl-44 md:text-2xl items-center md:items-start p-2 bg-black bg-opacity-50 text-white gap-4 text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
             >
             
-              {carousel.title}
+            {checkLanguage(selectedLanguage, carousel.title)}
             </div>
           </a>
         {/each}

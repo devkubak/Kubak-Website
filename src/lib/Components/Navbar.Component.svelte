@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores";
+  import type { Language } from "$lib/Models/common/Language.Common.Model";
   import {
     Navbar, NavBrand, NavLi, NavUl, NavHamburger, Img, Button, Dropdown, DropdownItem
   } from "flowbite-svelte";
@@ -23,6 +24,29 @@
   // Selected language state
   let selectedLanguage = 'en';
   $: currentLang = langOptions[selectedLanguage];
+
+  const value = {
+      en: "English",
+      kr: "Kurdish",
+      ar: "Arabic",
+    };
+
+
+  function checkLanguage(
+    selectedLanguage: string,
+    text: Language
+  ): string {
+    console.log(text);
+    if (Object.keys(text).includes(selectedLanguage)) {
+      console.log(text);
+      return text[
+        selectedLanguage as keyof typeof text
+      ] as string;
+    } else {
+      return text.en;
+    }
+  }
+    
 </script>
 
 <div class="w-full absolute z-10">
@@ -43,9 +67,9 @@
         <div class="flex justify-center items-center text-center gap-2">
     
             <select bind:value={selectedLanguage} class="w-20 h-10 md:ml-5 lg:ml-36 xl:ml-64 2xl:ml-96 rounded-full bg-[#f17f18] flex justify-center items-center text-white">{selectedLanguage}<ChevronDownSolid class="ms-2 w-2 h-2 text-white dark:text-white" />
-              <option value="en">EN</option>
-              <option value="kr">KR</option>
-              <option value="ar">AR</option>
+              {#each Object.keys(value) as lang}
+    <option value={lang}>{value[lang]}</option>
+  {/each}
             </select>
           </div>
           <DarkMode class="text-lg">
