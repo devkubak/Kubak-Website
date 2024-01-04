@@ -19,13 +19,12 @@
   });
 
   function checkLanguage(
-    text: Language
+    text: Language,
+    lang?:string | null
   ): string {
-    console.log(text);
-    if (Object.keys(text).includes($locale as string)) {
-      console.log(text);
+    if (Object.keys(text).includes(lang as string)) {
       return text[
-        $locale as keyof typeof text
+        lang as keyof typeof text
       ] as string;
     } else {
       return text.en;
@@ -49,14 +48,14 @@
       ulClass="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400"
     >
       <p class="text-center px-4">
-        {checkLanguage($footerStore.description)}
+        {checkLanguage($footerStore.description,$locale)}
       </p>
 
       <div
         class="w-full flex justify-between items-center mt-12 text-center text-gray-800 dark:text-white text-[8px] md:text-[12px] px-4 gap-3"
       >
-        <p>{checkLanguage($footerStore.address1)}</p>
-        <p>{checkLanguage($footerStore.address2)}</p>
+        <p>{checkLanguage($footerStore.address1,$locale)}</p>
+        <p>{checkLanguage($footerStore.address2,$locale)}</p>
       </div>
     </FooterLinkGroup>
   </div>

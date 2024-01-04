@@ -50,12 +50,27 @@
               <source src={carousel.video} type="video/mp4" />
             </video>
 
+            {#if $locale == "en"}
+             
             <div
-              class="absolute bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse text-center md:pl-44 md:text-2xl items-center md:items-start p-2 bg-black bg-opacity-50 text-white gap-4 text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
+            class="absolute bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse text-center md:pl-44 md:text-2xl items-center md:items-start p-2 bg-black bg-opacity-50 text-white gap-4 text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
             >
             
             {checkLanguage(carousel.title,$locale)}
-            </div>
+          </div>
+          {:else}
+
+          <div
+          class="absolute bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse text-center md:pr-44 md:text-2xl items-center md:items-end p-2 bg-black bg-opacity-50 text-white gap-4 text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
+          >
+          
+          {checkLanguage(carousel.title,$locale)}
+        </div>
+          {/if}
+
+
+
+
           </a>
         {/each}
       </Carousel>

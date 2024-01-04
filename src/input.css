@@ -87,9 +87,17 @@
     font-family: "kurdish";
     font-style: normal;
     src: url('/fonts/bahij.ttf') format('truetype'),
+
+  }
+  @font-face {
+    font-family: "kurdish_plain";
+    font-style: normal;
+    src: url('/fonts/bahij_plain.ttf') format('truetype')
     
     
     
+
+
   }
   :global(body){
       font-family: "kurdish";

@@ -23,7 +23,7 @@
 <div
   class="container mx-auto text-center dark:text-white text-xs md:text-xl bg-white dark:bg-[#212121] rounded-2xl p-3"
 >
-  <p>
+  <p class="leading-10">
     {$_("aboutDescription")}
   </p>
 </div>
