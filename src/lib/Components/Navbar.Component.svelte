@@ -100,7 +100,7 @@
               class="ms-2 w-2 h-2 text-white dark:text-white"
             />
             {#each Object.keys(value) as lang}
-              <option value={lang}>{value[lang]}</option>
+              <option value={lang} class="text-black">{value[lang]}</option>
             {/each}
           </select>
           <DarkMode class="text-lg">
