@@ -43,9 +43,10 @@
 <div class="w-full absolute z-10">
   <Navbar
     class="bg-[#0000009a] dark:bg-[#000000be] backdrop-blur-md text-center fixed"
+    style="font-family:kurdish;"
   >
   <div class="flex w-full xl:gap-24 md:order-2 justify-between flex-wrap md:justify-center"
-  style="font-family: kurdish;"
+  style="font-family:kurdish;"
   >
 
   
@@ -65,7 +66,7 @@
   {activeClass}
   {nonActiveClass}
   class="md:text-md lg:text-lg gap-2"
-  style="font-family: 'Kurdish';"
+  style="font-family:kurdish;"
   >
       <div class="w-full md:flex md:justify-around gap-12">
         {#if $locale == "en"}
@@ -91,10 +92,10 @@
       </div>
         {/if}
 
-        <div class="flex justify-around items-center text-center gap-2">
+        <div class="flex justify-center md:justify-around items-center text-center gap-2">
           <select
             bind:value={selectedLanguage}
-            class="w-20 h-10 rounded-full bg-[#f17f18] flex justify-center items-center text-white"
+            class="w-20 h-10 rounded-full bg-[#ffffff00] flex justify-center items-center text-white"
             >{selectedLanguage}<ChevronDownSolid
               class="ms-2 w-2 h-2 text-white dark:text-white"
             />
