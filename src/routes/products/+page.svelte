@@ -31,6 +31,10 @@
     }
     
   }
+
+  $:{
+    console.log($locale);
+  }
 </script>
 
 {#if $productStore}
@@ -44,11 +48,17 @@
 
 {#each $productStore.productAttribute as productAttribute}
 <div
-  class="container mx-auto flex justify-center items-center mt-5 gap-5  {productAttribute.image_position == ImagePosition.LEFT ? "md:flex-row-reverse" : "md:flex-row" } flex-col-reverse flex-wrap md:flex-nowrap px-4 mb-24"
+  class="container mx-auto flex justify-center items-center mt-5 gap-5   {productAttribute.image_position == ImagePosition.LEFT ? "md:flex-row-reverse" : "md:flex-row" } flex-col-reverse flex-wrap md:flex-nowrap px-4 mb-24"
 >
-  <p class="md:text-xl dark:text-white">
+<div class="w-full h-auto flex flex-col gap-3" dir="{$locale == "en" ? "ltr" : "rtl"}">
+
+  <p class="md:text-2xl text-[#f17f18] text-lg font-bold ">
     {checkLanguage( productAttribute.title,$locale)}
   </p>
+  <p class="md:text-xl dark:text-white">
+    {checkLanguage( productAttribute.description,$locale)}
+  </p>
+</div>
   <DeviceMockup device="ios">
     <img
       src={productAttribute.image || "/images/phone1.jpg"}

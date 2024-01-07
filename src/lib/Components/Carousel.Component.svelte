@@ -11,22 +11,16 @@
     try {
       await carouselStore.getAll();
       console.log($carouselStore.data);
-      
     } catch (e) {
       console.log(e);
     }
   });
 
-  function checkLanguage(
-    text: Language,
-    lang?:string | null
-  ): string {
+  function checkLanguage(text: Language, lang?: string | null): string {
     console.log(text);
     if (Object.keys(text).includes(lang as string)) {
       console.log(text);
-      return text[
-        lang as keyof typeof text
-      ] as string;
+      return text[lang as keyof typeof text] as string;
     } else {
       return text.en;
     }
@@ -39,7 +33,7 @@
       <Carousel autoplay autoplayDuration={50000} autoplayProgressVisible>
         {#each $carouselStore.data as carousel}
           <!-- svelte-ignore a11y-missing-attribute -->
-          <a title = {carousel.title.en} class="block relative">
+          <a title={carousel.title.en} class="block relative">
             <!-- svelte-ignore a11y-media-has-caption -->
             <video
               class="cursor-pointer w-full h-[400px] md:h-[900px] object-cover"
@@ -51,26 +45,18 @@
             </video>
 
             {#if $locale == "en"}
-             
-            <div
-            class="absolute bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse text-center md:pl-44 md:text-2xl items-center md:items-start p-2 bg-black bg-opacity-50 text-white gap-4 text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
-            >
-            
-            {checkLanguage(carousel.title,$locale)}
-          </div>
-          {:else}
-
-          <div
-          class="absolute bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse text-center md:pr-44 md:text-2xl items-center md:items-end p-2 bg-black bg-opacity-50 text-white gap-4 text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
-          >
-          
-          {checkLanguage(carousel.title,$locale)}
-        </div>
-          {/if}
-
-
-
-
+              <div
+                class="absolute bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse text-center md:pl-44 md:text-2xl items-center md:items-start p-2 bg-black bg-opacity-50 text-white gap-4 text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
+              >
+                {checkLanguage(carousel.title, $locale)}
+              </div>
+            {:else}
+              <div
+                class="absolute bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse text-center md:pr-44 md:text-2xl items-center md:items-end p-2 bg-black bg-opacity-50 text-white gap-4 text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
+              >
+                {checkLanguage(carousel.title, $locale)}
+              </div>
+            {/if}
           </a>
         {/each}
       </Carousel>
