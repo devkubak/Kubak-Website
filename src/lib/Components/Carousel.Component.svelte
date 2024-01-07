@@ -2,19 +2,9 @@
   //@ts-ignore
   import Carousel from "svelte-carousel";
   import { browser } from "$app/environment";
-  import { onMount } from "svelte";
   import { carouselStore } from "$lib/Store/Carousel.Store";
   import type { Language } from "$lib/Models/Common/Language.Common.Model";
   import { locale } from "svelte-i18n";
-
-  onMount(async () => {
-    try {
-      await carouselStore.getAll();
-      console.log($carouselStore.data);
-    } catch (e) {
-      console.log(e);
-    }
-  });
 
   function checkLanguage(text: Language, lang?: string | null): string {
     console.log(text);

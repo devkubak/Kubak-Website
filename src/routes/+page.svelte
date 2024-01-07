@@ -9,7 +9,6 @@
 
   onMount(async () => {
     try {
-      console.log($locale);
       
       await projectStore.getAll();
     } catch (e) {

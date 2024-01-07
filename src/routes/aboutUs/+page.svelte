@@ -53,9 +53,9 @@
         class="w-full h-auto flex flex-col justify-center items-center gap-3"
       >
         <p class="text-[#f17f18] text-2xl font-bold">
-          {checkLanguage(aboutUs.title,$locale)}
+          {checkLanguage(aboutUs.title,$locale)??""}
         </p>
-        <p class="text-lg">{checkLanguage(aboutUs.description,$locale)}</p>
+        <p class="text-lg " dir="{$locale == "en" ? "ltr" : "rtl"}" >{checkLanguage(aboutUs.description,$locale)} </p>
       </div>
       <div
         class="w-full h-auto flex flex-col justify-center items-center gap-3"
