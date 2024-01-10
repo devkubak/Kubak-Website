@@ -9,7 +9,6 @@
 
   onMount(async () => {
     try {
-      
       await projectStore.getAll();
     } catch (e) {
       console.log(e);
@@ -17,7 +16,7 @@
   });
 </script>
 
-<Carousel/>
+<Carousel />
 
 <div
   class="container mx-auto text-center dark:text-white text-xs md:text-xl bg-white dark:bg-[#212121] rounded-2xl p-3"
@@ -33,7 +32,7 @@
   </p>
 </div>
 
-<DevelopmentProcess selectedLanguage={$locale+""}/>
+<DevelopmentProcess selectedLanguage={$locale + ""} />
 <div
   class="w-full h-12 flex justify-center items-center text-center mt-12 mb-3"
 >
@@ -42,7 +41,7 @@
   </p>
 </div>
 
-<Technologies selectedLanguage={$locale+""}/>
+<Technologies selectedLanguage={$locale + ""} />
 
 <div
   class="w-full h-12 flex justify-center items-center text-center mt-12 mb-3"
@@ -51,7 +50,6 @@
     {$_("ourProjects")}
   </p>
 </div>
-
 
 <OurProjects />
 <!-- <div
