@@ -1,6 +1,6 @@
 {
   "name": "kubak-website",
-  "version": "0.3.1",
+  "version": "0.8.9",
   "private": true,
   "scripts": {
     "dev": "vite dev",
