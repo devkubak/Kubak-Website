@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { productAttributeStore } from "$lib/Store/ProductAttribute.Store";
   import { productStore } from "$lib/Store/Product.Store";
   import { DeviceMockup } from "flowbite-svelte";
   import { onMount } from "svelte";
