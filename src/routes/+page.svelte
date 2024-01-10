@@ -1,8 +1,8 @@
 <script lang="ts">
-	import OurProjects from '$lib/Components/OurProjects.svelte';
   import Carousel from "$lib/Components/Carousel.Component.svelte";
   import Technologies from "$lib/Components/Technologies.Component.svelte";
   import DevelopmentProcess from "$lib/Components/DevelopmentProcess.Component.svelte";
+	import OurProjects from '$lib/Components/OurProjects.Component.svelte';
   import { onMount } from "svelte";
   import { projectStore } from "$lib/Store/Project.Store";
   import { _, locale } from "svelte-i18n";
