@@ -10,7 +10,6 @@
   onMount(async () => {
     try {
       await productStore.get();
-      console.log($productStore);
     } catch (e) {
       console.log(e);
     }
