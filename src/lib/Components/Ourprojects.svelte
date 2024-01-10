@@ -24,7 +24,6 @@
   onMount(async () => {
     try {
       await projectStore.getAll();
-      console.log($projectStore.data);
     } catch (e) {
       console.log(e);
     }
