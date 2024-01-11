@@ -39,7 +39,7 @@
   <Tabs
     style="pill"
     class="flex"
-    defaultClass="flex flex-row md:flex-col gap-3 flex-wrap justify-center mr-4 mb-4 md:mb-0"
+    defaultClass="flex flex-row md:flex-col-reverse gap-3 flex-wrap justify-center mr-4 mb-4 md:mb-0"
     contentClass=" w-full h-auto min-h-[610px] bg-white dark:bg-[#363636] rounded-2xl flex items-start justify-center"
   >
     {#each $developmentStore.data as development}
@@ -75,7 +75,7 @@
   <Tabs
     style="pill"
     class="flex"
-    defaultClass="flex flex-row md:flex-col gap-3 flex-wrap justify-center ml-4 mb-4 md:mb-0"
+    defaultClass="flex flex-row md:flex-col-reverse gap-3 flex-wrap justify-center ml-4 mb-4 md:mb-0"
     contentClass=" w-full h-auto min-h-[610px] bg-white dark:bg-[#363636] rounded-2xl flex items-start justify-center"
   >
     {#each $developmentStore.data as development}

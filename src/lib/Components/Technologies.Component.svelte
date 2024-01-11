@@ -43,7 +43,7 @@
   <Tabs
     style="pill"
     class="flex"
-    defaultClass="flex flex-row md:flex-col gap-3 mb-4 mr-2 md:mb-0 flex-wrap justify-center"
+    defaultClass="flex flex-row md:flex-col-reverse gap-3 mb-4 mr-2 md:mb-0 flex-wrap justify-center"
     contentClass=" w-full h-[410px] bg-white dark:bg-[#363636] rounded-2xl flex items-center justify-center"
   >
     {#each technologies as technology}
@@ -83,7 +83,7 @@
   <Tabs
     style="pill"
     class="flex"
-    defaultClass="flex flex-row md:flex-col gap-3 mb-4 ml-2 md:mb-0 flex-wrap justify-center"
+    defaultClass="flex flex-row md:flex-col-reverse gap-3 mb-4 ml-2 md:mb-0 flex-wrap justify-center"
     contentClass=" w-full h-[410px] bg-white dark:bg-[#363636] rounded-2xl flex items-center justify-center"
   >
     {#each technologies as technology}
