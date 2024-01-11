@@ -75,4 +75,24 @@
   .seemore_txt {
     font-weight: bold;
   }
+
+  video::-webkit-media-controls-container {
+  opacity: 0 !important;
+}
+
+*::-webkit-media-controls-panel {
+  display: none!important;
+  -webkit-appearance: none;
+}
+    /* Old shadow dom for play button */
+*::--webkit-media-controls-play-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
+    /* New shadow dom for play button */
+    /* This one works */
+*::-webkit-media-controls-start-playback-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
 </style>
