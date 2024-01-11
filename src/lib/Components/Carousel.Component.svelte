@@ -30,6 +30,7 @@
               autoplay
               loop
               muted
+              playsinline
             >
               <source src={carousel.video} type="video/mp4" />
             </video>
