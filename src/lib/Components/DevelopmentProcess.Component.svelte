@@ -77,7 +77,7 @@
       
         <div
           class={`${selectedCard === index
-            ? 'bg-[#212121a9] h-auto'
+            ? 'bg-[#212121a9] h-auto w-full'
             : 'bg-[#212121a9] h-full '} py-3 px-4 flex justify-center items-center backdrop-blur-lg`}
           id="row"
           style="width: 100%;"
