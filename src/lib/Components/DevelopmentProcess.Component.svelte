@@ -74,7 +74,7 @@
         class:selected={selectedCard === index}
         on:click={() => handleCardClick(index)}
       >
-      <p class="absolute z-50 text-white font-bold text-lg w-full h-16 flex justify-center items-center" id="title-text">{checkLanguage(selectedLanguage, development.title)}</p>
+      <p class="absolute z-50 text-white rounded-full font-bold text-lg w-full h-16 flex justify-center items-center" id="title-text">{checkLanguage(selectedLanguage, development.title)}</p>
         <div
           class={`${selectedCard === index
             ? 'bg-[#212121a9] h-auto'
@@ -182,7 +182,7 @@
 
   input:checked + label #title-text{
     opacity: 0 !important;
-    transform: translateY(0px) !important;
+   
   }
     input:checked + label#card {
     width: 80%;
