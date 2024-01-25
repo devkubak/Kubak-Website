@@ -56,10 +56,12 @@
         name="card-group"
         checked={index == $developmentStore.total % 4}
         on:change={() => handleCardClick(index)}
+        
       />
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
       <label
+     
         class="{selectedCard === index
           ? 'w-[80%] md:w-[80px] h-full'
           : 'w-[80%] md:w-[80px] h-16 md:h-[600px]'} overflow-hidden object-cover cursor-pointer rounded-[2rem] my-0 mx-2 flex items-end"
@@ -82,7 +84,7 @@
           id="row"
           style="width: 100%;"
         >
-        <p class="absolute z-50 text-white text-center rounded-full font-bold text-lg w-full h-16 flex justify-center items-center" id="title-text">{checkLanguage(selectedLanguage, development.title)}</p>
+        <p class="absolute z-50 text-white text-center rounded-full font-bold text-lg w-full h-16 flex  justify-center items-center" id="title-text">{checkLanguage(selectedLanguage, development.title)}</p>
           <div
             class="content-container font-bold "
             id="description"
@@ -130,12 +132,35 @@
     transition: all 0.3s ease;
   }
 
-  #title-text{
-    opacity: 0;
-  
+  #title-text {
+    opacity: 1;
+    transition: all 5s ease-in-out;
+    animation: rotateTitle 1s linear;
+    -webkit-animation: rotateTitle 1s linear;
+    -moz-animation: rotateTitle 1s linear;
+    transform: rotate(-90deg)
+
   }
 
+  input:checked + label #title-text {
+    opacity: 100 !important;
+    display: none !important;
+    animation: opacityTitle .1s ;
+    -webkit-animation: opacityTitle .1s ;
+    -moz-animation: opacityTitle .1s ;
+  }
 
+  @keyframes rotateTitle {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-90deg); }
+  }
+
+  @keyframes opacityTitle {
+    from { opacity:100 ; }
+    to { opacity:100 ; }
+   
+   
+  }
   input:checked + label .content-container {
     opacity: 1 !important;
     transform: translateY(0px) !important;
@@ -178,13 +203,32 @@
 
     #title-text{
     opacity: 1;
-  
+    transform: none;
+    
+    
   }
 
   input:checked + label #title-text{
-    opacity: 0 !important;
-   
+    opacity: 100 !important;
+    display: none !important;
+    transform: none;
+    animation: opacityTitle .1s ;
+    -webkit-animation: opacityTitle .1s ;
+    -moz-animation: opacityTitle .1s ;
   }
+
+
+  @keyframes rotateTitle {
+    from { scale: 2; }
+    to { scale: 1; }
+    
+  }
+
+  @keyframes opacityTitle {
+    from { opacity:100 ; }
+    to { opacity:100 ; }
+  }
+
     input:checked + label#card {
     width: 80%;
     height: 350px;
