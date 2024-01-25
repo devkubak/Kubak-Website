@@ -77,7 +77,7 @@
         <div
           class={`${selectedCard === index
             ? 'bg-[#212121a9] h-auto'
-            : 'bg-[#212121a9] h-full '} py-8 px-4 flex justify-center items-center backdrop-blur-lg`}
+            : 'bg-[#212121a9] h-full '} py-3 px-4 flex justify-center items-center backdrop-blur-lg`}
           id="row"
           style="width: 100%;"
         >
@@ -86,10 +86,10 @@
             id="description"
             class:selected={selectedCard === index}
           >
-            <h4 class="text-[#f17f18] text-lg">
+            <h4 class="text-[#f17f18] text-sm md:text-lg">
               {checkLanguage(selectedLanguage, development.title)}
             </h4>
-            <p class="text-white pt-[5px] px-2">
+            <p class="text-white text-xs md:text-lg pt-[5px] px-2">
               {checkLanguage(selectedLanguage, development.description)}
             </p>
           </div>
@@ -140,7 +140,7 @@
 
   #description > h4 {
     text-transform: uppercase;
-    margin-top: 13px;
+    margin-top: 2px;
   }
 
   input {
@@ -165,5 +165,11 @@
       height: 400px;
       width: 80% !important;
     }
+
+    input:checked + label#card {
+    width: 80%;
+    height: 350px;
+    filter: opacity(100%);
+  }
   }
 </style>
