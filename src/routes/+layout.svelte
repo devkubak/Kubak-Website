@@ -13,12 +13,17 @@
   import { technologyAttributeStore } from "$lib/Store/TechnologyAttibute.Store";
   import { onMount } from "svelte";
   import { Img } from "flowbite-svelte";
-
+  import AOS from 'aos';
+  import 'aos/dist/aos.css';
+  
+  // Initialize AOS
+ 
   let loading = true;
 	onMount(async () => {
 		try {
       await carouselStore.getAll();
 			await footerStore.get();
+      AOS.init();
 		} finally {
 			loading = false;
 		}

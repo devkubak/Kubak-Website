@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 :root {
     --sc-color-rgb-light-50p: #3434348b !important;
     --sc-color-rgb-light: ##fff !important;

@@ -5,6 +5,7 @@
   import { carouselStore } from "$lib/Store/Carousel.Store";
   import type { Language } from "$lib/Models/Common/Language.Common.Model";
   import { locale } from "svelte-i18n";
+  
 
   function checkLanguage(text: Language, lang?: string | null): string {
     console.log(text);
@@ -17,7 +18,7 @@
   }
 </script>
 
-<div class="w-full flex flex-col justify-end gap-5">
+<div class="w-full flex flex-col justify-end gap-5" >
   <div class="w-full mt-14 md:mt-0 rounded-none">
     {#if browser && $carouselStore.data.length > 0}
       <Carousel autoplay autoplayDuration={50000} autoplayProgressVisible>
@@ -39,7 +40,11 @@
               <div
                 class="absolute bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse text-center md:pl-44 md:text-2xl items-center md:items-start p-2 bg-black bg-opacity-50 text-white gap-4 text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
               >
+              <div class="absolute bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse text-center md:pl-44 md:text-2xl items-center md:items-start p-2  gap-4 text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
+               data-aos="fade-up"
+              data-aos-anchor-placement="center-center" data-aos-duration="3000">
                 {checkLanguage(carousel.title, $locale)}
+              </div>
               </div>
             {:else}
               <div

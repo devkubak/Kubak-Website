@@ -39,6 +39,8 @@
 {#if $locale == "en"}
 <div
   class="container mx-auto w-full md:w-1/2 flex flex-col md:flex-row justify-center items-center h-auto bg-[#e3e3e3] dark:bg-[#212121] rounded-3xl p-5"
+  data-aos="fade-up"
+  data-aos-duration="2000"
 >
   <Tabs
     style="pill"
