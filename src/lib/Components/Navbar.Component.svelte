@@ -95,7 +95,7 @@
         <div class="flex justify-center md:justify-around items-center text-center gap-2">
           <select
             bind:value={selectedLanguage}
-            class="w-20 h-10 rounded-full bg-[#ffffff00] flex justify-center items-center text-white"
+            class="w-20 h-10 rounded-full bg-[#ffffff00] hidden justify-center items-center text-white"
             >{selectedLanguage}<ChevronDownSolid
               class="ms-2 w-2 h-2 text-white dark:text-white"
             />
