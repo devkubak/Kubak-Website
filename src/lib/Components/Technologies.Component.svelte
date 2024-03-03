@@ -38,7 +38,7 @@
 
 {#if $locale == "en"}
 <div
-  class="container mx-auto w-full md:w-1/2 flex flex-col md:flex-row justify-center items-center h-auto bg-[#e3e3e3] dark:bg-[#212121] rounded-3xl p-5"
+  class="container mx-auto w-full md:w-1/2 flex flex-col md:flex-row justify-center items-center h-auto dark:bg-gradient-to-r dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-r from-[#ededed] via-[#d1d1d1] to-[#ededed] rounded-3xl p-5"
   data-aos="fade-up"
   data-aos-duration="2000"
 >
@@ -46,7 +46,7 @@
     style="pill"
     class="flex"
     defaultClass="flex flex-row md:flex-col-reverse gap-3 mb-4 mr-2 md:mb-0 flex-wrap justify-center"
-    contentClass=" w-full h-[410px] bg-white dark:bg-[#363636] rounded-2xl flex items-center justify-center"
+    contentClass=" w-full h-[410px] bg-white bg-[#ededed4d] dark:bg-[#3636364d] rounded-2xl flex items-center justify-center backdrop-filter backdrop-blur-lg"
   >
     {#each technologies as technology}
       <TabItem
