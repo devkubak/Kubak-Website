@@ -60,11 +60,11 @@
         >
           {#each technology.technologyAttributes as attribute}
             <div
-              class="border-2 border-solid shadow-lg shadow-[#f17f185e] border-[#f17f18] w-14 sm:w-20 2xl:w-28 h-14 sm:h-20 2xl:h-28 flex rounded-full justify-center items-center flex-col p-4 gap-2"
+              class="border-2 border-solid shadow-lg shadow-[#f17f185e] border-[#f17f18] w-24 sm:w-20 2xl:w-28 h-24 sm:h-20 2xl:h-28 flex rounded-full justify-center items-center flex-col p-4 gap-2"
             >
               <img
                 src={attribute.image ?? "/images/swift.png"}
-                class="w-4 sm:w-10"
+                class="w-10 h-10"
                 alt=""
               />
               <p class="text-[8px] text-center dark:text-white">
