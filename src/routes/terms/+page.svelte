@@ -15,7 +15,7 @@
     </div>
 
     <div class="w-full flex flex-col gap-24">
-      <p>
+      <p >
         This Terms of Use is an agreement between Users (“You”, “Your”, or
         “Yourself”) and Kubak (“We”, “Us”, or “Our”), a limited liability
         company duly established and legally operating under the laws of the
@@ -36,8 +36,9 @@
 </div>
 
 <div class="container mx-auto mt-24 flex flex-col gap-5">
-  <Accordion>
+  <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0">
     <AccordionItem
+    borderSharedClass="border-transparent"
       defaultClass="rounded-3xl w-full bg-white flex items-center justify-between  font-bold dark:bg-[#212121] "
       inactiveClass="hover:bg-[#f1f1f1] dark:hover:bg-[#252525]"
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
@@ -45,7 +46,7 @@
       <span slot="header" class="text-[#f17f18]"
         >Use of Application and Services</span
       >
-      <p class="text-gray-500 dark:text-gray-400">
+      <p class="text-black dark:text-white">
         The access and use of Application are subject to this Terms of Use. You
         have full discretion either to use the Application or other apps,
         whether to use Services available on Application, or to stop using the
@@ -61,14 +62,15 @@
     </AccordionItem>
   </Accordion>
 
-  <Accordion>
+  <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0">
     <AccordionItem
+    borderSharedClass="border-transparent"
       defaultClass="rounded-3xl w-full bg-white flex items-center justify-between  font-bold dark:bg-[#212121]"
       inactiveClass="hover:bg-[#f1f1f1] dark:hover:bg-[#252525]"
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Signing-up</span>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">
+      <p class="mb-2 text-black dark:text-white">
         and Signing-in Kubak Account Before using the Application, You must
         agree to this Terms of Use and Privacy Policy, and register Yourself by
         providing information We need. When registering, We will ask You to
@@ -95,14 +97,15 @@
     </AccordionItem>
   </Accordion>
 
-  <Accordion>
+  <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0">
     <AccordionItem
+    borderSharedClass="border-transparent"
       defaultClass="rounded-3xl w-full bg-white flex items-center justify-between  font-bold dark:bg-[#212121]"
       inactiveClass="hover:bg-[#f1f1f1] dark:hover:bg-[#252525]"
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Your Account</span>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">
+      <p class="mb-2 text-black dark:text-white">
         Your Account can only be used by You and cannot be transferred to other
         people for any reason. We reserve the right to refuse to facilitate
         orders if We know or have sufficient reasons to suspect that You have
@@ -124,14 +127,15 @@
     </AccordionItem>
   </Accordion>
 
-  <Accordion>
+  <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0">
     <AccordionItem
+    borderSharedClass="border-transparent"
       defaultClass="rounded-3xl w-full bg-white flex items-center justify-between  font-bold dark:bg-[#212121]"
       inactiveClass="hover:bg-[#f1f1f1] dark:hover:bg-[#252525]"
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Personal Information</span>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">
+      <p class="mb-2 text-black dark:text-white">
         Collection, storing, processing, use and sharing of Your personal
         information, such as Your name and mobile phone number You provided when
         opening an Account are subject to the Privacy Policy, which is an
@@ -140,8 +144,9 @@
     </AccordionItem>
   </Accordion>
 
-  <Accordion>
+  <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0">
     <AccordionItem
+    borderSharedClass="border-transparent"
       defaultClass="rounded-3xl w-full bg-white flex items-center justify-between  font-bold dark:bg-[#212121]"
       inactiveClass="hover:bg-[#f1f1f1] dark:hover:bg-[#252525]"
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
@@ -149,7 +154,7 @@
       <span slot="header" class="text-[#f17f18]"
         >Content, Information and Promotion</span
       >
-      <p class="mb-2 text-gray-500 dark:text-gray-400">
+      <p class="mb-2 text-black dark:text-white">
         We or other parties cooperating with Us may provide Third-Party Content
         which You may find on the Application. In any event where the
         Third-Party Content is provided by other parties cooperating with Us
@@ -190,14 +195,15 @@
     </AccordionItem>
   </Accordion>
 
-  <Accordion>
+  <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0">
     <AccordionItem
+    borderSharedClass="border-transparent"
       defaultClass="rounded-3xl w-full bg-white flex items-center justify-between  font-bold dark:bg-[#212121]"
       inactiveClass="hover:bg-[#f1f1f1] dark:hover:bg-[#252525]"
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Rates and Fees</span>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">
+      <p class="mb-2 text-black dark:text-white">
         Our Application is free to download. However, We may charge price and/or
         fees for using certain features on Application in the future. Services
         available on the Application are subject to rates that You can find on
@@ -210,14 +216,15 @@
     </AccordionItem>
   </Accordion>
 
-  <Accordion>
+  <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0">
     <AccordionItem
+    borderSharedClass="border-transparent"
       defaultClass="rounded-3xl w-full bg-white flex items-center justify-between  font-bold dark:bg-[#212121]"
       inactiveClass="hover:bg-[#f1f1f1] dark:hover:bg-[#252525]"
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Application Software</span>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">
+      <p class="mb-2 text-black dark:text-white">
         We only provide official Application software on official digital
         markets, such as Google Play Store or Apple App Store, and for use on
         mobile phones or tablet devices only. Downloading the Application from
@@ -228,14 +235,15 @@
     </AccordionItem>
   </Accordion>
 
-  <Accordion>
+  <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0">
     <AccordionItem
+    borderSharedClass="border-transparent"
       defaultClass="rounded-3xl w-full bg-white flex items-center justify-between  font-bold dark:bg-[#212121]"
       inactiveClass="hover:bg-[#f1f1f1] dark:hover:bg-[#252525]"
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Intellectual Property</span>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">
+      <p class="mb-2 text-black dark:text-white">
         Application and Services, including but not limited to names, logos,
         program codes, designs, trademarks, technologies, database, business
         processes and models, are protected by copyright, trademark, patent and
@@ -289,8 +297,9 @@
     </AccordionItem>
   </Accordion>
 
-  <Accordion>
+  <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0">
     <AccordionItem
+    borderSharedClass="border-transparent"
       defaultClass="rounded-3xl w-full bg-white flex items-center justify-between  font-bold dark:bg-[#212121]"
       inactiveClass="hover:bg-[#f1f1f1] dark:hover:bg-[#252525]"
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
@@ -298,7 +307,7 @@
       <span slot="header" class="text-[#f17f18]"
         >Acknowledgment and Consent</span
       >
-      <p class="mb-2 text-gray-500 dark:text-gray-400">
+      <p class="mb-2 text-black dark:text-white">
         By accepting the Privacy Policy, you acknowledge that you have read and
         understood this Privacy Policy and you accept all of its terms. In
         particular, you agree and consent to us collecting, using, sharing,
@@ -329,14 +338,15 @@
     </AccordionItem>
   </Accordion>
 
-  <Accordion>
+  <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0">
     <AccordionItem
+    borderSharedClass="border-transparent"
       defaultClass="rounded-3xl w-full bg-white flex items-center justify-between  font-bold dark:bg-[#212121]"
       inactiveClass="hover:bg-[#f1f1f1] dark:hover:bg-[#252525]"
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Your Responsibility</span>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">
+      <p class="mb-2 text-black dark:text-white">
         You are fully responsible for the decisions that You made to use
         Application, Services, Third-Party Content, Offers or Payment Method.
         You shall treat the Service Provider, Third-Party Content Provider,
@@ -360,14 +370,15 @@
     </AccordionItem>
   </Accordion>
 
-  <Accordion>
+  <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0">
     <AccordionItem
+    borderSharedClass="border-transparent"
       defaultClass="rounded-3xl w-full bg-white flex items-center justify-between  font-bold dark:bg-[#212121]"
       inactiveClass="hover:bg-[#f1f1f1] dark:hover:bg-[#252525]"
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Anonymous Data</span>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">
+      <p class="mb-2 text-black dark:text-white">
         We may create, use, license or disclose Personal Information, provided,
         however, (i) that all identifiers have been removed such that the data,
         alone or in combination with other available data, cannot be attributed
@@ -378,8 +389,9 @@
     </AccordionItem>
   </Accordion>
 
-  <Accordion>
+  <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0">
     <AccordionItem
+    borderSharedClass="border-transparent"
       defaultClass="rounded-3xl w-full bg-white flex items-center justify-between  font-bold dark:bg-[#212121]"
       inactiveClass="hover:bg-[#f1f1f1] dark:hover:bg-[#252525]"
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
@@ -387,7 +399,7 @@
       <span slot="header" class="text-[#f17f18]"
         >Limitation of Our Responsibility</span
       >
-      <p class="mb-2 text-gray-500 dark:text-gray-400">
+      <p class="mb-2 text-black dark:text-white">
         We provide Application as is and We do not represent or warrant that the
         reliability, timeliness, quality, suitability, availability, accuracy,
         completeness or security of the Application will fulfil Your needs and
@@ -427,14 +439,15 @@
     </AccordionItem>
   </Accordion>
 
-  <Accordion>
+  <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0">
     <AccordionItem
+    borderSharedClass="border-transparent"
       defaultClass="rounded-3xl w-full bg-white flex items-center justify-between  font-bold dark:bg-[#212121]"
       inactiveClass="hover:bg-[#f1f1f1] dark:hover:bg-[#252525]"
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Troubleshooting</span>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">
+      <p class="mb-2 text-black dark:text-white">
         If You experience a system failure, know or suspect that Your account
         has been hacked, used or misused by other parties, or if Your personal
         mobile phone or tablet is lost, stolen, hacked or exposed to a virus,
