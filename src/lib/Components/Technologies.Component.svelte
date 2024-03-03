@@ -38,7 +38,7 @@
 
 {#if $locale == "en"}
 <div
-  class="container mx-auto w-full md:w-1/2 flex flex-col md:flex-row justify-center items-center h-auto dark:bg-gradient-to-r dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-r from-[#ededed] via-[#d1d1d1] to-[#ededed] rounded-3xl p-5"
+  class="container mx-auto w-full md:w-1/2 flex flex-col md:flex-row justify-center items-center h-auto dark:bg-gradient-to-r dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-r from-[#ededed] via-[#d1d1d1] to-[#f1f1f14d] rounded-3xl p-5"
   data-aos="fade-up"
   data-aos-duration="2000"
 >
@@ -51,7 +51,7 @@
     {#each technologies as technology}
       <TabItem
         open
-        activeClasses="bg-white dark:bg-[#363636] w-full rounded-lg md:rounded-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out mr-2"
+        activeClasses="bg-[#fefefe6b] dark:bg-[#3434344d] shadow-xl border-2 border-[#f17f184d] shadow-[#f17f1833] w-full rounded-lg md:rounded-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out mr-2"
         inactiveClasses="hover:bg-[#f1f1f1] dark:hover:bg-[#404040] w-full rounded-lg md:rounded-xl py-5 w-full px-4 text-black dark:text-white font-bold duration-300 ease-in-out"
       >
         <span slot="title" class="text-sm">{checkLanguage(selectedLanguage, technology.title)}</span>
@@ -60,7 +60,7 @@
         >
           {#each technology.technologyAttributes as attribute}
             <div
-              class="border-2 border-solid border-[#f17f18] w-14 sm:w-20 2xl:w-28 h-14 sm:h-20 2xl:h-28 flex rounded-full justify-center items-center flex-col p-4 gap-2"
+              class="border-2 border-solid shadow-lg shadow-[#f17f185e] border-[#f17f18] w-14 sm:w-20 2xl:w-28 h-14 sm:h-20 2xl:h-28 flex rounded-full justify-center items-center flex-col p-4 gap-2"
             >
               <img
                 src={attribute.image ?? "/images/swift.png"}
