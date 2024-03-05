@@ -7,6 +7,13 @@
   import { projectStore } from "$lib/Store/Project.Store";
   import { _, locale } from "svelte-i18n";
 
+  let aboutDescription = $_("aboutDescription");
+  let showFullText = false;
+
+  function toggleShowFullText() {
+    showFullText = !showFullText;
+  }
+
   onMount(async () => {
     try {
       await projectStore.getAll();
@@ -18,15 +25,25 @@
 
 <Carousel />
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <div
-  class="container mx-auto text-center dark:text-white text-xs md:text-xl bg-white dark:bg-[#212121] rounded-2xl p-3"
+  class="container mx-auto text-center dark:text-white text-xs md:text-xl dark:bg-gradient-to-b dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#ededed] via-[#d1d1d1] to-[#f1f1f14d] rounded-2xl p-3 duration-150 ease-in-out"
   data-aos="fade-up"
   data-aos-anchor-placement="center" data-aos-duration="3000"
 >
 
-  <p class="leading-10">
-    {$_("aboutDescription")}
-  </p>
+<p class="leading-10 duration-150 ease-in-out">
+  {showFullText
+    ? aboutDescription
+    : aboutDescription.length > 200
+      ? aboutDescription.slice(0, 200) + "..."
+      : aboutDescription}
+</p>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div class="text-[#f17f18] hover:text-[#f19718] mt-5 cursor-pointer ease-in-out duration-300" style="font-family: english-title;" on:click={toggleShowFullText}>
+  {showFullText ? "Show Less" : "Show More"}
+</div>
 </div>
 
 <div class="w-full flex justify-center items-center text-center mt-12">
