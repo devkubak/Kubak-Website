@@ -42,10 +42,10 @@
 
 <div class="w-full absolute z-10">
   <Navbar
-    class="bg-[#0000009a] dark:bg-[#000000be] backdrop-blur-md text-center fixed"
+    class="bg-[#0000009a] dark:bg-[#000000be]  backdrop-blur-md text-center fixed"
     style="font-family:english;"
   >
-  <div class="flex w-full xl:gap-24 md:order-2 justify-between flex-wrap md:justify-center"
+  <div class="flex w-full xl:gap-24 md:order-2  justify-between flex-wrap md:justify-center"
   style="font-family:english;"
   >
 
@@ -61,34 +61,38 @@
   
   <NavHamburger menuClass="text-white" />
   <NavUl
+
+  
   {activeUrl}
-  ulClass="md:flex w-full items-center md:gap-3 bg-[#0000009a] dark:bg-[#000000be] md:bg-transparent md:dark:bg-transparent"
+  ulClass="md:flex w-full items-center md:gap-3 bg-[#00000000] border-0 dark:bg-[#00000000] md:bg-transparent md:dark:bg-transparent"
   {activeClass}
   {nonActiveClass}
   class="md:text-md lg:text-lg gap-2"
-  style="font-family:english;"
+  
+  
   >
       <div class="w-full md:flex md:justify-around gap-12">
         {#if $locale == "en"}
         <div
           class="w-full text-md md:gap-5 md:flex justify-center items-center font-english"
+          
         >
-          <NavLi href="/">{$_("home")}</NavLi>
-          <NavLi href="/products">{$_("products")}</NavLi>
-          <NavLi href="/aboutUs">{$_("aboutUs")}</NavLi>
-          <NavLi href="/privacy">{$_("privacyPolicy")}</NavLi>
-          <NavLi href="/terms">{$_("termsofUse")}</NavLi>
+          <NavLi href="/" style="font-family:english-title;">{$_("home")}</NavLi>
+          <NavLi href="/products" style="font-family:english-title;">{$_("products")}</NavLi>
+          <NavLi href="/aboutUs" style="font-family:english-title;">{$_("aboutUs")}</NavLi>
+          <NavLi href="/privacy" style="font-family:english-title;">{$_("privacyPolicy")}</NavLi>
+          <NavLi href="/terms" style="font-family:english-title;">{$_("termsofUse")}</NavLi>
         </div>
         {:else}
 
         <div
         class="w-full text-xs xl:text-[1rem] md:gap-5 md:flex justify-center items-center font-english" dir="rtl"
       >
-        <NavLi href="/">{$_("home")}</NavLi>
-        <NavLi href="/products">{$_("products")}</NavLi>
-        <NavLi href="/aboutUs">{$_("aboutUs")}</NavLi>
-        <NavLi href="/privacy">{$_("privacyPolicy")}</NavLi>
-        <NavLi href="/terms">{$_("termsofUse")}</NavLi>
+        <NavLi href="/" style="font-family:english-title;">{$_("home")}</NavLi>
+        <NavLi href="/products" style="font-family:english-title;">{$_("products")}</NavLi>
+        <NavLi href="/aboutUs" style="font-family:english-title;">{$_("aboutUs")}</NavLi>
+        <NavLi href="/privacy" style="font-family:english-title;">{$_("privacyPolicy")}</NavLi>
+        <NavLi href="/terms" style="font-family:english-title;">{$_("termsofUse")}</NavLi>
       </div>
         {/if}
 

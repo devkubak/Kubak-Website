@@ -30,7 +30,7 @@
 </div>
 
 <div class="w-full flex justify-center items-center text-center mt-12">
-  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl" data-aos="zoom-out-up" data-aos-duration="1000">
+  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl" data-aos="zoom-out-up" data-aos-anchor-placement="center" data-aos-duration="1000">
     {$_("DevelopmentProcess")}
   </p>
 </div>
@@ -39,7 +39,7 @@
 <div
   class="w-full h-12 flex justify-center items-center text-center mt-12 mb-3"
 >
-  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl" data-aos="zoom-out-up" data-aos-duration="1000">
+  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl" data-aos="zoom-out-up" data-aos-anchor-placement="center" data-aos-duration="1000">
     {$_("technologiesWeUse")}
   </p>
 </div>
@@ -49,7 +49,7 @@
 <div
   class="w-full h-12 flex justify-center items-center text-center mt-12 mb-3"
 >
-  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl" data-aos="zoom-out-up" data-aos-duration="1000">
+  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl" data-aos="zoom-out-up" data-aos-anchor-placement="center" data-aos-duration="1000">
     {$_("ourProjects")}
   </p>
 </div>

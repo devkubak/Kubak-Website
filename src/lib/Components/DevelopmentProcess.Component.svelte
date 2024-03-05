@@ -45,6 +45,7 @@
   id="wrapper"
   data-aos="fade-up"
   data-aos-duration="2000"
+  
 >
   <div
     class="h-auto gap-3 md:gap-0 md:h-auto flex flex-nowrap flex-col md:flex-row justify-center items-center md:items-stretch"
