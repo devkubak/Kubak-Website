@@ -21,7 +21,7 @@
 <div
   class="container mx-auto text-center dark:text-white text-xs md:text-xl bg-white dark:bg-[#212121] rounded-2xl p-3"
   data-aos="fade-up"
-  data-aos-anchor-placement="center-bottom" data-aos-duration="3000"
+  data-aos-anchor-placement="center" data-aos-duration="3000"
 >
 
   <p class="leading-10">
