@@ -85,21 +85,19 @@
 
 
   @font-face {
-    font-family: "kurdish";
+    font-family: "english";
     font-style: normal;
-    src: url('/fonts/bahij.ttf') format('truetype'),
+    src: url('/fonts/Rajdhani-Regular.ttf') format('truetype'),
 
   }
   @font-face {
-    font-family: "kurdish_plain";
-    font-style: normal;
-    src: url('/fonts/bahij_plain.ttf') format('truetype')
-    
-    
-    
-
+    font-family: "english-title";
+    font-style: bold;
+    src: url('/fonts/Rajdhani-Bold.ttf') format('truetype'),
 
   }
+  
   :global(body){
-      font-family: "kurdish";
+      font-family: "english";
+      
   }

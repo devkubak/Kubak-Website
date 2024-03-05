@@ -50,7 +50,7 @@
 >
 <div class="w-full h-auto flex flex-col gap-3" dir="{$locale == "en" ? "ltr" : "rtl"}">
 
-  <p class="md:text-2xl text-[#f17f18] text-lg font-bold " style="font-family: kurdish;">
+  <p class="md:text-2xl text-[#f17f18] text-lg font-bold " style="font-family: english;">
     {checkLanguage( productAttribute.title,$locale)}
   </p>
   <p class="md:text-xl dark:text-white">

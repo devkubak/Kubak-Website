@@ -43,10 +43,10 @@
 <div class="w-full absolute z-10">
   <Navbar
     class="bg-[#0000009a] dark:bg-[#000000be] backdrop-blur-md text-center fixed"
-    style="font-family:kurdish;"
+    style="font-family:english;"
   >
   <div class="flex w-full xl:gap-24 md:order-2 justify-between flex-wrap md:justify-center"
-  style="font-family:kurdish;"
+  style="font-family:english;"
   >
 
   
@@ -66,12 +66,12 @@
   {activeClass}
   {nonActiveClass}
   class="md:text-md lg:text-lg gap-2"
-  style="font-family:kurdish;"
+  style="font-family:english;"
   >
       <div class="w-full md:flex md:justify-around gap-12">
         {#if $locale == "en"}
         <div
-          class="w-full text-md md:gap-5 md:flex justify-center items-center font-kurdish"
+          class="w-full text-md md:gap-5 md:flex justify-center items-center font-english"
         >
           <NavLi href="/">{$_("home")}</NavLi>
           <NavLi href="/products">{$_("products")}</NavLi>
@@ -82,7 +82,7 @@
         {:else}
 
         <div
-        class="w-full text-xs xl:text-[1rem] md:gap-5 md:flex justify-center items-center font-kurdish" dir="rtl"
+        class="w-full text-xs xl:text-[1rem] md:gap-5 md:flex justify-center items-center font-english" dir="rtl"
       >
         <NavLi href="/">{$_("home")}</NavLi>
         <NavLi href="/products">{$_("products")}</NavLi>
@@ -127,6 +127,6 @@
 
 <style>
   * {
-    font-family: "Kurdish";
+    font-family: "english";
   }
 </style>

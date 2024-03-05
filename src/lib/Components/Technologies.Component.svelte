@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { ID } from 'appwrite';
   import type { Language } from "$lib/Models/Common/Language.Common.Model";
   import type { TechnologyDto } from "$lib/Models/DTO/Technology.Dto.Model";
   import { technologyStore } from "$lib/Store/Technology.Store";
@@ -8,14 +9,17 @@
 
 
   let technologies: TechnologyDto[] = [];
-
+  let isLoading:Boolean = true;
   onMount(async () => {
     try {
      technologies = await technologyStore.getAll() as TechnologyDto[];
     } catch (e) {
       console.log(e);
+    }finally{
+      isLoading = false;
     }
-  });
+  }
+  );
 
   function checkLanguage(
     selectedLanguage: string,
@@ -44,10 +48,11 @@
 >
   <Tabs
     style="pill"
-    class="flex"
-    defaultClass="flex flex-row md:flex-col-reverse gap-3 mb-4 mr-2 md:mb-0 flex-wrap justify-center"
-    contentClass=" w-full h-[410px] bg-white bg-[#ededed4d] dark:bg-[#3636364d] rounded-2xl flex items-center justify-center backdrop-filter backdrop-blur-lg"
+    class="flex duration-300 ease-in-out"
+    defaultClass="flex flex-row md:flex-col-reverse gap-3 mb-4 mr-2 md:mb-0 flex-wrap justify-center duration-300 ease-in-out"
+    contentClass=" w-full h-[410px] bg-white bg-[#ededed4d] dark:bg-[#3636364d] rounded-2xl flex items-center justify-center backdrop-filter backdrop-blur-lg duration-300 ease-in-out"
   >
+  
     {#each technologies as technology}
       <TabItem
         open
@@ -91,6 +96,7 @@
     {#each technologies as technology}
       <TabItem
         open
+        
         activeClasses="bg-white dark:bg-[#363636] w-full rounded-lg md:rounded-xl py-5 w-full px-4 text-[#f17f18] font-bold duration-300 ease-in-out mr-2"
         inactiveClasses="hover:bg-[#f1f1f1] dark:hover:bg-[#404040] w-full rounded-lg md:rounded-xl py-5 w-full px-4 text-black dark:text-white font-bold duration-300 ease-in-out"
       >

@@ -50,3 +50,13 @@
   <slot />
   <Footer />
 {/if}
+
+
+<style>
+
+
+
+
+
+
+</style>
