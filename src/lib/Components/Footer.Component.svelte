@@ -47,7 +47,7 @@
     <FooterLinkGroup
       ulClass="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400"
     >
-      <p class="text-center px-4">
+      <p class="text-justify px-4">
         {checkLanguage($footerStore.description,$locale)}
       </p>
 
