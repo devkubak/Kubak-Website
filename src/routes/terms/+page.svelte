@@ -15,7 +15,7 @@
     </div>
 
     <div class="w-full flex flex-col gap-24">
-      <p >
+      <p class="text-justify">
         This Terms of Use is an agreement between Users (“You”, “Your”, or
         “Yourself”) and Kubak (“We”, “Us”, or “Our”), a limited liability
         company duly established and legally operating under the laws of the
@@ -46,7 +46,7 @@
       <span slot="header" class="text-[#f17f18]"
         >Use of Application and Services</span
       >
-      <p class="text-black dark:text-white">
+      <p class="text-black dark:text-white text-justify">
         The access and use of Application are subject to this Terms of Use. You
         have full discretion either to use the Application or other apps,
         whether to use Services available on Application, or to stop using the
@@ -70,7 +70,7 @@
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Signing-up</span>
-      <p class="mb-2 text-black dark:text-white">
+      <p class="mb-2 text-black dark:text-white text-justify">
         and Signing-in Kubak Account Before using the Application, You must
         agree to this Terms of Use and Privacy Policy, and register Yourself by
         providing information We need. When registering, We will ask You to
@@ -105,7 +105,7 @@
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Your Account</span>
-      <p class="mb-2 text-black dark:text-white">
+      <p class="mb-2 text-black dark:text-white text-justify">
         Your Account can only be used by You and cannot be transferred to other
         people for any reason. We reserve the right to refuse to facilitate
         orders if We know or have sufficient reasons to suspect that You have
@@ -135,7 +135,7 @@
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Personal Information</span>
-      <p class="mb-2 text-black dark:text-white">
+      <p class="mb-2 text-black dark:text-white text-justify">
         Collection, storing, processing, use and sharing of Your personal
         information, such as Your name and mobile phone number You provided when
         opening an Account are subject to the Privacy Policy, which is an
@@ -154,7 +154,7 @@
       <span slot="header" class="text-[#f17f18]"
         >Content, Information and Promotion</span
       >
-      <p class="mb-2 text-black dark:text-white">
+      <p class="mb-2 text-black dark:text-white text-justify">
         We or other parties cooperating with Us may provide Third-Party Content
         which You may find on the Application. In any event where the
         Third-Party Content is provided by other parties cooperating with Us
@@ -203,7 +203,7 @@
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Rates and Fees</span>
-      <p class="mb-2 text-black dark:text-white">
+      <p class="mb-2 text-black dark:text-white text-justify">
         Our Application is free to download. However, We may charge price and/or
         fees for using certain features on Application in the future. Services
         available on the Application are subject to rates that You can find on
@@ -224,7 +224,7 @@
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Application Software</span>
-      <p class="mb-2 text-black dark:text-white">
+      <p class="mb-2 text-black dark:text-white text-justify">
         We only provide official Application software on official digital
         markets, such as Google Play Store or Apple App Store, and for use on
         mobile phones or tablet devices only. Downloading the Application from
@@ -243,7 +243,7 @@
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Intellectual Property</span>
-      <p class="mb-2 text-black dark:text-white">
+      <p class="mb-2 text-black dark:text-white text-justify">
         Application and Services, including but not limited to names, logos,
         program codes, designs, trademarks, technologies, database, business
         processes and models, are protected by copyright, trademark, patent and
@@ -307,7 +307,7 @@
       <span slot="header" class="text-[#f17f18]"
         >Acknowledgment and Consent</span
       >
-      <p class="mb-2 text-black dark:text-white">
+      <p class="mb-2 text-black dark:text-white text-justify">
         By accepting the Privacy Policy, you acknowledge that you have read and
         understood this Privacy Policy and you accept all of its terms. In
         particular, you agree and consent to us collecting, using, sharing,
@@ -346,7 +346,7 @@
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Your Responsibility</span>
-      <p class="mb-2 text-black dark:text-white">
+      <p class="mb-2 text-black dark:text-white text-justify">
         You are fully responsible for the decisions that You made to use
         Application, Services, Third-Party Content, Offers or Payment Method.
         You shall treat the Service Provider, Third-Party Content Provider,
@@ -378,7 +378,7 @@
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Anonymous Data</span>
-      <p class="mb-2 text-black dark:text-white">
+      <p class="mb-2 text-black dark:text-white text-justify">
         We may create, use, license or disclose Personal Information, provided,
         however, (i) that all identifiers have been removed such that the data,
         alone or in combination with other available data, cannot be attributed
@@ -399,7 +399,7 @@
       <span slot="header" class="text-[#f17f18]"
         >Limitation of Our Responsibility</span
       >
-      <p class="mb-2 text-black dark:text-white">
+      <p class="mb-2 text-black dark:text-white text-justify">
         We provide Application as is and We do not represent or warrant that the
         reliability, timeliness, quality, suitability, availability, accuracy,
         completeness or security of the Application will fulfil Your needs and
@@ -447,7 +447,7 @@
       activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out"
     >
       <span slot="header" class="text-[#f17f18]">Troubleshooting</span>
-      <p class="mb-2 text-black dark:text-white">
+      <p class="mb-2 text-black dark:text-white text-justify">
         If You experience a system failure, know or suspect that Your account
         has been hacked, used or misused by other parties, or if Your personal
         mobile phone or tablet is lost, stolen, hacked or exposed to a virus,

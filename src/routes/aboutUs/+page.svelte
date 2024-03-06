@@ -32,7 +32,7 @@
   class="container mx-auto flex justify-center text-center items-center flex-col bg-white dark:bg-[#212121] dark:text-white rounded-br-3xl rounded-bl-3xl p-4 gap-5"
 >
   <img src="/images/kubak2.png" alt="" class="w-96 pt-28" />
-  <p class="pb-4 md:text-2xl">
+  <p class="pb-4 md:text-2xl text-justify">
     {$_("aboutDescription")}
   </p>
 </div>
@@ -55,7 +55,7 @@
         <p class="text-[#f17f18] text-2xl font-bold">
           {checkLanguage(aboutUs.title,$locale)??""}
         </p>
-        <p class="text-lg " dir="{$locale == "en" ? "ltr" : "rtl"}" >{checkLanguage(aboutUs.description,$locale)} </p>
+        <p class="text-lg text-justify" dir="{$locale == "en" ? "ltr" : "rtl"}" >{checkLanguage(aboutUs.description,$locale)} </p>
       </div>
       <div
         class="w-full h-auto flex flex-col justify-center items-center gap-3"

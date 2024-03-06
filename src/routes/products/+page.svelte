@@ -53,7 +53,7 @@
   <p class="md:text-2xl text-[#f17f18] text-lg font-bold " style="font-family: english;">
     {checkLanguage( productAttribute.title,$locale)}
   </p>
-  <p class="md:text-xl dark:text-white">
+  <p class="md:text-xl dark:text-white text-justify">
     {checkLanguage( productAttribute.description,$locale)}
   </p>
 </div>
