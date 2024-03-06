@@ -41,7 +41,7 @@
 </p>
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="text-[#f17f18] hover:text-[#f19718] mt-5 cursor-pointer ease-in-out duration-300" style="font-family: english-title;" on:click={toggleShowFullText}>
+<div class="text-[#f17f18] hover:text-[#f19718] my-5 cursor-pointer ease-in-out duration-300" style="font-family: english-title;" on:click={toggleShowFullText}>
   {showFullText ? "Show Less" : "Show More"}
 </div>
 </div>
