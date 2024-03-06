@@ -83,7 +83,7 @@
         <div
           class={`${selectedCard === index
             ? 'bg-[#212121a9] h-auto w-full'
-            : 'bg-[#212121a9] h-full w-full'} py-3 px-4 flex justify-center items-center backdrop-blur-lg`}
+            : 'bg-[#212121a9] h-full w-full'} py-3 px-4 flex justify-center items-center backdrop-blur-lg ease-in-out duration`}
           id="row"
           style="width: 100%;"
         >
@@ -93,10 +93,10 @@
             id="description"
             class:selected={selectedCard === index}
           >
-            <h4 class="text-[#f17f18] text-sm md:text-lg">
+            <h4 class="text-[#f17f18] text-sm md:text-lg duration-300 ease-in-out">
               {checkLanguage(selectedLanguage, development.title)}
             </h4>
-            <p class="text-white text-xs md:text-lg pt-[5px] px-2">
+            <p class="text-white text-xs md:text-lg pt-[5px] px-2 duration-300 ease-in-out">
               {checkLanguage(selectedLanguage, development.description)}
             </p>
           </div>
@@ -237,5 +237,9 @@
     height: 350px;
     filter: opacity(100%);
   }
+  }
+
+  #description{
+    
   }
 </style>

@@ -43,6 +43,7 @@
     <FooterBrand
       src={$footerStore.image}
       imgClass="w-16"
+      id="footer-brand"
     />
     <FooterLinkGroup
       ulClass="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400"
@@ -67,3 +68,4 @@
   </div>
 </Footer>
 {/if}
+
