@@ -25,9 +25,9 @@
     selectedLanguage: string,
     text: Language
   ): string {
-    console.log(text);
+     (text);
     if (Object.keys(text).includes(selectedLanguage)) {
-      console.log(text);
+       (text);
       return text[
         selectedLanguage as keyof typeof text
       ] as string;

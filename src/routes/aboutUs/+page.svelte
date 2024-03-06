@@ -18,8 +18,8 @@
     lang?:string | null
   ): string {
     if (Object.keys(text).includes($locale as string)) {
-      console.log(text);
-      console.log("Hello There",text[$locale as keyof typeof text] as string);
+       (text);
+       ("Hello There",text[$locale as keyof typeof text] as string);
       
       return text[$locale as keyof typeof text] as string;
     } else {

@@ -9,7 +9,7 @@
   onMount(async () => {
     try {
       await developmentStore.getAll();
-      console.log($developmentStore);
+       ($developmentStore);
       selectedCard = $developmentStore.total % 4
     } catch (e) {
       console.log(e);
@@ -17,10 +17,10 @@
   });
 
   function handleCardClick(index: number) {
-    console.log(index);
+     (index);
     if (selectedCard !== index) {
      
-      console.log(selectedCard);
+       (selectedCard);
       selectedCard = index
     } else {
       return;
@@ -29,9 +29,9 @@
 
   export let selectedLanguage: string;
   function checkLanguage(selectedLanguage: string, text: Language): string {
-    console.log(text);
+     (text);
     if (Object.keys(text).includes(selectedLanguage)) {
-      console.log(text);
+       (text);
   
       return text[selectedLanguage as keyof typeof text] as string;
     } else {

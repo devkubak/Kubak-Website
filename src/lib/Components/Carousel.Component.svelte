@@ -8,9 +8,9 @@
   
 
   function checkLanguage(text: Language, lang?: string | null): string {
-    console.log(text);
+     (text);
     if (Object.keys(text).includes(lang as string)) {
-      console.log(text);
+       (text);
       return text[lang as keyof typeof text] as string;
     } else {
       return text.en;

@@ -25,7 +25,7 @@ const createDevelopmentStore = () => {
       try {
         let { documents, total } =
           await developmentRepository.getDevelopments();
-        console.log("Hello There Data Card", documents);
+         ("Hello There Data Card", documents);
 
         let dto: DevelopmentDto[] = documents.map((document) => {
           return Dto.ToDevelopmentDto(document) as DevelopmentDto;
