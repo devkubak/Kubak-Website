@@ -1,16 +1,19 @@
 <script lang="ts">
   import { productStore } from "$lib/Store/Product.Store";
-  import { DeviceMockup } from "flowbite-svelte";
+  import { DeviceMockup, Img } from "flowbite-svelte";
   import { onMount } from "svelte";
   import { ImagePosition } from "$lib/Models/Enums/Image-Position.Enum.Model";
   import type { Language } from "$lib/Models/Common/Language.Common.Model";
   import { locale } from "svelte-i18n";
 
+  let loading:boolean = true;
   onMount(async () => {
     try {
       await productStore.get();
     } catch (e) {
       console.log(e);
+    }finally{
+      loading = false;
     }
   });
 
@@ -34,10 +37,23 @@
      ($locale);
   }
 </script>
+{#if loading}
+<div class="w-full h-screen flex flex-col gap-5 bg-white justify-center items-center">
 
+  <div class="w-full h-auto flex justify-center items-center">
+    <Img src="/images/kubakLogo.png" class="w-24 h-24 object-contain"/>
+  </div>
+  <div class="flex items-center justify-center space-x-2 h-auto w-full">
+    <div class="w-4 h-4 rounded-full animate-pulse bg-[#f17f18]"></div>
+    <div class="w-4 h-4 rounded-full animate-pulse bg-[#f17f18]"></div>
+    <div class="w-4 h-4 rounded-full animate-pulse bg-[#f17f18]"></div>
+  </div>
+</div>
+{:else}
 {#if $productStore}
 <div
   class="w-full bg-white dark:bg-[#212121] dark:text-white pb-12 pt-32 flex justify-center items-center text-center"
+  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
 >
   <p class="md:text-4xl container mx-auto">
     {checkLanguage($productStore.title,$locale)}
@@ -46,21 +62,22 @@
 
 {#each $productStore.productAttribute as productAttribute}
 <div
-  class="container mx-auto flex justify-center items-center mt-5 gap-5   {productAttribute.image_position == ImagePosition.LEFT ? "md:flex-row-reverse" : "md:flex-row" } flex-col-reverse flex-wrap md:flex-nowrap px-4 mb-24"
->
-<div class="w-full h-auto flex flex-col gap-3" dir="{$locale == "en" ? "ltr" : "rtl"}">
+  class="container mx-auto flex justify-center items-center mt-5 gap-5    {productAttribute.image_position == ImagePosition.LEFT ? "md:flex-row-reverse" : "md:flex-row" } flex-col-reverse flex-wrap md:flex-nowrap px-4 mb-24" 
+  
+  >
+<div class="w-full h-auto flex flex-col gap-3" dir="{$locale == "en" ? "ltr" : "rtl"}" >
 
-  <p class="md:text-2xl text-[#f17f18] text-lg font-bold " style="font-family: english;">
+  <p class="md:text-2xl text-[#f17f18] text-lg font-bold " style="font-family: english;" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
     {checkLanguage( productAttribute.title,$locale)}
   </p>
-  <p class="md:text-xl dark:text-white text-justify">
+  <p class="md:text-xl dark:text-white text-justify" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
     {checkLanguage( productAttribute.description,$locale)}
   </p>
 </div>
   
-  <div class="relative mx-auto p-3 border-[#f17f18] dark:border-[#f17f18] bg-[#f17f18] border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
+  <div class="relative mx-auto p-3 border-[#f17f18] dark:border-[#f17f18] bg-[#f17f18] border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
     <div class="w-[148px] h-[18px] bg-[#f17f18] top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
-    <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-[#f17f18]">
+    <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-[#f17f18]" >
       <img src={productAttribute.image || "/images/phone1.jpg"} class="w-[272px] h-[572px] rounded-3xl" alt="ios example 1" />
     </div>
 </div>
@@ -201,3 +218,4 @@
     <img src="/images/appLight.png" class="w-52" alt="" />
   </a>
 </div>
+{/if}
