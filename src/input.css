@@ -97,6 +97,11 @@
 
   }
   
+  
+  #footerImg{
+    padding: 0;
+  }
+  
   :global(body){
       font-family: "english";
       

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { ID } from 'appwrite';
   import {
     Footer,
     FooterCopyright,
@@ -33,39 +34,71 @@
 </script>
 
 {#if $footerStore}
+
 <Footer
   footerType="logo"
-  class="mt-5 px-0 md:px-0  pb-0 md:pb-0 bg-white dark:bg-[#212121]"
+  class=" px-0 md:px-0 mt-5  pb-0 md:pb-0 bg-white dark:bg-[#21212126]"
+ id="footerImg"
 >
-  <div
-    class="container mx-auto flex items-center flex-col justify-center gap-12"
-  >
-    <FooterBrand
-      src={$footerStore.image}
-      imgClass="w-16"
-      id="footer-brand"
-    />
-    <FooterLinkGroup
-      ulClass="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400"
-    >
-      <p class="text-justify px-4">
-        {checkLanguage($footerStore.description,$locale)}
-      </p>
-
-      <div
-        class="w-full flex justify-between items-center mt-12 text-center text-gray-800 dark:text-white text-[8px] md:text-[12px] px-4 gap-3"
+  <div class="footer-bg backdrop-blur-lg">
+    <div class="container mx-auto flex  items-center flex-col justify-center gap-12">
+      <FooterBrand
+        src={$footerStore.image}
+        imgClass="w-16 mt-5 "
+        id="footer-brand"
+      />
+      <FooterLinkGroup
+        ulClass="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400"
       >
-        <p>{checkLanguage($footerStore.address1,$locale)}</p>
-        <p>{checkLanguage($footerStore.address2,$locale)}</p>
-      </div>
-    </FooterLinkGroup>
+        <p class="text-justify px-4">
+          {checkLanguage($footerStore.description,$locale)}
+        </p>
+
+        <div
+          class="w-full flex justify-between items-center mt-12 text-center text-gray-800 dark:text-white text-[8px] md:text-[12px] px-4 gap-3"
+        >
+          <p>{checkLanguage($footerStore.address1,$locale)}</p>
+          <p>{checkLanguage($footerStore.address2,$locale)}</p>
+        </div>
+      </FooterLinkGroup>
+    </div>
   </div>
 
   <div
-    class=" w-full h-12 mt-4 bg-[#f17f18] flex justify-center items-center text-white"
+    class=" w-full h-12  bg-[#f17f18] flex justify-center items-center text-white"
   >
     <FooterCopyright href="/" by="Kubak" spanClass="text-white" />
   </div>
 </Footer>
+
 {/if}
+
+<style>
+  .footer-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/footerBack.jpg');
+  background-size: cover;
+  background-position: right;
+  opacity: .1; /* Adjust opacity as needed */
+  filter: blur(0px);
+
+}
+
+.container {
+  position: relative; /* Ensure z-index works */
+  z-index: 1; /* Ensure content is above the background */
+}
+
+</style>
 

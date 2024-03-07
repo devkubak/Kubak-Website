@@ -50,7 +50,7 @@
     style="pill"
     class="flex duration-300 ease-in-out"
     defaultClass="flex flex-row md:flex-col-reverse gap-3 mb-4 mr-2 md:mb-0 flex-wrap justify-center duration-300 ease-in-out"
-    contentClass=" w-full h-[410px] bg-white bg-[#ededed4d] dark:bg-[#3636364d] rounded-2xl flex items-center justify-center backdrop-filter backdrop-blur-lg duration-300 ease-in-out"
+    contentClass=" w-full h-auto bg-white bg-[#ededed4d] dark:bg-[#3636364d] rounded-2xl flex items-center justify-center backdrop-filter backdrop-blur-lg duration-300 ease-in-out"
   >
   
     {#each technologies as technology}
@@ -69,7 +69,7 @@
             >
               <img
                 src={attribute.image ?? "/images/swift.png"}
-                class="w-10 h-10"
+                class="w-10 h-10 object-contain"
                 alt=""
               />
               <p class="text-[8px] text-center dark:text-white">
