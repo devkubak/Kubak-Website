@@ -6,7 +6,7 @@
   import { onMount } from "svelte";
   import { projectStore } from "$lib/Store/Project.Store";
   import { _, locale } from "svelte-i18n";
-
+  import NewTech from "$lib/Components/NewTechnologies.Component.svelte"
   let aboutDescription = $_("aboutDescription");
   let showFullText = false;
 
@@ -61,8 +61,7 @@
   </p>
 </div>
 
-<Technologies selectedLanguage={$locale + ""} />
-
+<NewTech />
 <div
   class="w-full h-12 flex justify-center items-center text-center mt-12 mb-3"
 >
