@@ -53,8 +53,8 @@
     
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <!-- svelte-ignore a11y-no-static-element-interactions -->
-      <div on:click={()=>goToPreviousTechnology()} class="w-16 h-[540px] px-2 bg-gradient-to-b  from-[#3e3e3e] via-[#686868] to-[#3e3e3e] bg-[#3e3e3e]  dark:bg-gradient-to-b  dark:from-[#191919] dark:via-[#1d1d1d] dark:to-[#191919] dark:bg-[#191919] flex justify-center rounded-l-lg items-center cursor-pointer ">
-        <img src="/images/newarrow.png" alt="" class="w-12 h-12 rotate-180">
+      <div on:click={()=>goToPreviousTechnology()} class="w-10 md:w-16 h-[540px] px-2 bg-gradient-to-b  from-[#3e3e3e] via-[#686868] to-[#3e3e3e] bg-[#3e3e3e]  dark:bg-gradient-to-b  dark:from-[#191919] dark:via-[#1d1d1d] dark:to-[#191919] dark:bg-[#191919] flex justify-center rounded-l-lg items-center cursor-pointer ">
+        <img src="/images/newarrow.png" alt="" class="size-8 md:size-12 rotate-180">
       </div>
       <div class="w-full h-[540px] flex flex-col justify-end items-center " >
 
@@ -63,7 +63,7 @@
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <!-- svelte-ignore a11y-no-static-element-interactions -->
           {#if technologies.length > 0}
-            <p class="w-full h-12 text-center flex justify-center items-center dark:text-white text-lg font-bold">{technologies[currentTechnologyIndex].title[$locale + ""]}</p>
+            <p class="w-full h-12 text-center flex justify-center items-center bg-white dark:bg-[#3a3a3a] dark:text-white text-4xl font-bold">{technologies[currentTechnologyIndex].title[$locale + ""]}</p>
           {/if}
           
           <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -89,8 +89,8 @@
     
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <div on:click={()=>goToNextTechnology()} class="w-16 h-[540px] px-2 bg-gradient-to-b  from-[#3e3e3e] via-[#686868] to-[#3e3e3e] bg-[#3e3e3e]  dark:bg-gradient-to-b  dark:from-[#191919] dark:via-[#1d1d1d] dark:to-[#191919] dark:bg-[#191919] rounded-r-lg flex justify-center items-center cursor-pointer">
-      <img src="/images/newarrow.png" alt="" class="w-12 h-12">
+    <div on:click={()=>goToNextTechnology()} class="w-10 md:w-16 h-[540px] px-2 bg-gradient-to-b  from-[#3e3e3e] via-[#686868] to-[#3e3e3e] bg-[#3e3e3e]  dark:bg-gradient-to-b  dark:from-[#191919] dark:via-[#1d1d1d] dark:to-[#191919] dark:bg-[#191919] rounded-r-lg flex justify-center items-center cursor-pointer">
+      <img src="/images/newarrow.png" alt="" class="size-8 md:size-12">
     </div>
   </div>
 </div>
