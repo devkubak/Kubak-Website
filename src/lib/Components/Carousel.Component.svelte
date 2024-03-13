@@ -22,7 +22,7 @@
 
         // Android
         if (/android/i.test(userAgent)) {
-            window.location.href = 'https://play.google.com/store/search?q=kubak+taxi&c=apps&hl=en&gl=US';
+            window.location.href = 'https://play.google.com/store/apps/details?id=co.kubak.city&hl=en&gl=US';
         }
         // iOS
         else if (/iPad|iPhone|iPod/.test(userAgent)) {

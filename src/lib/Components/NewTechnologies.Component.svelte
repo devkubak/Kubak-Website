@@ -74,6 +74,7 @@
             {#key currentTechnologyIndex}
               {#each technologies[currentTechnologyIndex].technologyAttributes as attr, index}
                 <div class="w-32 h-52 sm:w-44 sm:h-60 flex flex-col justify-end items-center bg-[#dddddd] dark:bg-zinc-700 fade-in rounded-lg shadow-lg hover:shadow-2xl duration-300 transition-all  ease-in-out"
+                id="card-shadow"
                      data-aos="flip-left"
                      data-aos-duration="2000" data-aos-anchor-placement="top">
                   <img src="{attr.image}" class="w-24 h-24 object-contain my-12" alt="" />
@@ -95,3 +96,10 @@
   </div>
 </div>
 
+
+
+<style>
+  #card-shadow:hover{
+    transition: all 0.3s ease-in-out;
+  }
+</style>

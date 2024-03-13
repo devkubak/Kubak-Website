@@ -10,6 +10,7 @@
   import { footerStore } from "$lib/Store/Footer.Store";
   import type { Language } from "$lib/Models/Common/Language.Common.Model";
   import { locale } from "svelte-i18n";
+  import Social from "$lib/Components/SocialMedia.Component.svelte"
 
   onMount(async () => {
     try {
@@ -50,6 +51,10 @@
       <FooterLinkGroup
         ulClass="flex flex-wrap items-center mb-6 text-[12px] md:text-[18px] text-gray-500 sm:mb-0 dark:text-gray-400"
       >
+      <div class="w-full h-12 mb-12 flex justify-center items-center ">
+
+        <Social/>
+      </div>
         <p class="text-justify px-4">
           {checkLanguage($footerStore.description,$locale)}
         </p>

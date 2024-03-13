@@ -43,7 +43,7 @@
     <!-- svelte-ignore a11y-distracting-elements -->
 
     {#each $projectStore.data as project}
-    <div id="card" class="rounded-lg dark:bg-[#171717]  shrink-0 snap-start  dark:text-white h-60 w-44 flex justify-around items-center flex-col">
+    <div id="card" class="rounded-lg dark:bg-[#171717]  shrink-0 snap-start  dark:text-white h-60 w-44 flex justify-around items-center flex-col before:bg-[#ffffff30] dark:before:bg-[#00000030]">
 
       <a
         href={project.link}
@@ -175,7 +175,16 @@
   display: block;
   width: 190px;
   height: 254px;
-  background: #22222230;
+  
+  backdrop-filter: blur(50px);
+}
+.dark #card::after {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 190px;
+  height: 254px;
+
   backdrop-filter: blur(50px);
 }
 
