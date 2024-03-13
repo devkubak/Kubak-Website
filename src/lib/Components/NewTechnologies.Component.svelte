@@ -73,11 +73,11 @@
           {#if technologies.length > 0}
             {#key currentTechnologyIndex}
               {#each technologies[currentTechnologyIndex].technologyAttributes as attr, index}
-                <div class="w-32 h-52 sm:w-44 sm:h-60 flex flex-col justify-end items-center bg-[#dddddd] dark:bg-zinc-700 fade-in"
+                <div class="w-32 h-52 sm:w-44 sm:h-60 flex flex-col justify-end items-center bg-[#dddddd] dark:bg-zinc-700 fade-in rounded-lg shadow-lg hover:shadow-2xl duration-300 transition-all  ease-in-out"
                      data-aos="flip-left"
                      data-aos-duration="2000" data-aos-anchor-placement="top">
                   <img src="{attr.image}" class="w-24 h-24 object-contain my-12" alt="" />
-                  <p class="w-full max-h-12 text-12 text-center flex justify-center items-center py-2 bg-[#f1f1f1] dark:bg-[#191919] dark:text-white">
+                  <p class="w-full max-h-12 text-12 text-center flex justify-center items-center py-2 bg-[#f1f1f1] dark:bg-[#191919] dark:text-white rounded-b-lg">
                     {attr.title}
                   </p>
                 </div>
@@ -94,3 +94,4 @@
     </div>
   </div>
 </div>
+

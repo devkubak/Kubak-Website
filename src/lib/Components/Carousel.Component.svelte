@@ -147,7 +147,7 @@ button {
  align-items: center;
  background-image: linear-gradient(144deg,#f17f18, #ffc897 50%,#ffa657);
  border: 0;
- border-radius: 8px;
+ border-radius: 30px;
  box-shadow: #f17d185b 0 15px 30px -5px;
  box-sizing: border-box;
  color: #FFFFFF;
@@ -176,7 +176,7 @@ button:hover {
 button span {
  background-color: #f17f18;
  padding: 8px 18px;
- border-radius: 6px;
+ border-radius: 30px;
  width: 100%;
  height: 100%;
  transition: 300ms;

@@ -43,6 +43,8 @@
     <!-- svelte-ignore a11y-distracting-elements -->
 
     {#each $projectStore.data as project}
+    <div id="card" class="rounded-lg dark:bg-[#171717]  shrink-0 snap-start  dark:text-white h-60 w-44 flex justify-around items-center flex-col">
+
       <a
         href={project.link}
         target="_blank"
@@ -50,14 +52,15 @@
         class="shrink-0 snap-start bg-white dark:bg-[#212121] dark:text-white h-60 w-44 flex justify-around rounded-lg items-center flex-col"
       >
         <img
-          class="rounded-container-token hover:brightness-125 w-24"
+          class="rounded-container-token hover:brightness-125 size-24 object-contain"
           src={project.image}
           alt=""
           title=""
           loading="lazy"
         />
-        <p>{project.name}</p>
+        <p class="text-black dark:text-white mt-12">{project.name}</p>
       </a>
+    </div>
     {/each}
   </div>
 </div>
@@ -82,3 +85,109 @@
     <img src="images/rightArrow.png" alt="" class="w-4 h-4" />
   </button>
 </div>
+
+
+
+<style>
+
+#card {
+  width: 190px;
+  height: 254px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.dark #card #carousel-card {
+  border-radius: 8px;
+  background: #212121;
+  width: 183px;
+  height: 245px;
+  z-index: 1;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#card #carousel-card {
+  border-radius: 8px;
+  background: #ffffff;
+  width: 183px;
+  height: 245px;
+  z-index: 1;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.content::before {
+  opacity: 0;
+  transition: opacity 300ms;
+  content: " ";
+  display: block;
+  background: white;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  filter: blur(50px);
+}
+
+#card:hover #carousel-card::before {
+  opacity: 1;
+}
+
+#card::before {
+  opacity: 0;
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 360px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(255, 119, 0),
+    #ff7700,
+    transparent
+  );
+  transition: opacity 300ms;
+  animation: rotation_9018 3000ms infinite linear;
+  animation-play-state: paused;
+}
+
+#card:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+#card::after {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 190px;
+  height: 254px;
+  background: #22222230;
+  backdrop-filter: blur(50px);
+}
+
+
+@keyframes rotation_9018 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
