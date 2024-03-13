@@ -68,7 +68,7 @@
               </div>
               </div>
 
-              <div class="w-11/12 h-16 ml-5 mb-4 absolute z-50 bottom-0  flex md:hidden justify-center items-center " data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
+              <div class="w-11/12 h-16 ml-5 mb-4 absolute z-50 bottom-0  flex md:hidden justify-center items-center " data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
                 <button>
                   
                   <!-- svelte-ignore a11y-click-events-have-key-events -->
