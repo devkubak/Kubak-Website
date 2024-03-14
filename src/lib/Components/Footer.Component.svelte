@@ -38,7 +38,7 @@
 
 <Footer
   footerType="logo"
-  class=" px-0 md:px-0 mt-5  pb-0 md:pb-0 bg-white dark:bg-[#21212126]"
+  class=" px-0 md:px-0 mt-5  pb-0 md:pb-0 bg-[#f1f1f1] dark:bg-[#33333326]"
  id="footerImg"
 >
   <div class="footer-bg backdrop-blur-lg">

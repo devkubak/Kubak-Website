@@ -106,3 +106,26 @@
       font-family: "english";
       
   }
+
+  .dark #Instagram-Light-Preview {
+    fill: #fff;  }
+
+
+#Facebook-Light-Preview:hover  {
+  fill: #fff;  }
+
+.dark #Facebook-Light-Preview {
+  fill: #fff;  }
+
+#Fill-1 {
+  fill: #424242;  }
+
+#Fill-1:hover {
+  fill: #fff !important;  }
+
+.dark #Fill-1 {
+  fill: #fff !important;  }
+
+
+  .icon-content:hover {
+    fill: #fff;  }
