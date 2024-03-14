@@ -146,7 +146,7 @@ li:hover::after {
   height: 50px;
   border-radius: 50%;
   color: #4d4d4d;
-  background-color: #fff;
+  background-color: #f1f1f1;
   transition: all 0.3s ease-in-out;
 }
 .dark .example-2 .icon-content a {
@@ -159,7 +159,7 @@ li:hover::after {
   height: 50px;
   border-radius: 50%;
   color: #4d4d4d;
-  background-color: #212121;
+  background-color: #363636;
   transition: all 0.3s ease-in-out;
 }
 .example-2 .icon-content a:hover {

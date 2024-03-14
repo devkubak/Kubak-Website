@@ -120,12 +120,10 @@
 #Fill-1 {
   fill: #424242;  }
 
-#Fill-1:hover {
+  .example-2 .icon-content:hover #Fill-1 {
   fill: #fff !important;  }
 
 .dark #Fill-1 {
   fill: #fff !important;  }
 
 
-  .icon-content:hover {
-    fill: #fff;  }
