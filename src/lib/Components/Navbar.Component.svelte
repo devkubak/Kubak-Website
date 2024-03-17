@@ -82,6 +82,7 @@
           <NavLi href="/aboutUs" style="font-family:english-title;">{$_("aboutUs")}</NavLi>
           <NavLi href="/privacy" style="font-family:english-title;">{$_("privacyPolicy")}</NavLi>
           <NavLi href="/terms" style="font-family:english-title;">{$_("termsofUse")}</NavLi>
+          <NavLi href="/contactUs" style="font-family:english-title;">{$_("contactUs")}</NavLi>
         </div>
         {:else}
 
@@ -93,6 +94,7 @@
         <NavLi href="/aboutUs" style="font-family:english-title;">{$_("aboutUs")}</NavLi>
         <NavLi href="/privacy" style="font-family:english-title;">{$_("privacyPolicy")}</NavLi>
         <NavLi href="/terms" style="font-family:english-title;">{$_("termsofUse")}</NavLi>
+        <NavLi href="/contactUs" style="font-family:english-title;">{$_("contactUs")}</NavLi>
       </div>
         {/if}
 

@@ -1,44 +1,32 @@
 <script lang="ts">
-  import type { Language } from "$lib/Models/Common/Language.Common.Model";
-  import { developmentStore } from "$lib/Store/Development.Store";
-  import { onMount } from "svelte";
-  import { _, locale } from "svelte-i18n";
+  import { onMount } from 'svelte';
+  import { developmentStore } from '$lib/Store/Development.Store';
+  import { _, locale } from 'svelte-i18n';
 
-  let selectedCard: number  = 0;
+  let selectedCard = 0;
 
   onMount(async () => {
     try {
       await developmentStore.getAll();
-       ($developmentStore);
-      selectedCard = $developmentStore.total % 4
-    } catch (e) {
-      console.log(e);
+      selectedCard = $developmentStore.total % 4;
+    } catch (error) {
+      console.error('Error fetching development data:', error);
     }
   });
 
   function handleCardClick(index: number) {
-     (index);
     if (selectedCard !== index) {
-     
-       (selectedCard);
-      selectedCard = index
-    } else {
-      return;
+      selectedCard = index;
     }
   }
 
   export let selectedLanguage: string;
-  function checkLanguage(selectedLanguage: string, text: Language): string {
-     (text);
-    if (Object.keys(text).includes(selectedLanguage)) {
-       (text);
-  
-      return text[selectedLanguage as keyof typeof text] as string;
-    } else {
-      return text.en;
-    }
+
+  function checkLanguage(lang: string, text: any): string {
+    return text[lang] ?? text.en;
   }
 </script>
+
 
 <div
   class="w-full h-auto justify-center items-center container mx-auto"
@@ -239,7 +227,4 @@
   }
   }
 
-  #description{
-    
-  }
 </style>

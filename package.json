@@ -14,6 +14,7 @@
     "@skeletonlabs/tw-plugin": "^0.3.1",
     "@sveltejs/adapter-auto": "^2.1.1",
     "@sveltejs/kit": "^1.30.3",
+    "@types/node": "^20.11.27",
     "autoprefixer": "^10.4.18",
     "flowbite": "^2.3.0",
     "flowbite-svelte": "^0.44.24",
@@ -35,6 +36,8 @@
     "@splidejs/splide": "^4.1.4",
     "aos": "^3.0.0-beta.6",
     "appwrite": "^13.0.2",
+    "nodemailer": "^6.9.12",
+    "svelte-email": "^0.0.4",
     "svelte-i18n": "^4.0.0",
     "swiper": "^6.8.4",
     "three": "^0.162.0"

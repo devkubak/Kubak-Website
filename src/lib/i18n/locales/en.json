@@ -1,12 +1,12 @@
 {
-    "home": "Home",
-    "products": "Products",
-    "aboutUs": "About Us",
-    "privacyPolicy": "Privacy Policy",
-    "termsofUse": "Terms of Use",
-    "aboutDescription":"Kubak is a software development company that offers IT solutions to businesses all around the world. Kubak provides a variety of software development solutions, including e-business solutions, enterprise applications, professional websites, design, product engineering, CMS Software, Payment Gateway solutions, Time and Attendance Tracking Software, Debt Collection Software, Appointment Reminder Solutions, Medical Transcription Services, and more. We research, design, develop, enhance, customize, implement, support, and maintain many parts of information technology.We are a professionally acknowledged software development company with vast experience in producing custom software and application development to meet your specific demands and specifications.",
-    "DevelopmentProcess":"DEVELOPMENT PROCESS",
-    "technologiesWeUse":"TECHNOLOGIES WE USE",
-    "ourProjects":"OUR PROJECTS"
-
-  }
+  "home": "Home",
+  "products": "Products",
+  "aboutUs": "About Us",
+  "privacyPolicy": "Privacy Policy",
+  "termsofUse": "Terms of Use",
+  "aboutDescription": "Kubak is a software development company that offers IT solutions to businesses all around the world. Kubak provides a variety of software development solutions, including e-business solutions, enterprise applications, professional websites, design, product engineering, CMS Software, Payment Gateway solutions, Time and Attendance Tracking Software, Debt Collection Software, Appointment Reminder Solutions, Medical Transcription Services, and more. We research, design, develop, enhance, customize, implement, support, and maintain many parts of information technology.We are a professionally acknowledged software development company with vast experience in producing custom software and application development to meet your specific demands and specifications.",
+  "DevelopmentProcess": "DEVELOPMENT PROCESS",
+  "technologiesWeUse": "TECHNOLOGIES WE USE",
+  "ourProjects": "OUR PROJECTS",
+  "contactUs": "Contact Us"
+}
