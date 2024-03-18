@@ -55,15 +55,15 @@
     <form on:submit|preventDefault={handleSubmit} class="w-full h-auto px-12 flex flex-col justify-center items-center gap-5">
       <div class="w-full h-auto flex flex-col justify-center items-start ">
         <label for="name" class="flex dark:text-white pl-5 mb-2" style="font-family: english-title;">Name</label>
-        <input type="text" bind:value={name} id="name" class="w-full h-12 rounded-full bg-[#f1f1f1] dark:bg-[#191919] border-0" placeholder="Your Name" required>
+        <input type="text" bind:value={name} id="name" class="w-full h-12 rounded-full dark:text-white bg-[#f1f1f1] dark:bg-[#191919] border-0" placeholder="Your Name" required>
       </div>
       <div class="w-full h-auto flex flex-col justify-center items-start">
         <label for="email" class="flex dark:text-white pl-5 mb-2" style="font-family: english-title;">Email</label>
-        <input type="email" bind:value={email} id="email" class="input w-full h-12 rounded-full bg-[#f1f1f1] dark:bg-[#191919] border-0" placeholder="Your Email" required>
+        <input type="email" bind:value={email} id="email" class="input w-full  h-12 dark:text-white rounded-full bg-[#f1f1f1] dark:bg-[#191919] border-0" placeholder="Your Email" required>
       </div>
       <div class="w-full h-auto">
         <label for="message" class="flex w-full h-auto  flex-col justify-center items-start dark:text-white pl-5 mb-2" style="font-family: english-title;">Message</label>
-        <textarea bind:value={message} id="message" class="textarea w-full h-32 rounded-2xl bg-[#f1f1f1] dark:bg-[#191919] border-0" placeholder="Your Message" required></textarea>
+        <textarea bind:value={message} id="message" class="textarea w-full h-32 dark:text-white rounded-2xl bg-[#f1f1f1] dark:bg-[#191919] border-0" placeholder="Your Message" required></textarea>
       </div>
       <button type="submit" class="btn w-full h-12 bg-[#f17f18] hover:bg-[#e68c50] duration-300 ease-in-out  text-white rounded-full" style="font-family: english-title;">Send Message</button>
     </form>
