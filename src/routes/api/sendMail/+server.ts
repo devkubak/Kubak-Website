@@ -14,8 +14,8 @@ export const POST: RequestHandler = async ({ request }) => {
       port: 465,
       secure: true,
       auth: {
-        user: "info@kubakgroup.com", //support email
-        pass: "#",  //support email passkey
+        user: "ali.g.5579@gmail.com", //support email
+        pass: "ptnx jwgr ufgc iajz",  //support email passkey
       },
       tls: {
         rejectUnauthorized: false
@@ -33,7 +33,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
    await transport.sendMail({
     from: emailUser,
-    to: "info@kubakgroup.com",
+    to: "ali.g.5579@gmail.com",
     subject: name,
     html: emailHtml,
   });
