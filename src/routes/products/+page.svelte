@@ -69,15 +69,15 @@
   >
 <div class="w-full h-auto flex flex-col gap-3" dir="{$locale == "en" ? "ltr" : "rtl"}" >
 
-  <p class="md:text-2xl text-[#f17f18] text-lg font-bold " style="font-family: english-title;" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+  <p class="md:text-2xl text-[#f17f18] text-lg font-bold " style="font-family: english-title;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
     {checkLanguage( productAttribute.title,$locale)}
   </p>
-  <p class="md:text-xl dark:text-white text-justify" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+  <p class="md:text-xl dark:text-white text-justify" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
     {checkLanguage( productAttribute.description,$locale)}
   </p>
 </div>
   
-  <div class="relative mx-auto p-3 border-[#f17f18] dark:border-[#f17f18] bg-[#f17f18] border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+  <div class="relative mx-auto p-3 border-[#f17f18] dark:border-[#f17f18] bg-[#f17f18] border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
     <div class="w-[148px] h-[18px] bg-[#f17f18] top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
     <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-[#f17f18]" >
       <img src={productAttribute.image || "/images/phone1.jpg"} class="w-[272px] h-[572px] rounded-3xl" alt="ios example 1" />

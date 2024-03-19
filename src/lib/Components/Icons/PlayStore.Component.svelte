@@ -1,4 +1,4 @@
-<div class="flex mt-3 w-auto px-2 h-14 text-white rounded-xl items-center justify-center ease-in-out duration-300" id="playstore" >
+<div class="flex mt-3 w-36 md:w-52 px-2 h-14 text-white rounded-xl items-center justify-center ease-in-out duration-300" id="playstore" >
     <div class="mr-3">
         <svg viewBox="30 336.7 120.9 129.2" width="30">
             <path fill="#FFD400" d="M119.2,421.2c15.3-8.4,27-14.8,28-15.3c3.2-1.7,6.5-6.2,0-9.7  c-2.1-1.1-13.4-7.3-28-15.3l-20.1,20.2L119.2,421.2z"/>
@@ -9,7 +9,7 @@
     </div>
     <div>
         <div class="text-xs">GET IT ON</div>
-        <div class="md:text-xl font-semibold font-sans -mt-1">Google Play</div>
+        <div class="text-sm md:text-xl font-semibold font-sans -mt-1">Google Play</div>
     </div>
 </div>
 
