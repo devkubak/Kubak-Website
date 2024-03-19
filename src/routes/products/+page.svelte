@@ -5,6 +5,8 @@
   import { ImagePosition } from "$lib/Models/Enums/Image-Position.Enum.Model";
   import type { Language } from "$lib/Models/Common/Language.Common.Model";
   import { locale } from "svelte-i18n";
+  import Appstore from "$lib/Components/Icons/Appstore.Component.svelte";
+  import PlayStore from "$lib/Components/Icons/PlayStore.Component.svelte";
 
   let loading:boolean = true;
   onMount(async () => {
@@ -204,18 +206,19 @@
   </DeviceMockup> -->
 <!-- </div> -->
 
-<div class="w-full container mx-auto flex items-center px-4">
-  <a
-    href="https://play.google.com/store/apps/details?id=co.kubak.city&hl=en&gl=US"
-    class="w-full flex justify-end"
-  >
-    <img src="/images/playLight.png" class="w-52" alt="" />
-  </a>
-  <a
-    href="https://apps.apple.com/us/app/kubak/id1460687618"
-    class="w-full flex justify-start"
-  >
-    <img src="/images/appLight.png" class="w-52" alt="" />
-  </a>
-</div>
+
+  <div class="w-full flex justify-center items-center gap-2">
+    <a
+      href="https://play.google.com/store/apps/details?id=co.kubak.city&hl=en&gl=US"
+      class="w-auto"
+    >
+      <PlayStore />
+    </a>
+    <a
+      href="https://apps.apple.com/us/app/kubak/id1460687618"
+      class="w-auto"
+    >
+      <Appstore />
+    </a>
+  </div>
 {/if}
