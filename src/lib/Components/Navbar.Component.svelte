@@ -40,7 +40,7 @@
   }
 </script>
 
-<div class="w-full absolute z-10">
+<div class="w-full absolute z-20">
   <Navbar
     class="bg-[#0000009a] dark:bg-[#000000be]  backdrop-blur-md text-center fixed"
     style="font-family:english;"
