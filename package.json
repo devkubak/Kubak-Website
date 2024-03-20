@@ -36,9 +36,11 @@
     "@splidejs/splide": "^4.1.4",
     "aos": "^3.0.0-beta.6",
     "appwrite": "^13.0.2",
+    "framer-motion": "^11.0.15",
     "nodemailer": "^6.9.12",
     "svelte-email": "^0.0.4",
     "svelte-i18n": "^4.0.0",
+    "svelte-motion": "^0.12.2",
     "swiper": "^6.8.4",
     "three": "^0.162.0"
   }

@@ -40,7 +40,7 @@
   }
 </script>
 {#if loading}
-<div class="w-full h-screen flex flex-col gap-5 bg-white justify-center items-center">
+<div class="w-full h-screen flex flex-col gap-5 bg-white dark:bg-[#212121] justify-center items-center">
 
   <div class="w-full h-auto flex justify-center items-center">
     <Img src="/images/kubakLogo.png" class="w-24 h-24 object-contain"/>

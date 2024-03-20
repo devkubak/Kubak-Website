@@ -7,42 +7,34 @@
   import { aboutUsStore } from "$lib/Store/AboutUs.Store";
   import { developmentStore } from "$lib/Store/Development.Store";
   import { footerStore } from "$lib/Store/Footer.Store";
-  import { productStore } from "$lib/Store/Product.Store";
-  import { projectStore } from "$lib/Store/Project.Store";
-  import { technologyStore } from "$lib/Store/Technology.Store";
-  import { technologyAttributeStore } from "$lib/Store/TechnologyAttibute.Store";
   import { onMount } from "svelte";
-  import { Img } from "flowbite-svelte";
+  import Splash from "$lib/Components/splash.Component.svelte";
   import AOS from 'aos';
   import 'aos/dist/aos.css';
   
-  // Initialize AOS
- 
   let loading = true;
-	onMount(async () => {
-		try {
-      await carouselStore.getAll();
-			await footerStore.get();
-      AOS.init();
-		} finally {
-			loading = false;
-		}
-	});
 
+onMount(async () => {
+  setTimeout(() => {
+    loading = false;
+  }, 2000); // Set timeout for 2 seconds
+
+  try {
+    await carouselStore.getAll();
+    await footerStore.get();
+    AOS.init();
+  } finally {
+    // Ensure loading is set to false even if there's an error during data loading
+    setTimeout(() => {
+      loading = false;
+    }, 4000); // Ensure loading screen stays for at least 2 seconds
+  }
+});
 </script>
 
 {#if loading}
-<div class="w-full h-screen flex flex-col gap-5 bg-white justify-center items-center">
+<Splash />
 
-  <div class="w-full h-auto flex justify-center items-center">
-    <Img src="/images/kubakLogo.png" class="w-24 h-24 object-contain"/>
-  </div>
-  <div class="flex items-center justify-center space-x-2 h-auto w-full">
-    <div class="w-4 h-4 rounded-full animate-pulse bg-[#f17f18]"></div>
-    <div class="w-4 h-4 rounded-full animate-pulse bg-[#f17f18]"></div>
-    <div class="w-4 h-4 rounded-full animate-pulse bg-[#f17f18]"></div>
-  </div>
-</div>
 {:else}
 
 
@@ -53,6 +45,7 @@
 
 
 <style>
+
 
 
 
