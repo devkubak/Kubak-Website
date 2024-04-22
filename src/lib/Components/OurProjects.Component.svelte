@@ -44,7 +44,7 @@
 
     {#each $projectStore.data as project}
     <div id="card" class="rounded-lg dark:bg-[#171717]  shrink-0 snap-start  dark:text-white h-60 w-44 flex justify-around items-center flex-col before:bg-[#ffffff30] dark:before:bg-[#00000030]">
-
+      {#if project.link}
       <a
         href={project.link}
         target="_blank"
@@ -60,6 +60,21 @@
         />
         <p class="text-black dark:text-white mt-12">{project.name}</p>
       </a>
+      {:else}
+      <a
+      id="carousel-card"
+      class="shrink-0 snap-start bg-white dark:bg-[#212121] dark:text-white h-60 w-44 flex justify-around rounded-lg items-center flex-col"
+    >
+      <img
+        class="rounded-container-token hover:brightness-125 size-24 object-contain"
+        src={project.image}
+        alt=""
+        title=""
+        loading="lazy"
+      />
+      <p class="text-black dark:text-white mt-12">{project.name}</p>
+    </a>
+    {/if}
     </div>
     {/each}
   </div>

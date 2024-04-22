@@ -27,7 +27,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div
-  class="container mx-auto text-center dark:text-white leading-[.1rem] text-md md:text-xl dark:bg-gradient-to-b shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#ededed] via-[#d1d1d1] to-[#f1f1f14d] rounded-2xl p-3 duration-150 ease-in-out"
+  class="container mx-auto text-center dark:text-white leading-[.1rem] text-md md:text-xl dark:bg-gradient-to-b shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#ededed] via-[#d1d1d1] to-[#f1f1f14d] rounded-2xl p-3 duration-300 ease-in-out"
   data-aos="fade-up"
   data-aos-anchor-placement="center" data-aos-duration="3000"
 >
@@ -100,3 +100,4 @@ class="w-80 h-96 bg-white dark:bg-[#212121] rounded-2xl flex flex-col justify-en
   <a href="/viewMore" class="w-34 h-12 flex justify-center items-center text-center my-5 bg-[#f17f18] text-white rounded-xl px-4">View More</a>
 </div>
 {/if} -->
+
