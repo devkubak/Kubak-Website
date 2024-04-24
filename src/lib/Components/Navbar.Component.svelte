@@ -1,8 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
-  import type {
-    LanguageIndex,
-  } from "$lib/Models/Common/Language.Common.Model";
+  import type { LanguageIndex } from "$lib/Models/Common/Language.Common.Model";
+  import { languageStore } from "$lib/Store/Language.Store";
   import {
     Navbar,
     NavBrand,
@@ -25,7 +24,7 @@
   const nonActiveClass = "text-white duration-300 ease-in-out";
 
   // Selected language state
-  let selectedLanguage:string = "en";
+  let selectedLanguage: string = "en";
 
   const value: LanguageIndex = {
     en: "EN",
@@ -33,9 +32,9 @@
     ar: "AR",
   };
 
-  $:{
-    if(selectedLanguage){
-      locale.set(selectedLanguage);      
+  $: {
+    if (selectedLanguage) {
+      locale.set(selectedLanguage);
     }
   }
 </script>
@@ -43,96 +42,114 @@
 <div class="w-full absolute z-20">
   <Navbar
     class="bg-[#0000009a] dark:bg-[#000000be]  backdrop-blur-md text-center fixed"
-    style="font-family:english;"
   >
-  <div class="flex w-full xl:gap-24 md:order-2  justify-between flex-wrap md:justify-center"
-  style="font-family:english;"
-  >
+    <div
+      class="flex w-full xl:gap-24 md:order-2 justify-between flex-wrap md:justify-center"
+    >
+      <NavBrand href="/">
+        <img
+          src="/images/kubak.png"
+          class="me-3 h-8 lg:h-12"
+          alt="Flowbite Logo"
+        />
+      </NavBrand>
 
-  
-  <NavBrand href="/">
-    <img
-      src="/images/kubak.png"
-      class="me-3 h-8 lg:h-12"
-      alt="Flowbite Logo"
-    />
-  </NavBrand>
-
-  
-  <NavHamburger menuClass="text-white" />
-  <NavUl
-
-  
-  {activeUrl}
-  ulClass="md:flex w-full items-center md:gap-3 bg-[#00000000] border-0 dark:bg-[#00000000] md:bg-transparent md:dark:bg-transparent"
-  {activeClass}
-  {nonActiveClass}
-  class="md:text-md lg:text-lg gap-2"
-  
-  
-  >
-      <div class="w-full md:flex md:justify-around gap-12">
-        {#if $locale == "en"}
-        <div
-          class="w-full text-md md:gap-5 md:flex justify-center items-center font-english"
-          
-        >
-          <NavLi href="/" style="font-family:english-title;">{$_("home")}</NavLi>
-          <NavLi href="/products" style="font-family:english-title;">{$_("products")}</NavLi>
-          <NavLi href="/aboutUs" style="font-family:english-title;">{$_("aboutUs")}</NavLi>
-          <NavLi href="/privacy" style="font-family:english-title;">{$_("privacyPolicy")}</NavLi>
-          <NavLi href="/terms" style="font-family:english-title;">{$_("termsofUse")}</NavLi>
-          <NavLi href="/contactUs" style="font-family:english-title;">{$_("contactUs")}</NavLi>
-        </div>
-        {:else}
-
-        <div
-        class="w-full text-xs xl:text-[1rem] md:gap-5 md:flex justify-center items-center font-english" dir="rtl"
+      <NavHamburger menuClass="text-white" />
+      <NavUl
+        {activeUrl}
+        ulClass="md:flex w-full items-center md:gap-3 bg-[#00000000] border-0 dark:bg-[#00000000] md:bg-transparent md:dark:bg-transparent"
+        {activeClass}
+        {nonActiveClass}
+        class="md:text-md lg:text-lg gap-2"
       >
-        <NavLi href="/" style="font-family:english-title;">{$_("home")}</NavLi>
-        <NavLi href="/products" style="font-family:english-title;">{$_("products")}</NavLi>
-        <NavLi href="/aboutUs" style="font-family:english-title;">{$_("aboutUs")}</NavLi>
-        <NavLi href="/privacy" style="font-family:english-title;">{$_("privacyPolicy")}</NavLi>
-        <NavLi href="/terms" style="font-family:english-title;">{$_("termsofUse")}</NavLi>
-        <NavLi href="/contactUs" style="font-family:english-title;">{$_("contactUs")}</NavLi>
-      </div>
-        {/if}
+        <div class="w-full md:flex md:justify-around gap-12">
+          {#if $locale == "en"}
+            <div
+              class="w-full text-md md:gap-5 md:flex justify-center items-center"
+            >
+              <NavLi href="/" class="english-title">{$_("home")}</NavLi>
+              <NavLi href="/products" class="english-title"
+                >{$_("products")}</NavLi
+              >
+              <NavLi href="/aboutUs" class="english-title"
+                >{$_("aboutUs")}</NavLi
+              >
+              <NavLi href="/privacy" class="english-title"
+                >{$_("privacyPolicy")}</NavLi
+              >
+              <NavLi href="/terms" class="english-title"
+                >{$_("termsofUse")}</NavLi
+              >
+              <NavLi href="/contactUs" class="english-title"
+                >{$_("contactUs")}</NavLi
+              >
+            </div>
+          {:else}
+            <div
+              class="w-full text-xs xl:text-[1rem] md:gap-5 md:flex justify-center items-center"
+              dir="rtl"
+            >
+              <NavLi href="/" class="kurdish-title">{$_("home")}</NavLi>
+              <NavLi href="/products" class="kurdish-title"
+                >{$_("products")}</NavLi
+              >
+              <NavLi href="/aboutUs" class="kurdish-title"
+                >{$_("aboutUs")}</NavLi
+              >
+              <NavLi href="/privacy" class="kurdish-title"
+                >{$_("privacyPolicy")}</NavLi
+              >
+              <NavLi href="/terms" class="kurdish-title"
+                >{$_("termsofUse")}</NavLi
+              >
+              <NavLi href="/contactUs" class="kurdish-title"
+                >{$_("contactUs")}</NavLi
+              >
+            </div>
+          {/if}
 
-        <div class="flex justify-center md:justify-around items-center text-center gap-2">
-          <!-- Multi Language Display None for Now -->
-          <select
-            bind:value={selectedLanguage}
-            class="w-20 h-10 rounded-full bg-[#ffffff00] hidden justify-center items-center text-white"
-            >{selectedLanguage}<ChevronDownSolid
-              class="ms-2 w-2 h-2 text-white dark:text-white"
-            />
-            {#each Object.keys(value) as lang}
-              <option value={lang} class="text-black">{value[lang]}</option>
-            {/each}
-          </select>
-          <DarkMode class="text-lg">
-            <Img
-              src="/images/lightMode.png"
-              slot="lightIcon"
-              class="w-8 h-8 md:w-20 md:h-8 object-contain"
-            />
-            <Img
-              src="/images/darkMode.png"
-              slot="darkIcon"
-              class="w-8 h-8 md:w-20 md:h-8 object-contain"
-            />
-          </DarkMode>
+          <div
+            class="flex justify-center md:justify-around items-center text-center gap-2"
+          >
+            <!-- Multi Language Display None for Now -->
+            <select
+              bind:value={selectedLanguage}
+              class="w-20 h-10 rounded-full bg-[#ffffff00] flex justify-center items-center text-white"
+              >{selectedLanguage}<ChevronDownSolid
+                class="ms-2 w-2 h-2 text-white dark:text-white"
+              />
+              {#if $languageStore}
+                {#each $languageStore.data as lang}
+                  <option
+                    value={lang.abbreviation}
+                    disabled={!lang.active}
+                    class="text-black {!lang.active ? 'hidden' : 'flex'}"
+                    >{lang.title}</option
+                  >
+                {/each}
+              {/if}
+            </select>
+            <DarkMode class="text-lg">
+              <Img
+                src="/images/lightMode.png"
+                slot="lightIcon"
+                class="w-8 h-8 md:w-20 md:h-8 object-contain"
+              />
+              <Img
+                src="/images/darkMode.png"
+                slot="darkIcon"
+                class="w-8 h-8 md:w-20 md:h-8 object-contain"
+              />
+            </DarkMode>
+          </div>
         </div>
-
-      </div> 
-
-    </NavUl>
-  </div>
+      </NavUl>
+    </div>
   </Navbar>
 </div>
 
 <style>
   * {
-    font-family: "english";
+    font-family: "kurdish" !important;
   }
 </style>

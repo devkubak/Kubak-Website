@@ -4,7 +4,7 @@
   import { browser } from "$app/environment";
   import { carouselStore } from "$lib/Store/Carousel.Store";
   import type { Language } from "$lib/Models/Common/Language.Common.Model";
-  import { locale } from "svelte-i18n";
+  import { locale, _ } from "svelte-i18n";
   
 
   function checkLanguage(text: Language, lang?: string | null): string {
@@ -73,22 +73,33 @@
                   
                   <!-- svelte-ignore a11y-click-events-have-key-events -->
                   <!-- svelte-ignore a11y-no-static-element-interactions -->
-                  <span id="downloadButton"  on:click={redirectToStore}>Download App</span>
+                  <span id="downloadButton"  on:click={redirectToStore} class="{$locale == "en" ? "english-title" : "kurdish-title"}">{$_("downloadApp")}</span>
                 </button>
               </div>
 
             {:else}
               <div
-                class="relative bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse text-center md:pr-44 md:text-2xl items-center md:items-end p-2 bg-black bg-opacity-50 text-white gap-4 text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
+                class="absolute bottom-0 left-0 w-full h-full flex justify-center flex-col-reverse text-center md:pr-44 md:text-2xl items-center md:items-end p-2 bg-black bg-opacity-50 text-white gap-4 text-lg lg:text-2xl xl:text-4xl 2xl:text-6xl"
               >
-              
+              <div class="w-full h-28 md:h-[32rem] absolute left-0 bottom-0 bg-gradient-to-t from-[#000000]"></div>
+              <div class="absolute bottom-0 left-0 w-full h-full flex justify-start pb-24 md:pb-48 flex-col-reverse text-center  md:pr-12 md:text-4xl items-center md:items-end p-2  gap-4 text-xl lg:text-6xl xl:text-6xl 2xl:text-[4rem]"
+              style="font-family: kurdish-title; filter:opacity(1); "
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-center" data-aos-duration="3000">
                 {checkLanguage(carousel.title, $locale)}
-
-             
-                 
-              
-              
               </div>
+            
+              </div>
+
+              <div class="w-11/12 h-16 ml-5 mb-4 absolute z-50 bottom-0  flex md:hidden justify-center items-center " data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
+                <button>
+                  
+                  <!-- svelte-ignore a11y-click-events-have-key-events -->
+                  <!-- svelte-ignore a11y-no-static-element-interactions -->
+                  <span id="downloadButton" class="{$locale == "en" ? "english-title" : "kurdish-title"}"  on:click={redirectToStore}>{$_("downloadApp")}</span>
+                </button>
+              </div>
+
             {/if}
           </a>
         {/each}
@@ -152,7 +163,6 @@ button {
  box-sizing: border-box;
  color: #FFFFFF;
  display: flex;
- font-family: Phantomsans, sans-serif;
  font-size: 18px;
  justify-content: center;
  line-height: 1em;
@@ -180,7 +190,6 @@ button span {
  width: 100%;
  height: 100%;
  transition: 300ms;
- font-family: english-title;
 }
 
 button:hover span {

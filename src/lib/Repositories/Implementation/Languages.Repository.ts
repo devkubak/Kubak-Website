@@ -2,6 +2,7 @@ import { Appwrite } from "$lib/Appwrite/appwrite";
 import { Environment } from "$lib/Env/Environment";
 import type { GenericListOptions } from "$lib/Models/common/ListOptions.Common.Model";
 import type { Languages } from "$lib/Models/Entities/Languages.Entity.Model";
+import { Query } from "appwrite";
 import type { ILanguagesRepository } from "../Interface/I.Languages.Repository";
 
 export class LanguagesRepository implements ILanguagesRepository {
@@ -11,7 +12,10 @@ export class LanguagesRepository implements ILanguagesRepository {
     try {
       const { documents, total } = (await Appwrite.databases.listDocuments(
         Environment.appwrite_database,
-        Environment.appwrite_collection_languages
+        Environment.appwrite_collection_languages,
+        [
+          Query.equal("active", true),
+        ]
       )) as AppwriteResponse<Languages>;
 
       return {

@@ -54,10 +54,10 @@
 {:else}
 {#if $productStore}
 <div
-  class="w-full bg-[#f1f1f1] dark:bg-[#212121] dark:text-white pb-12 pt-32 flex justify-center items-center text-center"
+  class="w-full bg-[#f1f1f1] dark:bg-[#212121] dark:text-white pb-12 pt-32 flex justify-center items-center text-center" 
   data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"
 >
-  <p class="md:text-4xl container mx-auto" style="font-family: english-title;">
+  <p class="md:text-4xl container mx-auto {$locale == "en" ? "english" : "kurdish"}" >
     {checkLanguage($productStore.title,$locale)}
   </p>
 </div>
@@ -69,10 +69,10 @@
   >
 <div class="w-full h-auto flex flex-col gap-3" dir="{$locale == "en" ? "ltr" : "rtl"}" >
 
-  <p class="md:text-2xl text-[#f17f18] text-lg font-bold " style="font-family: english-title;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+  <p class="md:text-2xl text-[#f17f18] text-lg font-bold {$locale == "en" ? "english-title" : "kurdish-title"}"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
     {checkLanguage( productAttribute.title,$locale)}
   </p>
-  <p class="md:text-xl dark:text-white text-justify" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+  <p class="md:text-xl dark:text-white text-justify {$locale == "en" ? "english" : "kurdish"}" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
     {checkLanguage( productAttribute.description,$locale)}
   </p>
 </div>

@@ -1,13 +1,12 @@
 <script lang="ts">
   import Carousel from "$lib/Components/Carousel.Component.svelte";
-  import Technologies from "$lib/Components/Technologies.Component.svelte";
   import DevelopmentProcess from "$lib/Components/DevelopmentProcess.Component.svelte";
 	import OurProjects from '$lib/Components/OurProjects.Component.svelte';
   import { onMount } from "svelte";
   import { projectStore } from "$lib/Store/Project.Store";
   import { _, locale } from "svelte-i18n";
+  import { languageStore } from "$lib/Store/Language.Store";
   import NewTech from "$lib/Components/NewTechnologies.Component.svelte"
-  let aboutDescription = $_("aboutDescription");
   let showFullText = false;
 
   function toggleShowFullText() {
@@ -21,6 +20,12 @@
       console.log(e);
     }
   });
+
+  $:{
+    console.log("Language",$locale);
+    
+  }
+
 </script>
 
 <Carousel />
@@ -32,22 +37,22 @@
   data-aos-anchor-placement="center" data-aos-duration="3000"
 >
 
-<p class="leading-10 duration-150 ease-in-out">
+<p class="leading-10 duration-150 ease-in-out {$locale == "en" ? "english" : "kurdish"}">
   {showFullText
-    ? aboutDescription
-    : aboutDescription.length > 200
-      ? aboutDescription.slice(0, 200) + "..."
-      : aboutDescription}
+    ? $_("aboutDescription")
+    : $_("aboutDescription").length > 200
+      ? $_("aboutDescription").slice(0, 200) + "..."
+      : $_("aboutDescription")}
 </p>
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="text-[#f17f18] hover:text-[#f19718] my-5 cursor-pointer ease-in-out duration-300" style="font-family: english-title;" on:click={toggleShowFullText}>
-  {showFullText ? "Show Less" : "Show More"}
+<div class="text-[#f17f18] hover:text-[#f19718] my-5 cursor-pointer ease-in-out duration-300 {$locale == "en" ? "english-title" : "kurdish-title"}"  on:click={toggleShowFullText}>
+  {showFullText ? $_("showLess") : $_("showMore") }
 </div>
 </div>
 
 <div class="w-full flex justify-center items-center text-center mt-12">
-  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl" data-aos="zoom-out-up" data-aos-anchor-placement="center" data-aos-duration="1000">
+  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl {$locale == "en" ? "english-title" : "kurdish-title"}" data-aos="zoom-out-up" data-aos-anchor-placement="center" data-aos-duration="1000">
     {$_("DevelopmentProcess")}
   </p>
 </div>
@@ -56,7 +61,7 @@
 <div
   class="w-full h-12 flex justify-center items-center text-center mt-12 mb-3"
 >
-  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl" data-aos="zoom-out-up" data-aos-anchor-placement="center" data-aos-duration="1000">
+  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl {$locale == "en" ? "english-title" : "kurdish-title"}" data-aos="zoom-out-up" data-aos-anchor-placement="center" data-aos-duration="1000">
     {$_("technologiesWeUse")}
   </p>
 </div>
@@ -65,7 +70,7 @@
 <div
   class="w-full h-12 flex justify-center items-center text-center mt-12 mb-3"
 >
-  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl" data-aos="zoom-out-up" data-aos-anchor-placement="center" data-aos-duration="1000">
+  <p class="text-black dark:text-white font-bold py-3 mt-3 md:text-4xl {$locale == "en" ? "english-title" : "kurdish-title"}" data-aos="zoom-out-up" data-aos-anchor-placement="center" data-aos-duration="1000">
     {$_("ourProjects")}
   </p>
 </div>

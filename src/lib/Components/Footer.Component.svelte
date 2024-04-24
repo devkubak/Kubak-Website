@@ -55,15 +55,15 @@
 
         <Social/>
       </div>
-        <p class="text-justify px-4">
+        <p class="text-justify px-4 {$locale == "en" ? "english" : "kurdish"}" dir={$locale == "en" ? "ltr" : "rtl"}>
           {checkLanguage($footerStore.description,$locale)}
         </p>
 
         <div
           class="w-full flex justify-between items-center mt-12 text-center text-gray-800 dark:text-white text-[12px] pb-5 md:text-[15px] px-4 gap-3"
         >
-          <p>{checkLanguage($footerStore.address1,$locale)}</p>
-          <p>{checkLanguage($footerStore.address2,$locale)}</p>
+          <p class="{$locale == "en" ? "english" : "kurdish"}">{checkLanguage($footerStore.address1,$locale)}</p>
+          <p class="{$locale == "en" ? "english" : "kurdish"}">{checkLanguage($footerStore.address2,$locale)}</p>
         </div>
       </FooterLinkGroup>
     </div>

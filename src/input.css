@@ -96,6 +96,36 @@
     src: url('/fonts/Rajdhani-Bold.ttf') format('truetype'),
 
   }
+
+  @font-face {
+    font-family: "kurdish-title";
+    font-style: bold;
+    src: url('/fonts/bahij.ttf') format('truetype'),
+
+  }
+
+  @font-face {
+    font-family: "kurdish";
+    font-style: bold;
+    src: url('/fonts/bahij_plain.ttf') format('truetype'),
+
+  }
+  
+
+  @layer utilities {
+    .english-title {
+      font-family: 'english-title';
+    }
+    .english {
+      font-family: 'english';
+    }
+    .kurdish {
+      font-family: 'kurdish';
+    }
+    .kurdish-title {
+      font-family: 'kurdish-title';
+    }
+  }
   
   
   #footerImg{

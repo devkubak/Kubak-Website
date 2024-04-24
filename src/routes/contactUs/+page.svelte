@@ -2,7 +2,7 @@
  import type { Language } from "$lib/Models/Common/Language.Common.Model";
   import { footerStore } from "$lib/Store/Footer.Store";
   import { onMount } from "svelte";
-  import { locale } from "svelte-i18n";
+  import { locale, _ } from "svelte-i18n";
   import { Toast } from 'flowbite-svelte';
   import { blur } from 'svelte/transition';
   import { BellOutline, CheckCircleSolid } from 'flowbite-svelte-icons';
@@ -58,13 +58,14 @@
 {#if showToast}
 <div class="absolute z-10 flex justify-center w-full h-auto top-24">
   <Toast transition={blur} color="green" params={{ amount: 50, delay: 1000 }} 
-  divClass="w-full max-w-xs p-4   shadow dark:text-white bg-gradient-to-b  from-[#00e47f5e] via-[#00e47f5e] to-[#00e47f5e] gap-3 " style="font-family: english-title; backdrop-filter: blur(10px);"
+  class="{$locale == "en" ? "english-title" : "kurdish-title"}"
+  divClass="w-full max-w-xs p-4   shadow dark:text-white bg-gradient-to-b  from-[#00e47f5e] via-[#00e47f5e] to-[#00e47f5e] gap-3 {$locale == "en" ? "english-title" : "kurdish-title"}" style="backdrop-filter: blur(10px);"
   >
     <svelte:fragment slot="icon">
     <CheckCircleSolid class="w-5 h-5" />
     <span class="sr-only">Check icon</span>
   </svelte:fragment>
-    Sent Successfully
+    {$_("sentSuccessfully")}
   </Toast>
 </div>
 {/if}
@@ -78,51 +79,51 @@
 
   <div class="w-[690px] md:w-full h-auto flex justify-center items-center dark:bg-gradient-to-b shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#f6f6f6] via-[#dddddd] to-[#f6f6f6] py-[3rem] rounded-2xl" data-aos="fade-up" data-aos-duration="2000" id="formDiv">
     <form on:submit|preventDefault={handleSubmit} class="w-full h-auto px-12 flex flex-col justify-center items-center gap-5">
-      <div class="w-full h-auto flex flex-col justify-center items-start ">
-        <label for="name" class="flex dark:text-white pl-5 mb-2" style="font-family: english-title;">Name</label>
-        <input type="text" bind:value={name} id="name" class="w-full h-12 rounded-full dark:text-white bg-[#f1f1f1] dark:bg-[#191919] border-0" placeholder="Your Name" required>
+      <div class="w-full h-auto flex flex-col justify-center items-start " dir={$locale == "en" ? "ltr" : "rtl"}>
+        <label for="name" class="flex dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 {$locale == "en" ? "english-title" : "kurdish-title"}" >{$_("name")}</label>
+        <input type="text" bind:value={name} id="name" class="w-full h-12 rounded-full dark:text-white bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "english" : "kurdish"}" placeholder={$_("name")} required>
       </div>
-      <div class="w-full h-auto flex flex-col justify-center items-start">
-        <label for="email" class="flex dark:text-white pl-5 mb-2" style="font-family: english-title;">Email</label>
-        <input type="email" bind:value={email} id="email" class="input w-full  h-12 dark:text-white rounded-full bg-[#f1f1f1] dark:bg-[#191919] border-0" placeholder="Your Email" required>
+      <div class="w-full h-auto flex flex-col justify-center items-start" dir={$locale == "en" ? "ltr" : "rtl"}>
+        <label for="email" class="flex dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 {$locale == "en" ? "english-title" : "kurdish-title"}" >{$_("email")}</label>
+        <input type="email" bind:value={email} id="email" class="input w-full  h-12 dark:text-white rounded-full bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "english" : "kurdish"}" placeholder={$_("email")} required>
       </div>
-      <div class="w-full h-auto">
-        <label for="message" class="flex w-full h-auto  flex-col justify-center items-start dark:text-white pl-5 mb-2" style="font-family: english-title;">Message</label>
-        <textarea bind:value={message} id="message" class="textarea w-full h-32 dark:text-white rounded-2xl bg-[#f1f1f1] dark:bg-[#191919] border-0" placeholder="Your Message" required></textarea>
+      <div class="w-full h-auto" dir={$locale == "en" ? "ltr" : "rtl"}>
+        <label for="message" class="flex w-full h-auto  flex-col justify-center items-start dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 {$locale == "en" ? "english-title" : "kurdish-title"}" >{$_("message")}</label>
+        <textarea bind:value={message} id="message" class="textarea w-full h-32 dark:text-white rounded-2xl bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "english" : "kurdish"}" placeholder={$_("message")} required></textarea>
       </div>
-      <button type="submit" class="btn w-full h-12 bg-[#f17f18] hover:bg-[#e68c50] duration-300 ease-in-out  text-white rounded-full" style="font-family: english-title;">Send Message</button>
+      <button type="submit" class="btn w-full h-12 bg-[#f17f18] hover:bg-[#e68c50] duration-300 ease-in-out  text-white rounded-full {$locale == "en" ? "english-title" : "kurdish-title"}" >{$_("send")}</button>
     </form>
   </div>
 
 </div>
 
 <div class="container mx-auto w-full h-auto flex-justify-center items-center mt-12">
-  <p class="dark:text-white text-2xl text-center" style="font-family: english-title;" data-aos="fade-up" data-aos-duration="1000">Where to find us</p>
+  <p class="dark:text-white text-2xl text-center {$locale == "en" ? "english-title" : "kurdish-title"}"  data-aos="fade-up" data-aos-duration="1000">{$_("whereToFindUs")}</p>
 </div>
 
 <div class="container mx-auto w-full h-auto pb-12 pt-2 flex justiy-center items-center gap-3">
 
   <div class="w-full h-[14rem] md:h-[10rem] p-2  rounded-2xl flex justify-start items-center dark:bg-gradient-to-b shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#f6f6f6] via-[#dddddd] to-[#f6f6f6] flex-col" data-aos="fade-up" data-aos-duration="2000">
-    <div class="w-full h-auto flex justify-center md:justify-start items-start p-0 md:pl-3 mt-5 gap-2">
+    <div class="w-full h-auto flex justify-center md:justify-start items-start p-0 {$locale == "en" ? "md:pl-3" : "md:pr-3"} mt-5 gap-2" dir={$locale == "en" ? "ltr" : "rtl"}>
       <img src="/images/marker.png" class="size-4 md:size-8" alt="">
-      <p class="text-md md:text-2xl dark:text-white" style="font-family:english-title;">Sulaymaniyah</p>
+      <p class="text-md md:text-2xl dark:text-white {$locale == "en" ? "english-title" : "kurdish-title"}">{$_("Sulaymaniyah")}</p>
     </div>
 
-    <div class="w-full h-full flex justify-center items-center md:items-end mb-12">
+    <div class="w-full h-full flex justify-center items-center md:items-end mb-12" dir={$locale == "en" ? "ltr" : "rtl"}>
 
-      <p class="dark:text-white px-2 w-full text-justify md:ml-5">{checkLanguage($footerStore.address2,$locale)}</p>
+      <p class="dark:text-white px-2 w-full text-justify md:ml-5 {$locale == "en" ? "english" : "kurdish"}">{checkLanguage($footerStore.address2,$locale)}</p>
     </div>
   </div>
 
   <div class="w-full h-[14rem] md:h-[10rem] p-2 rounded-2xl flex justify-start items-center dark:bg-gradient-to-b shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#f6f6f6] via-[#dddddd] to-[#f6f6f6] flex-col" data-aos="fade-up" data-aos-duration="2000">
-    <div class="w-full h-auto flex justify-center md:justify-start items-start p-0 md:pl-3 mt-5 gap-2">
+    <div class="w-full h-auto flex justify-center md:justify-start items-start p-0 md:pl-3 mt-5 gap-2" dir={$locale == "en" ? "ltr" : "rtl"}>
       <img src="/images/marker.png" class="size-4 md:size-8" alt="">
-      <p class="text-md md:text-2xl dark:text-white "  style="font-family:english-title;">Erbil</p>
+      <p class="text-md md:text-2xl dark:text-white {$locale == "en" ? "english-title" : "kurdish-title"}">{$_("erbil")}</p>
     </div>
 
-    <div class="w-full h-full flex justify-center items-center md:items-end mb-12">
+    <div class="w-full h-full flex justify-center items-center md:items-end mb-12" dir={$locale == "en" ? "ltr" : "rtl"}>
 
-      <p class="dark:text-white px-2 w-full md:ml-5 text-justify">{checkLanguage($footerStore.address1,$locale)}</p>
+      <p class="dark:text-white px-2 w-full md:ml-5 text-justify {$locale == "en" ? "english" : "kurdish"}" >{checkLanguage($footerStore.address1,$locale)}</p>
     </div>
   </div>
 
