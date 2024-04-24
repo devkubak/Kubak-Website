@@ -18,6 +18,8 @@ import type { AboutUs } from "$lib/Models/Entities/AboutUs.Entity.Model";
 import type { AboutUsDto } from "$lib/Models/DTO/AboutUs.DTO.Model";
 import { IndexOrder } from "../Enums/Index-Order.Enum.Model";
 import { ImagePosition } from "../Enums/Image-Position.Enum.Model";
+import { LanguagesDto } from "../DTO/Languages.DTO.Model";
+import { Languages } from "../Entities/Languages.Entity.Model";
 export class Dto {
   static ToCarouselDto(carousel: Carousel): CarouselDto | null {
     try {
@@ -220,6 +222,23 @@ export class Dto {
       };
     } catch (error: any) {
       throw new Error(error);
+    }
+  }
+
+
+  static ToLanguageDto(langauge: Languages): LanguagesDto {
+    try {
+      return {
+        id: langauge.$id,
+        title: langauge.title,
+        abbreviation: langauge.abbreviation,
+        active: langauge.active,
+        createdAt: langauge.$createdAt as Date,
+        updatedAt: langauge.$updatedAt as Date,
+        deletedAt: null,
+      };
+    } catch (error) {
+      throw error;
     }
   }
 }

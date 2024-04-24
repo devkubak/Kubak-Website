@@ -44,6 +44,8 @@ export namespace Environment {
     ENVIRONMENT.VITE_APPWRITE_ABOUT_US_ID;
   export const appwrite_collection_about_us_languages: string =
     ENVIRONMENT.VITE_APPWRITE_ABOUT_US_LANGUAGES_ID;
+    export const appwrite_collection_languages: string =
+    ENVIRONMENT.VITE_APPWRITE_LANGUAGES_ID;
 
   // Appwrite Storage
   export const appwrite_storage: string = ENVIRONMENT.VITE_APPWRITE_STORAGE_ID;

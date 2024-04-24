@@ -1,13 +1,13 @@
-export interface Database{
-    $id: string;
-    $createdAt: string;
-    $updatedAt: string;
-    $permissions: [];
-    $databaseId: string;
-    $collectionId: string;
+export class Database{
+    $id: string = null!;
+    $createdAt: Date | string = null!;
+    $updatedAt: Date | string = null!;
+    $permissions: [] = [];
+    $databaseId: string = null!;
+    $collectionId: string = null!;
 }
-export interface DatabaseAuth {
-    $createdAt: string | Date;
-    $id: string;
-    $updatedAt: string | Date;
+export class DatabaseAuth {
+    $createdAt: string | Date = null!;
+    $id: string = null!;
+    $updatedAt: string | Date = null!;
 }

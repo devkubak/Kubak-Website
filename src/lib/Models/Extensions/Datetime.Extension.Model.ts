@@ -1,5 +1,5 @@
-export interface Datetime {
-    createdAt: Date | string;
-    updatedAt: Date | string;
-    deletedAt: Date | null;
+export class Datetime {
+    createdAt: Date = new Date();
+    updatedAt: Date = new Date();
+    deletedAt: Date | null = null;
 }
