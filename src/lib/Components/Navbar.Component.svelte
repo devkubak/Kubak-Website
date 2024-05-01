@@ -124,7 +124,7 @@
                     value={lang.abbreviation}
                     disabled={!lang.active}
                     class="text-black {!lang.active ? 'hidden' : 'flex'}"
-                    >{lang.title}</option
+                    >{lang.abbreviation}</option
                   >
                 {/each}
               {/if}

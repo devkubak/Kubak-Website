@@ -52,7 +52,7 @@
     defaultClass="flex flex-row md:flex-col-reverse gap-3 mb-4 mr-2 md:mb-0 flex-wrap justify-center duration-300 ease-in-out"
     contentClass=" w-full h-auto bg-white bg-[#ededed4d] dark:bg-[#3636364d] rounded-2xl flex items-center justify-center backdrop-filter backdrop-blur-lg duration-300 ease-in-out"
   >
-  
+    {#if $technologyStore}
     {#each technologies as technology}
       <TabItem
         open
@@ -80,6 +80,7 @@
         </div>
       </TabItem>
     {/each}
+    {/if}
   </Tabs>
 </div>
 {:else}

@@ -10,8 +10,11 @@ export class TechnologyRepository implements ITechnologyRepository {
       const { documents, total } = (await Appwrite.databases.listDocuments(
         Environment.appwrite_database,
         Environment.appwrite_collection_technologies,
+      
+        
         [Query.limit(8), Query.isNull("deletedAt")]
       )) as AppwriteResponse<Technology>;
+      console.log("in repository",documents, total);
       return { documents, total };
     } catch (error) {
       throw error;

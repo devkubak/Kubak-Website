@@ -14,6 +14,7 @@
   onMount(async () => {
     try {
       technologies = await technologyStore.getAll() as TechnologyDto[];
+      console.log("Technologies", $technologyStore.data);
     } catch (e) {
       console.log(e);
     } finally {

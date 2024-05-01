@@ -18,8 +18,8 @@ import type { AboutUs } from "$lib/Models/Entities/AboutUs.Entity.Model";
 import type { AboutUsDto } from "$lib/Models/DTO/AboutUs.DTO.Model";
 import { IndexOrder } from "../Enums/Index-Order.Enum.Model";
 import { ImagePosition } from "../Enums/Image-Position.Enum.Model";
-import { LanguagesDto } from "../DTO/Languages.DTO.Model";
-import { Languages } from "../Entities/Languages.Entity.Model";
+import type{ LanguagesDto } from "$lib/Models/DTO/Languages.DTO.Model";
+import type{ Languages } from "$lib/Models/Entities/Languages.Entity.Model";
 export class Dto {
   static ToCarouselDto(carousel: Carousel): CarouselDto | null {
     try {
