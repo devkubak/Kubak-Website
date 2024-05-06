@@ -64,7 +64,7 @@
               style="font-family: english-title; filter:opacity(1); "
               data-aos="fade-up"
               data-aos-anchor-placement="center-center" data-aos-duration="3000">
-                {checkLanguage(carousel.title, $locale)}
+                {@html checkLanguage(carousel.title, $locale)}
               </div>
               </div>
 
@@ -86,7 +86,7 @@
               style="font-family: kurdish-title; filter:opacity(1); "
               data-aos="fade-up"
               data-aos-anchor-placement="center-center" data-aos-duration="3000">
-                {checkLanguage(carousel.title, $locale)}
+                {@html checkLanguage(carousel.title, $locale)}
               </div>
             
               </div>
