@@ -89,20 +89,20 @@
               class="w-full text-xs xl:text-[1rem] md:gap-5 md:flex justify-center items-center"
               dir="rtl"
             >
-              <NavLi href="/" class="kurdish-title">{$_("home")}</NavLi>
-              <NavLi href="/products" class="kurdish-title"
+              <NavLi href="/" class="Bahij_Plain_Plain">{$_("home")}</NavLi>
+              <NavLi href="/products" class="Bahij_Plain_Plain"
                 >{$_("products")}</NavLi
               >
-              <NavLi href="/aboutUs" class="kurdish-title"
+              <NavLi href="/aboutUs" class="Bahij_Plain_Plain"
                 >{$_("aboutUs")}</NavLi
               >
-              <NavLi href="/privacy" class="kurdish-title"
+              <NavLi href="/privacy" class="Bahij_Plain_Plain"
                 >{$_("privacyPolicy")}</NavLi
               >
-              <NavLi href="/terms" class="kurdish-title"
+              <NavLi href="/terms" class="Bahij_Plain_Plain"
                 >{$_("termsofUse")}</NavLi
               >
-              <NavLi href="/contactUs" class="kurdish-title"
+              <NavLi href="/contactUs" class="Bahij_Plain_Plain"
                 >{$_("contactUs")}</NavLi
               >
             </div>
