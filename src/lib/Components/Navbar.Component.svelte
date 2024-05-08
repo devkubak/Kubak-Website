@@ -68,19 +68,19 @@
               class="w-full text-md md:gap-5 md:flex justify-center items-center"
             >
               <NavLi href="/" >{$_("home")}</NavLi>
-              <NavLi href="/products" 
+              <NavLi href="/products" style="font-family:Bahij_Plain;"
                 >{$_("products")}</NavLi
               >
-              <NavLi href="/aboutUs" 
+              <NavLi href="/aboutUs" style="font-family:Bahij_Plain;"
                 >{$_("aboutUs")}</NavLi
               >
-              <NavLi href="/privacy" 
+              <NavLi href="/privacy" style="font-family:Bahij_Plain;"
                 >{$_("privacyPolicy")}</NavLi
               >
-              <NavLi href="/terms" 
+              <NavLi href="/terms" style="font-family:Bahij_Plain;"
                 >{$_("termsofUse")}</NavLi
               >
-              <NavLi href="/contactUs" 
+              <NavLi href="/contactUs" style="font-family:Bahij_Plain;"
                 >{$_("contactUs")}</NavLi
               >
             </div>
@@ -89,20 +89,20 @@
               class="w-full text-xs xl:text-[1rem] md:gap-5 md:flex justify-center items-center"
               dir="rtl"
             >
-              <NavLi href="/" class="text-Bahij_Plain_Plain">{$_("home")}</NavLi>
-              <NavLi href="/products" class="text-Bahij_Plain_Plain"
+              <NavLi href="/" style="font-family:Bahij_Plain;">{$_("home")}</NavLi>
+              <NavLi href="/products" style="font-family:Bahij_Plain;"
                 >{$_("products")}</NavLi
               >
-              <NavLi href="/aboutUs" class="text-Bahij_Plain_Plain"
+              <NavLi href="/aboutUs" style="font-family:Bahij_Plain;"
                 >{$_("aboutUs")}</NavLi
               >
-              <NavLi href="/privacy" class="text-Bahij_Plain_Plain"
+              <NavLi href="/privacy" style="font-family:Bahij_Plain;"
                 >{$_("privacyPolicy")}</NavLi
               >
-              <NavLi href="/terms" class="text-Bahij_Plain_Plain"
+              <NavLi href="/terms" style="font-family:Bahij_Plain;"
                 >{$_("termsofUse")}</NavLi
               >
-              <NavLi href="/contactUs" class="text-Bahij_Plain_Plain"
+              <NavLi href="/contactUs" style="font-family:Bahij_Plain;"
                 >{$_("contactUs")}</NavLi
               >
             </div>
