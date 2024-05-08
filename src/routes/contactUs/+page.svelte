@@ -58,8 +58,8 @@
 {#if showToast}
 <div class="absolute z-10 flex justify-center w-full h-auto top-24">
   <Toast transition={blur} color="green" params={{ amount: 50, delay: 1000 }} 
-  class="{$locale == "en" ? "Bahij_Plain" : "Bahij_Plain_Plain"}"
-  divClass="w-full max-w-xs p-4   shadow dark:text-white bg-gradient-to-b  from-[#00e47f5e] via-[#00e47f5e] to-[#00e47f5e] gap-3 {$locale == "en" ? "Bahij_Plain" : "Bahij_Plain_Plain"}" style="backdrop-filter: blur(10px);"
+  class="{$locale == "en" ? "font-Bahij_Plain" : "font-Bahij_Plain_Plain"}"
+  divClass="w-full max-w-xs p-4   shadow dark:text-white bg-gradient-to-b  from-[#00e47f5e] via-[#00e47f5e] to-[#00e47f5e] gap-3 {$locale == "en" ? "font-Bahij_Plain" : "font-Bahij_Plain_Plain"}" style="backdrop-filter: blur(10px);"
   >
     <svelte:fragment slot="icon">
     <CheckCircleSolid class="w-5 h-5" />
@@ -80,25 +80,25 @@
   <div class="w-[690px] md:w-full h-auto flex justify-center items-center dark:bg-gradient-to-b shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#f6f6f6] via-[#dddddd] to-[#f6f6f6] py-[3rem] rounded-2xl" data-aos="fade-up" data-aos-duration="2000" id="formDiv">
     <form on:submit|preventDefault={handleSubmit} class="w-full h-auto px-12 flex flex-col justify-center items-center gap-5">
       <div class="w-full h-auto flex flex-col justify-center items-start " dir={$locale == "en" ? "ltr" : "rtl"}>
-        <label for="name" class="flex dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 {$locale == "en" ? "Bahij_Plain" : "Bahij_Plain_Plain"}" >{$_("name")}</label>
+        <label for="name" class="flex dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 {$locale == "en" ? "font-Bahij_Plain" : "font-Bahij_Plain_Plain"}" >{$_("name")}</label>
         <input type="text" bind:value={name} id="name" class="w-full h-12 rounded-full dark:text-white bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "english" : "kurdish"}" placeholder={$_("name")} required>
       </div>
       <div class="w-full h-auto flex flex-col justify-center items-start" dir={$locale == "en" ? "ltr" : "rtl"}>
-        <label for="email" class="flex dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 {$locale == "en" ? "Bahij_Plain" : "Bahij_Plain_Plain"}" >{$_("email")}</label>
+        <label for="email" class="flex dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 {$locale == "en" ? "font-Bahij_Plain" : "font-Bahij_Plain_Plain"}" >{$_("email")}</label>
         <input type="email" bind:value={email} id="email" class="input w-full  h-12 dark:text-white rounded-full bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "english" : "kurdish"}" placeholder={$_("email")} required>
       </div>
       <div class="w-full h-auto" dir={$locale == "en" ? "ltr" : "rtl"}>
-        <label for="message" class="flex w-full h-auto  flex-col justify-center items-start dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 {$locale == "en" ? "Bahij_Plain" : "Bahij_Plain_Plain"}" >{$_("message")}</label>
+        <label for="message" class="flex w-full h-auto  flex-col justify-center items-start dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 {$locale == "en" ? "font-Bahij_Plain" : "font-Bahij_Plain_Plain"}" >{$_("message")}</label>
         <textarea bind:value={message} id="message" class="textarea w-full h-32 dark:text-white rounded-2xl bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "english" : "kurdish"}" placeholder={$_("message")} required></textarea>
       </div>
-      <button type="submit" class="btn w-full h-12 bg-[#f17f18] hover:bg-[#e68c50] duration-300 ease-in-out  text-white rounded-full {$locale == "en" ? "Bahij_Plain" : "Bahij_Plain_Plain"}" >{$_("send")}</button>
+      <button type="submit" class="btn w-full h-12 bg-[#f17f18] hover:bg-[#e68c50] duration-300 ease-in-out  text-white rounded-full {$locale == "en" ? "font-Bahij_Plain" : "font-Bahij_Plain_Plain"}" >{$_("send")}</button>
     </form>
   </div>
 
 </div>
 
 <div class="container mx-auto w-full h-auto flex-justify-center items-center mt-12">
-  <p class="dark:text-white text-2xl text-center {$locale == "en" ? "Bahij_Plain" : "Bahij_Plain_Plain"}"  data-aos="fade-up" data-aos-duration="1000">{$_("whereToFindUs")}</p>
+  <p class="dark:text-white text-2xl text-center {$locale == "en" ? "font-Bahij_Plain" : "font-Bahij_Plain_Plain"}"  data-aos="fade-up" data-aos-duration="1000">{$_("whereToFindUs")}</p>
 </div>
 
 <div class="container mx-auto w-full h-auto pb-12 pt-2 flex justiy-center items-center gap-3">
@@ -106,7 +106,7 @@
   <div class="w-full h-[14rem] md:h-[10rem] p-2  rounded-2xl flex justify-start items-center dark:bg-gradient-to-b shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#f6f6f6] via-[#dddddd] to-[#f6f6f6] flex-col" data-aos="fade-up" data-aos-duration="2000">
     <div class="w-full h-auto flex justify-center md:justify-start items-start p-0 {$locale == "en" ? "md:pl-3" : "md:pr-3"} mt-5 gap-2" dir={$locale == "en" ? "ltr" : "rtl"}>
       <img src="/images/marker.png" class="size-4 md:size-8" alt="">
-      <p class="text-md md:text-2xl dark:text-white {$locale == "en" ? "Bahij_Plain" : "Bahij_Plain_Plain"}">{$_("Sulaymaniyah")}</p>
+      <p class="text-md md:text-2xl dark:text-white {$locale == "en" ? "font-Bahij_Plain" : "font-Bahij_Plain_Plain"}">{$_("Sulaymaniyah")}</p>
     </div>
 
     <div class="w-full h-full flex justify-center items-center md:items-end mb-12" dir={$locale == "en" ? "ltr" : "rtl"}>
@@ -118,7 +118,7 @@
   <div class="w-full h-[14rem] md:h-[10rem] p-2 rounded-2xl flex justify-start items-center dark:bg-gradient-to-b shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#f6f6f6] via-[#dddddd] to-[#f6f6f6] flex-col" data-aos="fade-up" data-aos-duration="2000">
     <div class="w-full h-auto flex justify-center md:justify-start items-start p-0 md:pl-3 mt-5 gap-2" dir={$locale == "en" ? "ltr" : "rtl"}>
       <img src="/images/marker.png" class="size-4 md:size-8" alt="">
-      <p class="text-md md:text-2xl dark:text-white {$locale == "en" ? "Bahij_Plain" : "Bahij_Plain_Plain"}">{$_("erbil")}</p>
+      <p class="text-md md:text-2xl dark:text-white {$locale == "en" ? "font-Bahij_Plain" : "font-Bahij_Plain_Plain"}">{$_("erbil")}</p>
     </div>
 
     <div class="w-full h-full flex justify-center items-center md:items-end mb-12" dir={$locale == "en" ? "ltr" : "rtl"}>

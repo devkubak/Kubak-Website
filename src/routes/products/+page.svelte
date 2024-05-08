@@ -69,7 +69,7 @@
   >
 <div class="w-full h-auto flex flex-col gap-3" dir="{$locale == "en" ? "ltr" : "rtl"}" >
 
-  <p class="md:text-2xl text-[#f17f18] text-lg font-bold {$locale == "en" ? "Bahij_Plain" : "Bahij_Plain_Plain"}" style="font-family: Bahij_Plain;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+  <p class="md:text-2xl text-[#f17f18] text-lg font-bold {$locale == "en" ? "font-Bahij_Plain" : "font-Bahij_Plain_Plain"}" style="font-family: font-Bahij_Plain;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
     {checkLanguage( productAttribute.title,$locale)}
   </p>
   <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
