@@ -11,7 +11,7 @@
     <div class="w-full flex flex-col font-bold">
       <p class="text-xl">last update 17 June 2023</p>
 
-      <p class="text-lg md:text-4xl text-[#f17f18]" style="font-family: font-Bahij_Plain;">Welcome to Kubak!</p>
+      <p class="text-lg md:text-4xl text-[#f17f18]" style="font-family: text-Bahij_Plain;">Welcome to Kubak!</p>
     </div>
 
     <div class="w-full flex flex-col gap-24">

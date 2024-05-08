@@ -89,20 +89,20 @@
               class="w-full text-xs xl:text-[1rem] md:gap-5 md:flex justify-center items-center"
               dir="rtl"
             >
-              <NavLi href="/" class="font-Bahij_Plain_Plain">{$_("home")}</NavLi>
-              <NavLi href="/products" class="font-Bahij_Plain_Plain"
+              <NavLi href="/" class="text-Bahij_Plain_Plain">{$_("home")}</NavLi>
+              <NavLi href="/products" class="text-Bahij_Plain_Plain"
                 >{$_("products")}</NavLi
               >
-              <NavLi href="/aboutUs" class="font-Bahij_Plain_Plain"
+              <NavLi href="/aboutUs" class="text-Bahij_Plain_Plain"
                 >{$_("aboutUs")}</NavLi
               >
-              <NavLi href="/privacy" class="font-Bahij_Plain_Plain"
+              <NavLi href="/privacy" class="text-Bahij_Plain_Plain"
                 >{$_("privacyPolicy")}</NavLi
               >
-              <NavLi href="/terms" class="font-Bahij_Plain_Plain"
+              <NavLi href="/terms" class="text-Bahij_Plain_Plain"
                 >{$_("termsofUse")}</NavLi
               >
-              <NavLi href="/contactUs" class="font-Bahij_Plain_Plain"
+              <NavLi href="/contactUs" class="text-Bahij_Plain_Plain"
                 >{$_("contactUs")}</NavLi
               >
             </div>

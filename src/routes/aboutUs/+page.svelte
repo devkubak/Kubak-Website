@@ -76,7 +76,7 @@ data-aos-duration="1000"
       <div
       class="w-full h-auto flex flex-col justify-center items-center gap-3"
       >
-      <p class="text-[#f17f18] text-2xl font-bold {$locale == "en" ? "font-Bahij_Plain" : "font-Bahij_Plain_Plain"}">
+      <p class="text-[#f17f18] text-2xl font-bold {$locale == "en" ? "text-Bahij_Plain" : "text-Bahij_Plain_Plain"}">
         { checkLanguage(aboutUs.title,$locale)??""}
       </p>
 
