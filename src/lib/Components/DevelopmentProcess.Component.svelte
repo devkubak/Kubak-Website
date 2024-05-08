@@ -81,12 +81,12 @@
             id="description"
             class:selected={selectedCard === index}
           >
-            <h4 class="text-[#f17f18] text-sm md:text-lg duration-300 ease-in-out {$locale == "en" ? "english-title" : "kurdish-title"}">
+            <h4 class="text-[#f17f18] text-sm md:text-lg duration-300 ease-in-out {$locale == "en" ? "english-title" : "kurdish-title"}" style="font-family: Bahij;">
               {checkLanguage(selectedLanguage, development.title)}
             </h4>
-            <p class="text-white text-xs md:text-lg pt-[5px] px-2 duration-300 ease-in-out {$locale == "en" ? "english" : "kurdish"}">
-              {checkLanguage(selectedLanguage, development.description)}
-            </p>
+            <div class=" text-xs  pt-[5px] px-2 duration-300 ease-in-out ">
+              {@html checkLanguage(selectedLanguage, development.description)}
+          </div>
           </div>
         </div>
       </label>

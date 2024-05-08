@@ -61,10 +61,10 @@
               >
               <div class="w-full h-28 md:h-[32rem] absolute left-0 bottom-0 bg-gradient-to-t from-[#000000]"></div>
               <div class="absolute bottom-0 left-0 w-full h-full flex justify-start pb-24 md:pb-48 flex-col-reverse text-center  md:pl-12 md:text-4xl items-center md:items-start p-2  gap-4 text-xl lg:text-6xl xl:text-6xl 2xl:text-[4rem]"
-              style="font-family: english-title; filter:opacity(1); "
+              style="font-family:Bahij; filter:opacity(1); "
               data-aos="fade-up"
               data-aos-anchor-placement="center-center" data-aos-duration="3000">
-                {@html checkLanguage(carousel.title, $locale)}
+              {@html checkLanguage(carousel.title, $locale)}
               </div>
               </div>
 
@@ -83,10 +83,10 @@
               >
               <div class="w-full h-28 md:h-[32rem] absolute left-0 bottom-0 bg-gradient-to-t from-[#000000]"></div>
               <div class="absolute bottom-0 left-0 w-full h-full flex justify-start pb-24 md:pb-48 flex-col-reverse text-center  md:pr-12 md:text-4xl items-center md:items-end p-2  gap-4 text-xl lg:text-6xl xl:text-6xl 2xl:text-[4rem]"
-              style="font-family: kurdish-title; filter:opacity(1); "
+              style="filter:opacity(1); "
               data-aos="fade-up"
               data-aos-anchor-placement="center-center" data-aos-duration="3000">
-                {@html checkLanguage(carousel.title, $locale)}
+              {@html checkLanguage(carousel.title, $locale)}
               </div>
             
               </div>
