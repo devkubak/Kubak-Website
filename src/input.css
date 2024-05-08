@@ -169,5 +169,5 @@
 
 
   *,body{
-    font-family: 'Bahij_Plain';
+    font-family: 'Bahij_Plain' !important;
   }
