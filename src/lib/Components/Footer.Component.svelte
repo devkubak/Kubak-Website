@@ -55,9 +55,9 @@
 
         <Social/>
       </div>
-        <p class="text-justify px-4 {$locale == "en" ? "english" : "kurdish"}" dir={$locale == "en" ? "ltr" : "rtl"}>
-          {checkLanguage($footerStore.description,$locale)}
-        </p>
+        <div class=" px-4" dir={$locale == "en" ? "ltr" : "rtl"}>
+          {@html checkLanguage($footerStore.description,$locale)}
+        </div>
 
         <div
           class="w-full flex justify-between items-center mt-12 text-center text-gray-800 dark:text-white text-[12px] pb-5 md:text-[15px] px-4 gap-3"

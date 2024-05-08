@@ -64,7 +64,7 @@
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <!-- svelte-ignore a11y-no-static-element-interactions -->
           {#if technologies.length > 0}
-            <p class="w-full h-12 text-center flex justify-center items-center bg-white dark:bg-[#3a3a3a] dark:text-white text-4xl font-bold {$locale == "en" ? "english-title" : "kurdish-title"}">{technologies[currentTechnologyIndex].title[$locale + ""]}</p>
+            <p class="w-full h-12 text-center flex justify-center items-center bg-white dark:bg-[#3a3a3a] dark:text-white text-2xl font-bold {$locale == "en" ? "english-title" : "kurdish-title"}">{technologies[currentTechnologyIndex].title[$locale + ""]}</p>
           {/if}
           
           <!-- svelte-ignore a11y-no-static-element-interactions -->

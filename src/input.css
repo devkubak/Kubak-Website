@@ -85,45 +85,58 @@
 
 
   @font-face {
-    font-family: "english";
+    font-family: "Rajdhani_Regular";
     font-style: normal;
     src: url('/fonts/Rajdhani-Regular.ttf') format('truetype'),
 
   }
   @font-face {
-    font-family: "english-title";
+    font-family: "Rajdhani";
     font-style: bold;
     src: url('/fonts/Rajdhani-Bold.ttf') format('truetype'),
 
   }
 
+
+
   @font-face {
-    font-family: "kurdish-title";
+    font-family: "Bahij";
     font-style: bold;
     src: url('/fonts/bahij.ttf') format('truetype'),
 
   }
 
   @font-face {
-    font-family: "kurdish";
+    font-family: "Bahij_Plain";
     font-style: bold;
     src: url('/fonts/bahij_plain.ttf') format('truetype'),
 
   }
-  
 
+  @font-face {
+    font-family: "Speda";
+    font-style: bold;
+    src: url('/fonts/Speda-Bold.ttf') format('truetype'),
+
+  }
+
+  
   @layer utilities {
-    .english-title {
-      font-family: 'english-title';
+    
+    .bahij_plain {
+      font-family: 'Bahij_Plain';
     }
-    .english {
-      font-family: 'english';
+    .bahij {
+      font-family: 'Bahij';
     }
-    .kurdish {
-      font-family: 'kurdish';
+    .rajdhani {
+      font-family: 'Rajdhani';
     }
-    .kurdish-title {
-      font-family: 'kurdish-title';
+    .rajdhani_regular {
+      font-family: 'Rajdhani_Regular';
+    }
+    .speda {
+      font-family: 'Speda';
     }
   }
   
@@ -132,10 +145,7 @@
     padding: 0;
   }
   
-  :global(body){
-      font-family: "english";
-      
-  }
+ 
 
   .dark #Instagram-Light-Preview {
     fill: #fff;  }
@@ -157,3 +167,7 @@
   fill: #fff !important;  }
 
 
+
+  *,body{
+    font-family: 'Bahij_Plain';
+  }

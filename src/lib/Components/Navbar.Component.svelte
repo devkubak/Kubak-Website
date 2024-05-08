@@ -148,8 +148,4 @@
   </Navbar>
 </div>
 
-<style>
-  * {
-    font-family: "kurdish" !important;
-  }
-</style>
+

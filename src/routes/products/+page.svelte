@@ -69,12 +69,12 @@
   >
 <div class="w-full h-auto flex flex-col gap-3" dir="{$locale == "en" ? "ltr" : "rtl"}" >
 
-  <p class="md:text-2xl text-[#f17f18] text-lg font-bold {$locale == "en" ? "english-title" : "kurdish-title"}"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+  <p class="md:text-2xl text-[#f17f18] text-lg font-bold {$locale == "en" ? "english-title" : "kurdish-title"}" style="font-family: Bahij;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
     {checkLanguage( productAttribute.title,$locale)}
   </p>
-  <p class="md:text-xl dark:text-white text-justify {$locale == "en" ? "english" : "kurdish"}" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-    {checkLanguage( productAttribute.description,$locale)}
-  </p>
+  <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+    {@html checkLanguage( productAttribute.description,$locale)}
+  </div>
 </div>
   
   <div class="relative mx-auto p-3 border-[#f17f18] dark:border-[#f17f18] bg-[#f17f18] border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
