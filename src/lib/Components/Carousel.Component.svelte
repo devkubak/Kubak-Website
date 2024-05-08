@@ -73,7 +73,7 @@
                   
                   <!-- svelte-ignore a11y-click-events-have-key-events -->
                   <!-- svelte-ignore a11y-no-static-element-interactions -->
-                  <span id="downloadButton"  on:click={redirectToStore} class="{$locale == "en" ? "english-title" : "kurdish-title"}">{$_("downloadApp")}</span>
+                  <span id="downloadButton"  on:click={redirectToStore} class="{$locale == "en" ? "Bahij" : "kurdish-title"}">{$_("downloadApp")}</span>
                 </button>
               </div>
 
@@ -96,7 +96,7 @@
                   
                   <!-- svelte-ignore a11y-click-events-have-key-events -->
                   <!-- svelte-ignore a11y-no-static-element-interactions -->
-                  <span id="downloadButton" class="{$locale == "en" ? "english-title" : "kurdish-title"}"  on:click={redirectToStore}>{$_("downloadApp")}</span>
+                  <span id="downloadButton" class="{$locale == "en" ? "Bahij" : "kurdish-title"}"  on:click={redirectToStore}>{$_("downloadApp")}</span>
                 </button>
               </div>
 

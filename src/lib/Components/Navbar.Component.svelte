@@ -67,20 +67,20 @@
             <div
               class="w-full text-md md:gap-5 md:flex justify-center items-center"
             >
-              <NavLi href="/" class="english-title">{$_("home")}</NavLi>
-              <NavLi href="/products" class="english-title"
+              <NavLi href="/" >{$_("home")}</NavLi>
+              <NavLi href="/products" 
                 >{$_("products")}</NavLi
               >
-              <NavLi href="/aboutUs" class="english-title"
+              <NavLi href="/aboutUs" 
                 >{$_("aboutUs")}</NavLi
               >
-              <NavLi href="/privacy" class="english-title"
+              <NavLi href="/privacy" 
                 >{$_("privacyPolicy")}</NavLi
               >
-              <NavLi href="/terms" class="english-title"
+              <NavLi href="/terms" 
                 >{$_("termsofUse")}</NavLi
               >
-              <NavLi href="/contactUs" class="english-title"
+              <NavLi href="/contactUs" 
                 >{$_("contactUs")}</NavLi
               >
             </div>

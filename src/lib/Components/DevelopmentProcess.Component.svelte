@@ -75,13 +75,13 @@
           id="row"
           style="width: 100%;"
         >
-        <p class="absolute z-50 text-white text-center rounded-full font-bold text-lg w-full h-16 flex {$locale == "en" ? "english-title" : "kurdish-title"}  justify-center items-center" id="title-text">{checkLanguage(selectedLanguage, development.title)}</p>
+        <p class="absolute z-50 text-white text-center rounded-full font-bold text-lg w-full h-16 flex {$locale == "en" ? "Bahij" : "kurdish-title"}  justify-center items-center" id="title-text">{checkLanguage(selectedLanguage, development.title)}</p>
           <div
             class="content-container font-bold "
             id="description"
             class:selected={selectedCard === index}
           >
-            <h4 class="text-[#f17f18] text-sm md:text-lg duration-300 ease-in-out {$locale == "en" ? "english-title" : "kurdish-title"}" style="font-family: Bahij;">
+            <h4 class="text-[#f17f18] text-sm md:text-lg duration-300 ease-in-out {$locale == "en" ? "Bahij" : "kurdish-title"}" style="font-family: Bahij;">
               {checkLanguage(selectedLanguage, development.title)}
             </h4>
             <div class=" text-xs  pt-[5px] px-2 duration-300 ease-in-out ">
