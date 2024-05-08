@@ -64,7 +64,7 @@
           <!-- svelte-ignore a11y-click-events-have-key-events -->
           <!-- svelte-ignore a11y-no-static-element-interactions -->
           {#if technologies.length > 0}
-            <p class="w-full h-12 text-center flex justify-center items-center bg-white dark:bg-[#3a3a3a] dark:text-white text-2xl font-bold {$locale == "en" ? "text-Bahij_Plain" : "text-Bahij_Plain_Plain"}">{technologies[currentTechnologyIndex].title[$locale + ""]}</p>
+            <p class="w-full h-12 text-center flex justify-center items-center bg-white dark:bg-[#3a3a3a] dark:text-white text-2xl font-bold " style="font-family:Bahij;">{technologies[currentTechnologyIndex].title[$locale + ""]}</p>
           {/if}
           
           <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -79,7 +79,7 @@
                      data-aos="flip-left"
                      data-aos-duration="2000" data-aos-anchor-placement="top">
                   <img src="{attr.image}" class="w-24 h-24 object-contain my-12" alt="" />
-                  <p class="w-full max-h-12 text-12 text-center flex justify-center items-center py-2 bg-[#f1f1f1] dark:bg-[#191919] dark:text-white rounded-b-lg {$locale == "en" ? "english" : "kurdish"}">
+                  <p class="w-full max-h-12 text-12 text-center flex justify-center items-center py-2 bg-[#f1f1f1] dark:bg-[#191919] dark:text-white rounded-b-lg"  style="font-family: Bahij_Plain;">
                     {attr.title}
                   </p>
                 </div>

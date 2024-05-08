@@ -72,7 +72,7 @@
         title=""
         loading="lazy"
       />
-      <p class="text-black dark:text-white mt-12">{project.name}</p>
+      <p class="text-black dark:text-white mt-12" style="font-family: Bahij_Plain;">{project.name}</p>
     </a>
     {/if}
     </div>

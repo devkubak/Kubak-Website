@@ -37,7 +37,7 @@
   data-aos-anchor-placement="center" data-aos-duration="3000"
 >
 
-<p class="leading-10 duration-150 ease-in-out {$locale == "en" ? "english" : "kurdish"}">
+<p class="leading-10 duration-150 ease-in-out" style="font-family:Bahij_Plain;">
   {showFullText
     ? $_("aboutDescription")
     : $_("aboutDescription").length > 200
