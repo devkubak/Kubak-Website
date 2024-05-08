@@ -79,7 +79,10 @@ data-aos-duration="1000"
       <p class="text-[#f17f18] text-2xl font-bold {$locale == "en" ? "english-title" : "kurdish-title"}">
         { checkLanguage(aboutUs.title,$locale)??""}
       </p>
-      {@html checkLanguage(aboutUs.description,$locale)}
+
+      <div class="w-full h-auto" dir={$locale == "en" ? "ltr" : "rtl"}>
+        {@html checkLanguage(aboutUs.description,$locale)}
+      </div>
     </div>
     <div
     class="w-full h-auto flex flex-col justify-center items-center gap-3"
