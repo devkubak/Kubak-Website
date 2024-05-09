@@ -114,6 +114,7 @@
             <!-- Multi Language Display None for Now -->
             <select
               bind:value={selectedLanguage}
+              style="Bahij_Plain"
               class="w-20 h-10 rounded-full bg-[#ffffff00] flex justify-center items-center text-white"
               >{selectedLanguage}<ChevronDownSolid
                 class="ms-2 w-2 h-2 text-white dark:text-white"
