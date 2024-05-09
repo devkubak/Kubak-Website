@@ -10,7 +10,7 @@
                 last update 17 June 2023
             </p>
         
-            <p class="text-lg md:text-4xl text-[#f17f18] " style="font-family: text-Bahij_Plain;">
+            <p class="text-lg md:text-4xl text-[#f17f18] " style="font-family:Bahij_Plain;">
                 The Following Privacy
             </p>
         </div>

@@ -67,20 +67,20 @@
             <div
               class="w-full text-md md:gap-5 md:flex justify-center items-center"
             >
-              <NavLi href="/" >{$_("home")}</NavLi>
-              <NavLi href="/products" class="Bahij_Plain" style="font-family:Bahij_Plain;"
+              <NavLi href="/" style="font-family:Bahij;">{$_("home")}</NavLi>
+              <NavLi href="/products"  style="font-family:Bahij;"
                 >{$_("products")}</NavLi
               >
-              <NavLi href="/aboutUs" class="Bahij_Plain" style="font-family:Bahij_Plain;"
+              <NavLi href="/aboutUs"  style="font-family:Bahij;"
                 >{$_("aboutUs")}</NavLi
               >
-              <NavLi href="/privacy" class="Bahij_Plain" style="font-family:Bahij_Plain;"
+              <NavLi href="/privacy"  style="font-family:Bahij;"
                 >{$_("privacyPolicy")}</NavLi
               >
-              <NavLi href="/terms" class="Bahij_Plain" style="font-family:Bahij_Plain;"
+              <NavLi href="/terms"  style="font-family:Bahij;"
                 >{$_("termsofUse")}</NavLi
               >
-              <NavLi href="/contactUs" class="Bahij_Plain" style="font-family:Bahij_Plain;"
+              <NavLi href="/contactUs"  style="font-family:Bahij;"
                 >{$_("contactUs")}</NavLi
               >
             </div>
