@@ -62,8 +62,8 @@
         <div
           class="w-full flex justify-between items-center mt-12 text-center text-gray-800 dark:text-white text-[12px] pb-5 md:text-[15px] px-4 gap-3"
         >
-          <p class="{$locale == "en" ? "english" : "kurdish"}" style="font-family:Bahij_Plain;">{checkLanguage($footerStore.address1,$locale)}</p>
-          <p class="{$locale == "en" ? "english" : "kurdish"}" style="font-family:Bahij_Plain;">{checkLanguage($footerStore.address2,$locale)}</p>
+          <p class="{$locale == "en" ? "Bahij_Plain" : "kurdish"}" style="font-family:Bahij_Plain;">{checkLanguage($footerStore.address1,$locale)}</p>
+          <p class="{$locale == "en" ? "Bahij_Plain" : "kurdish"}" style="font-family:Bahij_Plain;">{checkLanguage($footerStore.address2,$locale)}</p>
         </div>
       </FooterLinkGroup>
     </div>

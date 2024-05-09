@@ -81,15 +81,15 @@
     <form on:submit|preventDefault={handleSubmit} class="w-full h-auto px-12 flex flex-col justify-center items-center gap-5">
       <div class="w-full h-auto flex flex-col justify-center items-start " dir={$locale == "en" ? "ltr" : "rtl"}>
         <label for="name" class="flex dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 " style="font-family:Bahij;" >{$_("name")}</label>
-        <input type="text" bind:value={name} id="name" class="w-full h-12 rounded-full dark:text-white bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "english" : "kurdish"}" placeholder={$_("name")} required>
+        <input type="text" bind:value={name} id="name" class="w-full h-12 rounded-full dark:text-white bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "Bahij_Plain" : "kurdish"}" placeholder={$_("name")} required>
       </div>
       <div class="w-full h-auto flex flex-col justify-center items-start" dir={$locale == "en" ? "ltr" : "rtl"}>
         <label for="email" class="flex dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 " style="font-family:Bahij;" >{$_("email")}</label>
-        <input type="email" bind:value={email} id="email" class="input w-full  h-12 dark:text-white rounded-full bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "english" : "kurdish"}" placeholder={$_("email")} required>
+        <input type="email" bind:value={email} id="email" class="input w-full  h-12 dark:text-white rounded-full bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "Bahij_Plain" : "kurdish"}" placeholder={$_("email")} required>
       </div>
       <div class="w-full h-auto" dir={$locale == "en" ? "ltr" : "rtl"}>
         <label for="message" class="flex w-full h-auto  flex-col justify-center items-start dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 " style="font-family:Bahij;" >{$_("message")}</label>
-        <textarea bind:value={message} id="message" class="textarea w-full h-32 dark:text-white rounded-2xl bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "english" : "kurdish"}" placeholder={$_("message")} required></textarea>
+        <textarea bind:value={message} id="message" class="textarea w-full h-32 dark:text-white rounded-2xl bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "Bahij_Plain" : "kurdish"}" placeholder={$_("message")} required></textarea>
       </div>
       <button type="submit" class="btn w-full h-12 bg-[#f17f18] hover:bg-[#e68c50] duration-300 ease-in-out  text-white rounded-full " style="font-family:Bahij;" >{$_("send")}</button>
     </form>
@@ -111,7 +111,7 @@
 
     <div class="w-full h-full flex justify-center items-center md:items-end mb-12" dir={$locale == "en" ? "ltr" : "rtl"}>
 
-      <p class="dark:text-white px-2 w-full text-justify md:ml-5 {$locale == "en" ? "english" : "kurdish"}">{checkLanguage($footerStore.address2,$locale)}</p>
+      <p class="dark:text-white px-2 w-full text-justify md:ml-5 {$locale == "en" ? "Bahij_Plain" : "kurdish"}">{checkLanguage($footerStore.address2,$locale)}</p>
     </div>
   </div>
 
@@ -123,7 +123,7 @@
 
     <div class="w-full h-full flex justify-center items-center md:items-end mb-12" dir={$locale == "en" ? "ltr" : "rtl"}>
 
-      <p class="dark:text-white px-2 w-full md:ml-5 text-justify {$locale == "en" ? "english" : "kurdish"}" >{checkLanguage($footerStore.address1,$locale)}</p>
+      <p class="dark:text-white px-2 w-full md:ml-5 text-justify {$locale == "en" ? "Bahij_Plain" : "kurdish"}" >{checkLanguage($footerStore.address1,$locale)}</p>
     </div>
   </div>
 

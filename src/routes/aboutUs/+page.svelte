@@ -51,7 +51,7 @@ data-aos-duration="1000"
   class="container mx-auto flex justify-center text-center items-center flex-col dark:bg-gradient-to-t shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#181818] dark:to-[#2f2f2f]   bg-gradient-to-b from-[#f6f6f6] via-[#dddddd] to-[#f6f6f6] dark:text-white rounded-br-3xl rounded-bl-3xl p-4 gap-5"
 >
   <img src="/images/kubak2.png" alt="" class="w-96 pt-28" />
-  <p class="pb-4 md:text-xl	text-justify {$locale == "en" ? "english" : "kurdish"}" dir={$locale == "en" ? "ltr" : "rtl"}>
+  <p class="pb-4 md:text-xl	text-justify" dir={$locale == "en" ? "ltr" : "rtl"} style="font-family: Bahij;">
     {$_("aboutDescription")}
   </p>
 </div>
