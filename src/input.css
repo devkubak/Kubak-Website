@@ -107,6 +107,13 @@
   }
 
   @font-face {
+    font-family: "Kubak";
+    font-style: bold;
+    src: url('/fonts/Kubak-Regular.ttf') format('truetype'),
+  
+  }
+
+  @font-face {
     font-family: "Bahij_Plain";
     font-style: bold;
     src: url('/fonts/bahij_plain.ttf') format('truetype'),
