@@ -1,9 +1,9 @@
 import { Appwrite } from "$lib/Appwrite/appwrite";
 import { Environment } from "$lib/Env/Environment";
-import { GenericListOptions } from "$lib/Models/Common/ListOptions.Common.Model";
 import { PrivacyInformations } from "$lib/Models/Entities/PrivacyInformations.Entity.Model";
 import { ID, Query } from "appwrite";
 import { IPrivacyInformationsRepository } from "../Interface/I.PrivacyInformations.Repository";
+import { GenericListOptions } from "$lib/Models/common/ListOptions.Common.Model";
 
 export class PrivacyInformationsRepository
   implements IPrivacyInformationsRepository
