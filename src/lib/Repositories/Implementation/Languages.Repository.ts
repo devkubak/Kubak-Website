@@ -1,6 +1,6 @@
 import { Appwrite } from "$lib/Appwrite/appwrite";
 import { Environment } from "$lib/Env/Environment";
-import type { GenericListOptions } from "$lib/Models/common/ListOptions.Common.Model";
+import type { GenericListOptions } from "$lib/Models/Common/ListOptions.Common.Model";
 import type { Languages } from "$lib/Models/Entities/Languages.Entity.Model";
 import { Query } from "appwrite";
 import type { ILanguagesRepository } from "../Interface/I.Languages.Repository";

@@ -18,8 +18,12 @@ import type { AboutUs } from "$lib/Models/Entities/AboutUs.Entity.Model";
 import type { AboutUsDto } from "$lib/Models/DTO/AboutUs.DTO.Model";
 import { IndexOrder } from "../Enums/Index-Order.Enum.Model";
 import { ImagePosition } from "../Enums/Image-Position.Enum.Model";
-import type{ LanguagesDto } from "$lib/Models/DTO/Languages.DTO.Model";
-import type{ Languages } from "$lib/Models/Entities/Languages.Entity.Model";
+import type { LanguagesDto } from "$lib/Models/DTO/Languages.DTO.Model";
+import type { Languages } from "$lib/Models/Entities/Languages.Entity.Model";
+import { PrivaciesDto } from "../DTO/Privacies.DTO.Model";
+import { PrivacyInformationDto } from "../DTO/PrivacyInformation.DTO.Model";
+import { Privacies } from "../Entities/Privacies.Entity.Model";
+import { PrivacyInformations } from "../Entities/PrivacyInformations.Entity.Model";
 export class Dto {
   static ToCarouselDto(carousel: Carousel): CarouselDto | null {
     try {
@@ -225,7 +229,6 @@ export class Dto {
     }
   }
 
-
   static ToLanguageDto(langauge: Languages): LanguagesDto {
     try {
       return {
@@ -237,6 +240,36 @@ export class Dto {
         updatedAt: langauge.$updatedAt as Date,
         deletedAt: null,
       };
+    } catch (error) {
+      throw error;
+    }
+  }
+  static ToPrivacyDto(privacy: Privacies): PrivaciesDto {
+    try {
+      const data = {
+        id: privacy.$id,
+        name: privacy.name,
+        lastUpdatedAt: privacy.lastUpdatedAt,
+        informations: privacy.informations.map((info) => {
+          return this.ToPrivacyInformationDto(info);
+        }),
+      };
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
+  static ToPrivacyInformationDto(
+    info: PrivacyInformations
+  ): PrivacyInformationDto {
+    try {
+      const data = {
+        id: info.$id,
+        title: info.title,
+        description: info.description,
+        privacyId: info.privacyId,
+      };
+      return data;
     } catch (error) {
       throw error;
     }

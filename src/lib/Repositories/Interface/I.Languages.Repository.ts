@@ -1,4 +1,4 @@
-import type { GenericListOptions } from "$lib/Models/common/ListOptions.Common.Model";
+import type { GenericListOptions } from "$lib/Models/Common/ListOptions.Common.Model";
 import type { Languages } from "$lib/Models/Entities/Languages.Entity.Model";
 
 export interface ILanguagesRepository {
