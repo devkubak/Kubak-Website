@@ -41,23 +41,19 @@ onMount(async () => {
   }
 
 });
+
+
 </script>
 
 {#if loading}
 <Splash />
 
 {:else if pathUrl.startsWith("/privacy/")}
-<slot />
+<div class="w-full  bg-[#212121] dark:bg-[#212121]">
 
-<style>
-  *,html{
-    background-color: #212121;
-  }
-  body{
-    background-color: #212121;
-  
-  }
-</style>
+  <slot />
+</div>
+
 {:else}
 
   <Navbar />
