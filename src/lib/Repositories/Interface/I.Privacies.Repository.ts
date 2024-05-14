@@ -1,6 +1,5 @@
-import { GenericListOptions } from "$lib/Models/common/ListOptions.Common.Model";
+import type { GenericListOptions } from "$lib/Models/Common/ListOptions.Common.Model";
 import { Privacies } from "$lib/Models/Entities/Privacies.Entity.Model";
-
 
 export interface IPrivaciesRepository {
   getPrivacies(

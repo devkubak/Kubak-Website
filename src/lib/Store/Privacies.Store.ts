@@ -1,9 +1,9 @@
-import { GenericListOptions } from "$lib/Models/common/ListOptions.Common.Model";
+import type { GenericListOptions } from "$lib/Models/Common/ListOptions.Common.Model";
 import { Dto } from "$lib/Models/Conversion/Conversion.Model";
 import type { PrivaciesDto } from "$lib/Models/DTO/Privacies.DTO.Model";
 import type { Store } from "$lib/Models/Response/Store.Response";
 import { PrivaciesRepository } from "$lib/Repositories/Implementation/Privacies.Repository";
-import { get, writable } from "svelte/store";
+import { writable } from "svelte/store";
 
 const privaciesRepository = new PrivaciesRepository();
 
