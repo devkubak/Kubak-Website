@@ -13,10 +13,16 @@
   import AOS from 'aos';
   import 'aos/dist/aos.css';
   import { locale } from "svelte-i18n";
-  
+  import { page } from "$app/stores";
+  import { privaciesStore } from "$lib/Store/Privacies.Store";
+  $: pathUrl = $page.url.pathname;
   let loading = true;
 
 onMount(async () => {
+  await privaciesStore.getAll({
+    limit: 100,
+    search: $page.params.name,
+  });
   setTimeout(() => {
     loading = false;
   }, 2000); // Set timeout for 2 seconds
@@ -40,13 +46,18 @@ onMount(async () => {
 {#if loading}
 <Splash />
 
-{:else}
+{:else if pathUrl.startsWith("/privacy/")}
+<slot />
 
+<style>
+  *,html{
+    background-color: #212121;
+  }
+</style>
+{:else}
 
   <Navbar />
   <slot />
-
-
     <Footer />
 
 {/if}
