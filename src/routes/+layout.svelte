@@ -53,6 +53,10 @@ onMount(async () => {
   *,html{
     background-color: #212121;
   }
+  body{
+    background-color: #212121;
+  
+  }
 </style>
 {:else}
 
