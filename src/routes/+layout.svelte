@@ -30,7 +30,6 @@ onMount(async () => {
 
   try {
     await languageStore.getAll();
-    console.log("Language",$languageStore.data);
     await carouselStore.getAll();
     await footerStore.get();
     AOS.init();

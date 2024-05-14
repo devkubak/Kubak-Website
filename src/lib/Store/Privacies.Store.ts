@@ -32,7 +32,6 @@ const createPrivacyStore = () => {
         const { documents, total } = await privaciesRepository.getPrivacies(
           options
         );
-        console.log(documents, total);
         const dtos = documents.map((doc)=> Dto.ToPrivacyDto(doc));
         const pages = Math.ceil(total / (options?.limit || 10));
         set({

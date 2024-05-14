@@ -1,6 +1,6 @@
 <script>
     import { page } from '$app/stores';
-    console.log($page.status, $page.error?.message);
+     ($page.status, $page.error?.message);
   </script>
   
   <div class=" h-screen w-full absolute  -z-10 opacity-15">

@@ -22,7 +22,7 @@
   });
 
   $:{
-    console.log("Language",$locale);
+     ("Language",$locale);
     
   }
 
