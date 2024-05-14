@@ -49,7 +49,7 @@ onMount(async () => {
 <Splash />
 
 {:else if pathUrl.startsWith("/privacy/")}
-<div class="w-full  bg-[#212121] dark:bg-[#212121]">
+<div class="w-full flex justify-center items-center   bg-[#212121] dark:bg-[#212121]">
 
   <slot />
 </div>
