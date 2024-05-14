@@ -15,6 +15,7 @@
   import { locale } from "svelte-i18n";
   import { page } from "$app/stores";
   import { privaciesStore } from "$lib/Store/Privacies.Store";
+  import { goto } from "$app/navigation";
   $: pathUrl = $page.url.pathname;
   let loading = true;
 
@@ -47,6 +48,8 @@ onMount(async () => {
 
 {#if loading}
 <Splash />
+
+
 
 {:else if pathUrl.startsWith("/privacy/")}
 <div class="w-full flex justify-center items-center   bg-[#212121] dark:bg-[#212121]">

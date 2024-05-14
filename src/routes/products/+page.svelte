@@ -207,7 +207,7 @@
 <!-- </div> -->
 
 
-  <div class="w-full flex justify-center items-center gap-2" data-aos="zoom-in" data-aos-duration="2000">
+  <div class="w-full flex justify-center items-center gap-2 mb-4" data-aos="zoom-in" data-aos-duration="2000">
     <a
       href="https://play.google.com/store/apps/details?id=co.kubak.city&hl=en&gl=US"
       class="w-auto"

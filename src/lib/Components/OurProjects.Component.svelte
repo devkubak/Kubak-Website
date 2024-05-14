@@ -81,7 +81,7 @@
 </div>
 
 <div
-  class="container mx-auto w-full flex justify-center items-center gap-2 mt-4"
+  class="container mx-auto w-full flex justify-center items-center gap-2 my-4"
 >
   <button
     type="button"

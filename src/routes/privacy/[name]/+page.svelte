@@ -5,6 +5,7 @@
 	import { page } from '$app/stores';
   import { onMount } from "svelte";
   import moment from "moment";
+  import { goto } from '$app/navigation';
   let privacy: PrivaciesDto = new PrivaciesDto();
 
    onMount(async() =>{
@@ -14,6 +15,10 @@
     
     });
    
+    if($privaciesStore.data.length == 0){
+        console.log("No data found");
+        goto("/error");
+    }
     privacy = $privaciesStore.data[0];
     
    })

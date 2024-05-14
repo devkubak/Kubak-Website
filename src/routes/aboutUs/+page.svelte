@@ -62,7 +62,7 @@ data-aos-duration="1000"
     <div
     data-aos="fade-up"
     data-aos-duration="2000"
-      class="w-full container mx-auto h-auto p-5 flex justify-center items-center flex-col mt-24 dark:bg-gradient-to-b shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#f6f6f6] via-[#dddddd] to-[#f6f6f6] dark:text-white gap-12 rounded-3xl"
+      class="w-full mb-4 container mx-auto h-auto p-5 flex justify-center items-center flex-col mt-24 dark:bg-gradient-to-b shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#f6f6f6] via-[#dddddd] to-[#f6f6f6] dark:text-white gap-12 rounded-3xl"
     >
       {#if aboutUs.image}
         <div

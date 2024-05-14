@@ -251,7 +251,7 @@ Advertisements contained on our Application, website, or Marketing Materials ope
           </AccordionItem>
       </Accordion>
 
-      <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0">
+      <Accordion defaultClass="bg-white dark:bg-[#212121] rounded-3xl border-0 mb-4">
         <AccordionItem
         borderSharedClass="border-transparent"
         defaultClass="rounded-3xl w-full bg-white flex items-center justify-between  font-bold dark:bg-[#212121] dark:text-white" inactiveClass="hover:bg-[#f1f1f1] dark:hover:bg-[#252525]" activeClass="focus:ring-gray-200 dark:focus:ring-[#252525] dark:text-white focus:ring-4 duration-300 ease-in-out">
