@@ -24,6 +24,7 @@ onMount(async () => {
     limit: 100,
     search: $page.params.name,
   });
+  console.log($page);
   setTimeout(() => {
     loading = false;
   }, 2000); // Set timeout for 2 seconds
@@ -50,7 +51,7 @@ onMount(async () => {
 
 
 
-{:else if pathUrl.startsWith("/privacy/")}
+{:else if pathUrl == ("/privacy/" + $page.params.name)}
 <div class="w-full flex justify-center items-center   bg-[#212121] dark:bg-[#212121]">
 
   <slot />
