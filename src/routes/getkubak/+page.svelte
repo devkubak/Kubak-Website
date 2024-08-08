@@ -7,19 +7,21 @@
       });
   function redirectToStore() {
           var userAgent = navigator.userAgent || navigator.vendor;
-  
+    // console.log(userAgent);
+    
           // Android
-          if (/android/i.test(userAgent)) {
+          if (/android/.test(userAgent)) {
+            // console.log('android');
               window.location.href = 'https://play.google.com/store/apps/details?id=co.kubak.city&hl=en&gl=US';
           }
           // iOS
-          else if (/iPad|iPhone|iPod/.test(userAgent)) {
+          else if (/iPad|iPhone|iPod|iMac/.test(userAgent)) {
+            // console.log('ios');
+            
               window.location.href = 'https://apps.apple.com/us/app/kubak/id1460687618';
           }
           // Other devices
-          else {
-              window.location.href = 'https://play.google.com/store/apps/details?id=co.kubak.city&hl=en&gl=US';
-          }
+          
           return {
               redirectToStore
           }
