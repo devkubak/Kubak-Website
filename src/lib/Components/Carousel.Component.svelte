@@ -34,7 +34,7 @@
         }
         // Other devices
         else {
-            alert("Sorry, we currently support only Android and iOS devices for app download.");
+            window.location.href = 'https://apps.apple.com/us/app/kubak/id1460687618';
         }
     }
 </script>
