@@ -51,14 +51,13 @@ onMount(async () => {
 
 
 
-{:else if pathUrl == ("/privacy/" + $page.params.name)}
+{:else if pathUrl == ("/privacy/" + $page.params.name) || pathUrl == ("/getkubak") || pathUrl == ("/getApp")}
 <div class="w-full flex justify-center items-center   bg-[#212121] dark:bg-[#212121]">
 
   <slot />
 </div>
 
-{:else if pathUrl == ("/getkubak" || "getApp")}
-<Splash />
+ 
 {:else}
 
   <Navbar />
