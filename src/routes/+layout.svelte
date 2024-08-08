@@ -57,6 +57,8 @@ onMount(async () => {
   <slot />
 </div>
 
+{:else if pathUrl == ("/getkubak" || "getApp")}
+<Splash />
 {:else}
 
   <Navbar />
