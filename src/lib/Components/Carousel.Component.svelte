@@ -22,7 +22,7 @@
     // console.log(userAgent);
     
         // Android
-        if (/android/.test(userAgent)) {
+        if (/android/i.test(userAgent)) {
           console.log('android');
           
             window.location.href = 'https://play.google.com/store/apps/details?id=co.kubak.city&hl=en&gl=US';

@@ -9,7 +9,7 @@ function redirectToStore() {
         var userAgent = navigator.userAgent || navigator.vendor;
 
         // Android
-        if (/android/.test(userAgent)) {
+        if (/android/i.test(userAgent)) {
             window.location.href = 'https://play.google.com/store/apps/details?id=co.kubak.city&hl=en&gl=US';
         }
         // iOS
