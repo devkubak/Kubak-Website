@@ -67,7 +67,7 @@
 
     <li class="icon-content">
       <a
-        href="https://www.instagram.com/kubakapp?igsh=MTlvc2UzcWF4eTJvbg=="
+        href="https://www.instagram.com/kubaktaxi/"
         aria-label="Instagram"
         data-social="instagram"
       >
