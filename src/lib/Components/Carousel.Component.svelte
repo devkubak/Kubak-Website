@@ -41,7 +41,7 @@
 
 
 <div class="w-full flex flex-col justify-end gap-5" >
-  <div class="w-full mt-14 md:mt-0 rounded-none">
+  <div class="w-full  md:mt-0 rounded-none">
     {#if browser && $carouselStore.data.length > 0}
       <Carousel autoplay autoplayDuration={50000} autoplayProgressVisible>
         {#each $carouselStore.data as carousel}
@@ -49,7 +49,7 @@
           <a title={carousel.title.en} class="block relative">
             <!-- svelte-ignore a11y-media-has-caption -->
             <video
-              class="cursor-pointer w-full h-[400px] md:h-[900px] object-cover"
+              class="cursor-pointer w-full h-[400px] md:h-[650px] 2xl:h-[1000px]  object-cover"
               autoplay
               loop
               muted

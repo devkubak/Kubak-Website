@@ -55,7 +55,7 @@
 
         <Social/>
       </div>
-        <div class=" px-4" dir={$locale == "en" ? "ltr" : "rtl"}>
+        <div class=" px-4"  dir={$locale == "en" ? "ltr" : "rtl"}>
           {@html checkLanguage($footerStore.description,$locale)}
         </div>
 
@@ -104,6 +104,8 @@
   position: relative; /* Ensure z-index works */
   z-index: 1; /* Ensure content is above the background */
 }
+
+
 
 </style>
 
