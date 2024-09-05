@@ -41,7 +41,13 @@
 
 <div class="w-full absolute z-20">
   <Navbar
-    class="bg-[#0000009a] dark:bg-[#000000be]  backdrop-blur-md text-center fixed"
+    class="w-full text-center fixed"
+    style="
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    background-color: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    "
   >
     <div
       class="flex w-full xl:gap-24 md:order-2 justify-between flex-wrap md:justify-center"
