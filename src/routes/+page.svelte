@@ -37,7 +37,7 @@
   data-aos-anchor-placement="center" data-aos-duration="3000"
 >
 
-<p class="leading-10 duration-150 ease-in-out" style="font-family:Bahij_Plain;">
+<p class="leading-10 duration-150 ease-in-out cssanimation leBlurIn sequence" style="font-family:Bahij_Plain;">
   {showFullText
     ? $_("aboutDescription")
     : $_("aboutDescription").length > 200
@@ -106,3 +106,13 @@ class="w-80 h-96 bg-white dark:bg-[#212121] rounded-2xl flex flex-col justify-en
 </div>
 {/if} -->
 
+<style>
+  .leBlurIn{ animation-name: leBlurIn }
+@keyframes leBlurIn {
+    from {
+        transform: scaleX(0.2);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+</style>
