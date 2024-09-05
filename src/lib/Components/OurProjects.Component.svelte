@@ -36,7 +36,7 @@
   <!-- Carousel -->
   <div
     bind:this={elemMovies}
-    class="snap-x snap-mandatory scroll-smooth flex gap-2 pb-2 justify-start sm:justify-center overflow-x-hidden w-full"
+    class="snap-x snap-mandatory scroll-smooth flex gap-2 pb-2 justify-start sm:justify-start overflow-x-hidden w-full"
     data-aos="fade-up"
   data-aos-duration="2000"
   >
