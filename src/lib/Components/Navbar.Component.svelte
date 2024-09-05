@@ -46,7 +46,7 @@
     <div
       class="flex w-full xl:gap-24 md:order-2 justify-between flex-wrap md:justify-center"
     >
-      <NavBrand href="/" class="cssanimation blurIn">
+      <NavBrand href="/" >
         <img
           src="/images/kubak.png"
           class="me-3 h-8 lg:h-12"
@@ -64,7 +64,7 @@
         <select
           bind:value={selectedLanguage}
           style="Bahij_Plain"
-          class="w-20 h-10 rounded-full bg-[#ffffff00] flex justify-center items-center text-white cssanimation blurIn"
+          class="w-20 h-10 rounded-full bg-[#ffffff00] flex justify-center items-center text-white"
           >{selectedLanguage}<ChevronDownSolid
             class="ms-2 w-2 h-2 text-white dark:text-white"
           />
@@ -84,16 +84,16 @@
           <Img
             src="/images/lightMode.png"
             slot="lightIcon"
-            class="w-8 h-8 md:w-20 md:h-8 object-contain cssanimation cssanimation flipX"
+            class="w-8 h-8 md:w-20 md:h-8 object-contain cssanimation "
           />
           <Img
             src="/images/darkMode.png"
             slot="darkIcon"
-            class="w-8 h-8 md:w-20 md:h-8 object-contain cssanimation cssanimation flipX"
+            class="w-8 h-8 md:w-20 md:h-8 object-contain cssanimation "
           />
         </DarkMode>
       </div>
-        <NavHamburger menuClass="text-white cssanimation blurIn bg-transparent hover:bg-transparent" />
+        <NavHamburger menuClass="text-white bg-transparent hover:bg-transparent" />
 
       
       </div>
