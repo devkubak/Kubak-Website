@@ -46,7 +46,7 @@
     <div
       class="flex w-full xl:gap-24 md:order-2 justify-between flex-wrap md:justify-center"
     >
-      <NavBrand href="/">
+      <NavBrand href="/" class="cssanimation blurIn">
         <img
           src="/images/kubak.png"
           class="me-3 h-8 lg:h-12"
@@ -58,13 +58,13 @@
       <div class="gap-2 justify-center items-center flex md:hidden">
 
         <div
-        class="flex justify-center md:justify-around items-center text-center gap-2"
+        class="flex justify-center md:justify-around items-center text-center gap-2 "
       >
         <!-- Multi Language Display None for Now -->
         <select
           bind:value={selectedLanguage}
           style="Bahij_Plain"
-          class="w-20 h-10 rounded-full bg-[#ffffff00] flex justify-center items-center text-white"
+          class="w-20 h-10 rounded-full bg-[#ffffff00] flex justify-center items-center text-white cssanimation blurIn"
           >{selectedLanguage}<ChevronDownSolid
             class="ms-2 w-2 h-2 text-white dark:text-white"
           />
@@ -80,20 +80,20 @@
             {/each}
           {/if}
         </select>
-        <DarkMode class="text-lg">
+        <DarkMode class="text-lg ">
           <Img
             src="/images/lightMode.png"
             slot="lightIcon"
-            class="w-8 h-8 md:w-20 md:h-8 object-contain"
+            class="w-8 h-8 md:w-20 md:h-8 object-contain cssanimation cssanimation flipX"
           />
           <Img
             src="/images/darkMode.png"
             slot="darkIcon"
-            class="w-8 h-8 md:w-20 md:h-8 object-contain"
+            class="w-8 h-8 md:w-20 md:h-8 object-contain cssanimation cssanimation flipX"
           />
         </DarkMode>
       </div>
-        <NavHamburger menuClass="text-white" />
+        <NavHamburger menuClass="text-white cssanimation blurIn bg-transparent hover:bg-transparent" />
 
       
       </div>
@@ -130,7 +130,7 @@
             </div>
           {:else}
             <div
-              class="w-full text-xs xl:text-[1rem] md:gap-5 md:flex justify-center items-center"
+              class="w-full text-xs xl:text-[1rem] md:gap-5 md:flex justify-center items-center cssanimation leBlurInBottom sequence"
               dir="rtl"
             >
               <NavLi href="/" style="font-family:Bahij_Plain;">{$_("home")}</NavLi>
@@ -159,7 +159,7 @@
             <select
               bind:value={selectedLanguage}
               style="Bahij_Plain"
-              class="w-20 h-10 rounded-full bg-[#ffffff00] flex justify-center items-center text-white"
+              class="w-20 h-10 rounded-full bg-[#ffffff00] flex justify-center items-center text-white cssanimation leBlurInBottom sequence"
               >{selectedLanguage}<ChevronDownSolid
                 class="ms-2 w-2 h-2 text-white dark:text-white"
               />
@@ -179,12 +179,12 @@
               <Img
                 src="/images/lightMode.png"
                 slot="lightIcon"
-                class="w-8 h-8 md:w-20 md:h-8 object-contain"
+                class="w-8 h-8 md:w-20 md:h-8 object-contain cssanimation cssanimation flipX"
               />
               <Img
                 src="/images/darkMode.png"
                 slot="darkIcon"
-                class="w-8 h-8 md:w-20 md:h-8 object-contain"
+                class="w-8 h-8 md:w-20 md:h-8 object-contain cssanimation cssanimation flipX"
               />
             </DarkMode>
           </div>
@@ -217,5 +217,22 @@
         filter: blur(20px);
         opacity: 0;
     }
+}
+
+.blurIn { animation-name: blurIn }
+@keyframes blurIn {
+    from {
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+.flipX { animation-name: flipX }
+@keyframes flipX {
+    from {
+        transform: perspective(600px) rotateX(-180deg);
+        opacity: 0;
+    }
+    to { transform: perspective(600px) rotateX(-360deg) }
 }
 </style>

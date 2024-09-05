@@ -182,3 +182,27 @@
   span{
     background-color: transparent !important;
   }
+
+  button[aria-label="Dark mode"]{
+    background-color: transparent !important;
+    background: none !important;
+    
+  }
+
+  .dark button[aria-label="Dark mode"]{
+    background-color: transparent !important;
+    background: none !important;
+    
+  }
+
+  button[aria-label="Dark mode"]:hover{
+    background-color: transparent !important;
+    background: none !important;
+
+  }
+
+  .dark button[aria-label="Dark mode"]:hover{
+    background-color: transparent !important;
+    background: none !important;
+
+  }
