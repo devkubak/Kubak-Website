@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { ID } from 'appwrite';
   import type { Language } from "$lib/Models/Common/Language.Common.Model";
   import type { TechnologyDto } from "$lib/Models/DTO/Technology.Dto.Model";
   import { technologyStore } from "$lib/Store/Technology.Store";

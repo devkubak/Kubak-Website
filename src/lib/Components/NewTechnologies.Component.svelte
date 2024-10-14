@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount } from "svelte";
-
   import AOS from "aos";
   import "aos/dist/aos.css";
   import type { TechnologyDto } from "$lib/Models/DTO/Technology.Dto.Model";

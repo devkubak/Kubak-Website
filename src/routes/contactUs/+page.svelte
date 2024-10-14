@@ -5,7 +5,7 @@
   import { locale, _ } from "svelte-i18n";
   import { Toast } from 'flowbite-svelte';
   import { blur } from 'svelte/transition';
-  import { BellOutline, CheckCircleSolid } from 'flowbite-svelte-icons';
+  import { CheckCircleSolid } from 'flowbite-svelte-icons';
 
   let name = '';
   let email = '';

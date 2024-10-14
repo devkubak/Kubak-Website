@@ -18,7 +18,6 @@
     } else {
       window.location.href = "https://apps.apple.com/us/app/kubak/id1460687618";
     }
-    // Other devices
 
     return {
       redirectToStore,

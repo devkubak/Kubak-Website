@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { privacyInformationStore } from "$lib/Store/PrivacyInformation.Store";
   import { PrivaciesDto } from "$lib/Models/DTO/Privacies.DTO.Model";
   import { privaciesStore } from "$lib/Store/Privacies.Store";
   import { page } from "$app/stores";

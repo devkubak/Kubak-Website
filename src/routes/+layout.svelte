@@ -4,18 +4,14 @@
   import Navbar from "$lib/Components/Navbar.Component.svelte";
   import Footer from "$lib/Components/Footer.Component.svelte";
   import { carouselStore } from "$lib/Store/Carousel.Store";
-  import { aboutUsStore } from "$lib/Store/AboutUs.Store";
-  import { developmentStore } from "$lib/Store/Development.Store";
   import { footerStore } from "$lib/Store/Footer.Store";
   import { onMount } from "svelte";
   import { languageStore } from "$lib/Store/Language.Store";
   import Splash from "$lib/Components/splash.Component.svelte";
   import AOS from "aos";
   import "aos/dist/aos.css";
-  import { locale } from "svelte-i18n";
   import { page } from "$app/stores";
   import { privaciesStore } from "$lib/Store/Privacies.Store";
-  import { goto } from "$app/navigation";
   $: pathUrl = $page.url.pathname;
   let loading = true;
 

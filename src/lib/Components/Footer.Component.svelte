@@ -10,7 +10,6 @@
   import { footerStore } from "$lib/Store/Footer.Store";
   import type { Language } from "$lib/Models/Common/Language.Common.Model";
   import { locale } from "svelte-i18n";
-  import Social from "$lib/Components/SocialMedia.Component.svelte"
   import SocialMediaTab from "$lib/Components/SocialMediaTab.Component.svelte"
 
   onMount(async () => {
