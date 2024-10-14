@@ -9,14 +9,14 @@ export class PrivacyInformationsRepository
   implements IPrivacyInformationsRepository
 {
   async getPrivacyInformations(
-    options?: GenericListOptions | undefined
+    options?: GenericListOptions | undefined,
   ): Promise<AppwriteResponse<PrivacyInformations>> {
     try {
       const query = this.filterQuery([], options);
       const { documents, total } = (await Appwrite.databases.listDocuments(
         Environment.appwrite_database,
         Environment.appwrite_collection_privacyInformations,
-        query
+        query,
       )) as AppwriteResponse<PrivacyInformations>;
 
       return { documents, total };
@@ -29,7 +29,7 @@ export class PrivacyInformationsRepository
       return (await Appwrite.databases.getDocument(
         Environment.appwrite_database,
         Environment.appwrite_collection_privacyInformations,
-        id
+        id,
       )) as PrivacyInformations;
     } catch (error) {
       throw error;

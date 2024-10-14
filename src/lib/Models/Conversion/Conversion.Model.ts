@@ -87,7 +87,7 @@ export class Dto {
         technology.technologyAttributes.length > 0
           ? technology.technologyAttributes.map((technologyAttribute) => {
               return Dto.ToTechnologyAttributeDto(
-                technologyAttribute
+                technologyAttribute,
               ) as TechnologyAttributeDto;
             })
           : [];
@@ -109,7 +109,7 @@ export class Dto {
   }
 
   static ToTechnologyAttributeDto(
-    technologyAttribute: TechnologyAttribute
+    technologyAttribute: TechnologyAttribute,
   ): TechnologyAttributeDto | null {
     try {
       let dto: TechnologyAttributeDto = {
@@ -141,7 +141,7 @@ export class Dto {
         },
         productAttribute: product.productAttributes.map((productAttribute) => {
           return this.ToProductAttributeDto(
-            productAttribute
+            productAttribute,
           ) as ProductAttributeDto;
         }),
       };
@@ -151,7 +151,7 @@ export class Dto {
   }
 
   static ToProductAttributeDto(
-    productAttribute: ProductAttribute
+    productAttribute: ProductAttribute,
   ): ProductAttributeDto {
     try {
       return {
@@ -260,7 +260,7 @@ export class Dto {
     }
   }
   static ToPrivacyInformationDto(
-    info: PrivacyInformations
+    info: PrivacyInformations,
   ): PrivacyInformationDto {
     try {
       const data = {

@@ -3,7 +3,7 @@ import type { Languages } from "$lib/Models/Entities/Languages.Entity.Model";
 
 export interface ILanguagesRepository {
   getLanguages(
-    options?: GenericListOptions
+    options?: GenericListOptions,
   ): Promise<AppwriteResponse<Languages>>;
   getLanguage(id: string): Promise<Languages>;
   updateLanguageActivity(id: string, active: boolean): Promise<Languages>;

@@ -7,14 +7,14 @@ import type { IPrivaciesRepository } from "../Interface/I.Privacies.Repository";
 
 export class PrivaciesRepository implements IPrivaciesRepository {
   async getPrivacies(
-    options?: GenericListOptions | undefined
+    options?: GenericListOptions | undefined,
   ): Promise<AppwriteResponse<Privacies>> {
     try {
       const query = this.filterQuery([], options);
       const { documents, total } = (await Appwrite.databases.listDocuments(
         Environment.appwrite_database,
         Environment.appwrite_collection_privacies,
-        query
+        query,
       )) as AppwriteResponse<Privacies>;
       return { documents, total };
     } catch (error) {
@@ -26,7 +26,7 @@ export class PrivaciesRepository implements IPrivaciesRepository {
       return (await Appwrite.databases.getDocument(
         Environment.appwrite_database,
         Environment.appwrite_collection_privacies,
-        id
+        id,
       )) as Privacies;
     } catch (error) {
       throw error;

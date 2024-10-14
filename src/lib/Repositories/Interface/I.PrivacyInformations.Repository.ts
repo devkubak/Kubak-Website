@@ -3,7 +3,7 @@ import type { PrivacyInformations } from "$lib/Models/Entities/PrivacyInformatio
 
 export interface IPrivacyInformationsRepository {
   getPrivacyInformations(
-    options?: GenericListOptions
+    options?: GenericListOptions,
   ): Promise<AppwriteResponse<PrivacyInformations>>;
   getPrivacyInformation(id: string): Promise<PrivacyInformations>;
 }

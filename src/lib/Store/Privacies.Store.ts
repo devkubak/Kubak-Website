@@ -29,10 +29,9 @@ const createPrivacyStore = () => {
     },
     getAll: async (options?: GenericListOptions) => {
       try {
-        const { documents, total } = await privaciesRepository.getPrivacies(
-          options
-        );
-        const dtos = documents.map((doc)=> Dto.ToPrivacyDto(doc));
+        const { documents, total } =
+          await privaciesRepository.getPrivacies(options);
+        const dtos = documents.map((doc) => Dto.ToPrivacyDto(doc));
         const pages = Math.ceil(total / (options?.limit || 10));
         set({
           data: dtos,

@@ -13,7 +13,7 @@ export class ProductAttributesRepository
       const { documents, total } = (await Appwrite.databases.listDocuments(
         Environment.appwrite_database,
         Environment.appwrite_collection_product_attributes,
-        query
+        query,
       )) as AppwriteResponse<ProductAttribute>;
       return { documents, total };
     } catch (error) {
@@ -26,7 +26,7 @@ export class ProductAttributesRepository
         Environment.appwrite_database,
         Environment.appwrite_collection_product_attributes,
         id,
-        [Query.isNull("deletedAt")]
+        [Query.isNull("deletedAt")],
       )) as ProductAttribute;
       return productAttribute;
     } catch (error) {

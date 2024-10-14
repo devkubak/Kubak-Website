@@ -16,7 +16,7 @@ const createAboutUsStore = () => {
       try {
         const { documents, total } = await aboutUsRepository.getAboutUs();
         const dto: AboutUsDto[] = documents.map((aboutUs) =>
-          Dto.ToAboutUsDto(aboutUs)
+          Dto.ToAboutUsDto(aboutUs),
         );
         set({ data: dto, total });
       } catch (error) {

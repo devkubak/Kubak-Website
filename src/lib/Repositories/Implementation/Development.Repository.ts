@@ -9,7 +9,7 @@ export class DevelopmentRepository implements IDevelopmentRepository {
     let { documents, total } = (await Appwrite.databases.listDocuments(
       Environment.appwrite_database,
       Environment.appwrite_collection_development_process,
-      [Query.isNull("deletedAt"), Query.limit(8)]
+      [Query.isNull("deletedAt"), Query.limit(8)],
     )) as AppwriteResponse<Development>;
 
     return { documents, total };
@@ -18,7 +18,7 @@ export class DevelopmentRepository implements IDevelopmentRepository {
     let document = (await Appwrite.databases.getDocument(
       Environment.appwrite_database,
       Environment.appwrite_collection_development_process,
-      id
+      id,
     )) as Development;
 
     return document;

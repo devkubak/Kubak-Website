@@ -11,7 +11,7 @@ export class FooterRepository implements IFooterRepository {
       const { documents, total } = (await Appwrite.databases.listDocuments(
         Environment.appwrite_database,
         Environment.appwrite_collection_footer,
-        [Query.isNull("deletedAt"), Query.limit(1)]
+        [Query.isNull("deletedAt"), Query.limit(1)],
       )) as AppwriteResponse<Footer>;
       return { documents, total };
     } catch (error) {

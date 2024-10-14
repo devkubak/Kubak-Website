@@ -3,7 +3,7 @@ import { Privacies } from "$lib/Models/Entities/Privacies.Entity.Model";
 
 export interface IPrivaciesRepository {
   getPrivacies(
-    options?: GenericListOptions
+    options?: GenericListOptions,
   ): Promise<AppwriteResponse<Privacies>>;
   getPrivacy(id: string): Promise<Privacies>;
 }

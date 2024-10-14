@@ -2,7 +2,7 @@ import type { TechnologyAttributeDto } from "$lib/Models/DTO/TechnologyAttribute
 import type { Language } from "$lib/Models/Common/Language.Common.Model";
 
 export interface TechnologyDto {
-    id: string;
-    title: Language;
-    technologyAttributes: TechnologyAttributeDto[];
+  id: string;
+  title: Language;
+  technologyAttributes: TechnologyAttributeDto[];
 }

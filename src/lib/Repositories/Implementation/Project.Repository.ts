@@ -10,7 +10,7 @@ export class ProjectRepository implements IProjectRepository {
       let { documents, total } = (await Appwrite.databases.listDocuments(
         Environment.appwrite_database,
         Environment.appwrite_collection_our_projects,
-        [Query.limit(100), Query.isNull("deletedAt")]
+        [Query.limit(100), Query.isNull("deletedAt")],
       )) as AppwriteResponse<Project>;
 
       return { documents, total };
@@ -22,7 +22,7 @@ export class ProjectRepository implements IProjectRepository {
     let document = (await Appwrite.databases.getDocument(
       Environment.appwrite_database,
       Environment.appwrite_collection_our_projects,
-      id
+      id,
     )) as Project;
 
     return document;

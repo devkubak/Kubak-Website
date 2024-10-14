@@ -14,7 +14,7 @@ export class TechnologyAttributeRepository
       const { documents, total } = (await Appwrite.databases.listDocuments(
         Environment.appwrite_database,
         Environment.appwrite_collection_technology_attribute,
-        [Query.limit(20), Query.isNull("deletedAt")]
+        [Query.limit(20), Query.isNull("deletedAt")],
       )) as AppwriteResponse<TechnologyAttribute>;
       return { documents, total };
     } catch (error) {
@@ -26,7 +26,7 @@ export class TechnologyAttributeRepository
       const technologyAttribute = (await Appwrite.databases.getDocument(
         Environment.appwrite_database,
         Environment.appwrite_collection_technology_attribute,
-        id
+        id,
       )) as TechnologyAttribute;
       return technologyAttribute;
     } catch (error) {

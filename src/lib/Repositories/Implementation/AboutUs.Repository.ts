@@ -10,7 +10,7 @@ export class AboutUsRepository implements IAboutUsRepository {
       const { documents, total } = (await Appwrite.databases.listDocuments(
         Environment.appwrite_database,
         Environment.appwrite_collection_about_us,
-        [Query.limit(6), Query.isNull("deletedAt")]
+        [Query.limit(6), Query.isNull("deletedAt")],
       )) as AppwriteResponse<AboutUs>;
       return { documents, total };
     } catch (error) {
@@ -22,7 +22,7 @@ export class AboutUsRepository implements IAboutUsRepository {
       const aboutUs = (await Appwrite.databases.getDocument(
         Environment.appwrite_database,
         Environment.appwrite_collection_about_us,
-        id
+        id,
       )) as AboutUs;
       return aboutUs;
     } catch (error) {
