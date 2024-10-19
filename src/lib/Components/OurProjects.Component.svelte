@@ -1,6 +1,8 @@
 <script lang="ts">
   import { projectStore } from "$lib/Store/Project.Store";
+    import { Popover } from "flowbite-svelte";
   import { onMount } from "svelte";
+  import { blur, fade, slide } from 'svelte/transition';
   let elemMovies: HTMLDivElement;
 
   function multiColumnLeft(): void {
@@ -63,7 +65,7 @@
       {:else}
       <a
       id="carousel-card"
-      class="shrink-0 snap-start bg-white dark:bg-[#212121] dark:text-white h-60 w-44 flex justify-around rounded-lg items-center flex-col"
+      class="click shrink-0 snap-start bg-white dark:bg-[#212121] dark:text-white h-60 w-44 flex justify-around rounded-lg items-center flex-col"
     >
       <img
         class="rounded-container-token hover:brightness-125 size-24 object-contain"
@@ -74,8 +76,12 @@
       />
       <p class="text-black dark:text-white mt-12" style="font-family: Bahij_Plain;">{project.name}</p>
     </a>
+    
     {/if}
+    
     </div>
+    <!-- <Popover class="w-64 text-sm font-light " title="Popover title" triggeredBy=".click" trigger="click">{project.description}</Popover> -->
+
     {/each}
   </div>
 </div>
@@ -100,7 +106,6 @@
     <img src="images/rightArrow.png" alt="" class="w-4 h-4" />
   </button>
 </div>
-
 
 
 <style>
