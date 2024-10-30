@@ -73,6 +73,7 @@ export class Dto {
         name: project.name as string,
         image: project.image,
         link: project.link as string,
+        description: project.description as string,
       };
 
       return dto;
