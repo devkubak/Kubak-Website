@@ -95,20 +95,21 @@
           </a>
         {/if}
       </div>
-      <Tooltip
-        arrow={false}
-        type="custom"
-        class="w-64 text-sm font-light tooltip-content
+      {#if project.description}
+        <Tooltip
+          arrow={false}
+          type="custom"
+          class="w-64 text-sm font-light tooltip-content
         bg-gradient-to-r from-[#f8f8f8] from-10% via-transparent via-30% to-[#f1f1f1]/50 to-90%
         dark:bg-gradient-to-r dark:from-[#141414] dark:from-10% dark:via-transparent dark:via-30% dark:to-[#212121]/50 dark:to-90% dark:text-white
-        
-        {project.description == null ? 'hidden' : 'flex'}"
-        title="Project Description"
-        triggeredBy=".click-{project.id}"
-        trigger="click"
-      >
-        {project.description || null}
-      </Tooltip>
+        "
+          title="Project Description"
+          triggeredBy=".click-{project.id}"
+          trigger="click"
+        >
+          {project.description || null}
+        </Tooltip>
+      {/if}
     {/each}
   </div>
 </div>
