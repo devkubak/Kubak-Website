@@ -10,7 +10,8 @@ export const POST: RequestHandler = async ({ request }) => {
     emailUser,
     name,
     message,
-  }: { emailUser: string; name: string; message: string } =
+    phone
+  }: { emailUser: string; name: string; message: string; phone: number } =
     await request.json();
 
   if (!transport) {
@@ -19,8 +20,13 @@ export const POST: RequestHandler = async ({ request }) => {
       port: 465,
       secure: true,
       auth: {
-        user: "ali.g.5579@gmail.com", //support email
-        pass: "ptnx jwgr ufgc iajz", //support email passkey
+        //support email
+        // user: "dana.code01@gmail.com",
+        user: "ali.g.5579@gmail.com",
+
+        //support email passkey
+        // pass: "mtij ndvf kbrd icvd",
+        pass: "ptnx jwgr ufgc iajz",
       },
       tls: {
         rejectUnauthorized: false,
@@ -30,7 +36,12 @@ export const POST: RequestHandler = async ({ request }) => {
 
   const emailHtml = await render({
     template: ContactEmail,
-    props: { emailUser, name, message },
+    props: { 
+      emailUser, 
+      name, 
+      message, 
+      phone
+    },
   });
 
   await transport.sendMail({
