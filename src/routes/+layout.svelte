@@ -40,7 +40,7 @@
 
 {#if loading}
   <Splash />
-{:else if pathUrl == "/privacy/" + $page.params.name || pathUrl == "/getkubak" || pathUrl == "/getApp"}
+{:else if pathUrl == "/privacy/" + $page.params.name || pathUrl == "/getkubak" || pathUrl == "/getApp" || pathUrl == "/deleteAccount"}
   <div
     class="w-full flex justify-center items-center bg-[#212121] dark:bg-[#212121]"
   >
