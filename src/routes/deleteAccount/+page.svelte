@@ -37,7 +37,7 @@
       </div>
       <div class="w-full flex flex-col space-y-4 text-base md:text-lg">
         <p class="text-justify leading-relaxed">
-          At Kubak, we provide you with the option to delete your account using our mobile application. Please note that if you have any pending transactions or outstanding amounts due, you will not be able to delete your account. Please complete all pending transactions and/or payments to delete your account.
+          At Kubak, we provide you with the option to delete your account using our mobile application.
         </p>
         
         <p class="font-medium mt-4">To delete your account using our mobile application, please follow these steps:</p>
