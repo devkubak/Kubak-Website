@@ -10,7 +10,7 @@
   import { footerStore } from "$lib/Store/Footer.Store";
   import type { Language } from "$lib/Models/Common/Language.Common.Model";
   import { locale } from "svelte-i18n";
-  import Social from "$lib/Components/SocialMedia.Component.svelte"
+  import SocialMediaTab from "$lib/Components/SocialMediaTab.Component.svelte"
 
   onMount(async () => {
     try {
@@ -38,7 +38,7 @@
 
 <Footer
   footerType="logo"
-  class=" px-0 md:px-0 mt-5  pb-0 md:pb-0 bg-[#fff] dark:bg-[#33333326]"
+  class=" px-0 md:px-0   pb-0 md:pb-0 bg-[#fff] dark:bg-[#33333326]"
  id="footerImg"
 >
   <div class="footer-bg backdrop-blur-lg">
@@ -51,11 +51,11 @@
       <FooterLinkGroup
         ulClass="flex flex-wrap items-center mb-6 text-[12px] md:text-[18px] text-gray-500 sm:mb-0 dark:text-gray-400"
       >
-      <div class="w-full h-12 mb-12 flex justify-center items-center ">
+      <div class="w-full h-auto mb-12 flex flex-col justify-center items-center ">
 
-        <Social/>
+        <SocialMediaTab/>
       </div>
-        <div class=" px-4" dir={$locale == "en" ? "ltr" : "rtl"}>
+        <div class=" px-4"  dir={$locale == "en" ? "ltr" : "rtl"}>
           {@html checkLanguage($footerStore.description,$locale)}
         </div>
 
@@ -104,6 +104,8 @@
   position: relative; /* Ensure z-index works */
   z-index: 1; /* Ensure content is above the background */
 }
+
+
 
 </style>
 

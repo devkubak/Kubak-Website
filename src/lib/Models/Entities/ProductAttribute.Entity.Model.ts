@@ -4,9 +4,9 @@ import type { Database } from "$lib/Models/Extensions/Database.Extension.Model";
 import type { ProductAttributeLanguage } from "./Language/ProductAttribute.Language.Entity.Model";
 
 export interface ProductAttribute extends Database {
-    image: string,
-    index_order: string,
-    image_position: string,
-    deletedAt: Date | null,
-    productAttributesLanguages: ProductAttributeLanguage
+  image: string;
+  index_order: string;
+  image_position: string;
+  deletedAt: Date | null;
+  productAttributesLanguages: ProductAttributeLanguage;
 }

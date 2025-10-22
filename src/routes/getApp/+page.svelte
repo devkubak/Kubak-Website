@@ -18,7 +18,7 @@ function redirectToStore() {
         }
         // Other devices
         else {
-            window.location.href = 'https://play.google.com/store/apps/details?id=co.kubak.city&hl=en&gl=US';
+            window.location.href = 'https://apps.apple.com/us/app/kubak/id1460687618';
         }
         return {
             redirectToStore

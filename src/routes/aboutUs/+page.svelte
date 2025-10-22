@@ -62,7 +62,7 @@ data-aos-duration="1000"
     <div
     data-aos="fade-up"
     data-aos-duration="2000"
-      class="w-full container mx-auto h-auto p-5 flex justify-center items-center flex-col mt-24 dark:bg-gradient-to-b shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#f6f6f6] via-[#dddddd] to-[#f6f6f6] dark:text-white gap-12 rounded-3xl"
+      class="w-full mb-4 container mx-auto h-auto p-5 flex justify-center items-center flex-col mt-24 dark:bg-gradient-to-b shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#f6f6f6] via-[#dddddd] to-[#f6f6f6] dark:text-white gap-12 rounded-3xl"
     >
       {#if aboutUs.image}
         <div
@@ -77,7 +77,7 @@ data-aos-duration="1000"
       class="w-full h-auto flex flex-col justify-center items-center gap-3"
       >
       <p class="text-[#f17f18] text-2xl font-bold" style="font-family: Bahij;">
-        { checkLanguage(aboutUs.title,$locale)??""}
+        { aboutUs.title ? checkLanguage(aboutUs.title, $locale) : "" }
       </p>
 
       <div class="w-full h-auto" dir={$locale == "en" ? "ltr" : "rtl"}>

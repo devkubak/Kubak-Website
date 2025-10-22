@@ -2,179 +2,182 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
-    --sc-color-rgb-light-50p: #3434348b !important;
-    --sc-color-rgb-light: ##fff !important;
-    --sc-color-hex-dark-50p: #f17f17 !important;
-    --sc-color-hex-dark: #fff !important;
-  }
-  
-  .sc-carousel__carousel-container {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  .sc-carousel__content-container {
-    position: relative;
-    display: flex;
-    width: 100%;
-    
-  }
-  .sc-carousel__pages-window {
-    width: 100% !important;
-    
-    display: flex;
-    overflow: hidden;
-    box-sizing: border-box;
-    position: relative;
-  
-  }
-  .sc-carousel__pages-container {
-    width: 100%;
-    display: flex; /* to put child elements in one row */
-    transition-property: transform;
-    padding: 0px !important;
-  }
-  .sc-carousel__arrow-container {
-    padding: 5px;
-    box-sizing: border-box;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-   position: relative;
-   display: none !important;
-  }
-  .sc-carousel-progress__container {
-    width: 100%;
-    height: 10px !important;
-    background-color: var(--sc-color-rgb-light-50p);
-    position: absolute;
-    bottom: 0;
-    backdrop-filter: blur(5px);
-    
-  }
-  :global(.sc-carousel-button) {
-    all: unset;
-    cursor: pointer;
-    display: none !important;
-  }
-  :global(.sc-carousel-button:focus) {
-    outline: 5px auto;
-    
-  }
+  --sc-color-rgb-light-50p: #3434348b !important;
+  --sc-color-rgb-light: ##fff !important;
+  --sc-color-hex-dark-50p: #f17f17 !important;
+  --sc-color-hex-dark: #fff !important;
+}
 
-  
-  .sc-carousel-arrow__circle{
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 10px !important;
-    
-   
-  }
+.sc-carousel__carousel-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.sc-carousel__content-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.sc-carousel__pages-window {
+  width: 100% !important;
 
-  .sc-carousel-arrow__arrow{
-    width: 10px !important;
-    height: 10px !important;
-  }
+  display: flex;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+.sc-carousel__pages-container {
+  width: 100%;
+  display: flex; /* to put child elements in one row */
+  transition-property: transform;
+  padding: 0px !important;
+}
+.sc-carousel__arrow-container {
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  display: none !important;
+}
+.sc-carousel-progress__container {
+  width: 100%;
+  height: 10px !important;
+  background-color: var(--sc-color-rgb-light-50p);
+  position: absolute;
+  bottom: 0;
+  backdrop-filter: blur(5px);
+}
+:global(.sc-carousel-button) {
+  all: unset;
+  cursor: pointer;
+  display: none !important;
+}
+:global(.sc-carousel-button:focus) {
+  outline: 5px auto;
+}
 
+.sc-carousel-arrow__circle {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 10px !important;
+}
 
+.sc-carousel-arrow__arrow {
+  width: 10px !important;
+  height: 10px !important;
+}
 
-  @font-face {
-    font-family: "Rajdhani_Regular";
-    font-style: normal;
-    src: url('/fonts/Rajdhani-Regular.ttf') format('truetype'),
+@font-face {
+  font-family: "Rajdhani_Regular";
+  font-style: normal;
+  src: url("/fonts/Rajdhani-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Rajdhani";
+  font-style: bold;
+  src: url("/fonts/Rajdhani-Bold.ttf") format("truetype");
+}
 
-  }
-  @font-face {
-    font-family: "Rajdhani";
-    font-style: bold;
-    src: url('/fonts/Rajdhani-Bold.ttf') format('truetype'),
+@font-face {
+  font-family: "Bahij";
+  font-style: bold;
+  src: url("/fonts/bahij.ttf") format("truetype");
+}
 
-  }
+@font-face {
+  font-family: "Kubak";
+  font-style: bold;
+  src: url("/fonts/Kubak-Regular.ttf") format("truetype");
+}
 
+@font-face {
+  font-family: "Bahij_Plain";
+  font-style: bold;
+  src: url("/fonts/bahij_plain.ttf") format("truetype");
+}
 
+@font-face {
+  font-family: "Speda";
+  font-style: bold;
+  src: url("/fonts/Speda-Bold.ttf") format("truetype");
+}
 
-  @font-face {
-    font-family: "Bahij";
-    font-style: bold;
-    src: url('/fonts/bahij.ttf') format('truetype'),
-
-  }
-
-  @font-face {
-    font-family: "Kubak";
-    font-style: bold;
-    src: url('/fonts/Kubak-Regular.ttf') format('truetype'),
-  
-  }
-
-  @font-face {
+@layer utilities {
+  .bahij_plain {
     font-family: "Bahij_Plain";
-    font-style: bold;
-    src: url('/fonts/bahij_plain.ttf') format('truetype'),
-
   }
-
-  @font-face {
+  .bahij {
+    font-family: "Bahij";
+  }
+  .rajdhani {
+    font-family: "Rajdhani";
+  }
+  .rajdhani_regular {
+    font-family: "Rajdhani_Regular";
+  }
+  .speda {
     font-family: "Speda";
-    font-style: bold;
-    src: url('/fonts/Speda-Bold.ttf') format('truetype'),
-
   }
+}
 
-  
-  @layer utilities {
-    
-    .bahij_plain {
-      font-family: 'Bahij_Plain';
-    }
-    .bahij {
-      font-family: 'Bahij';
-    }
-    .rajdhani {
-      font-family: 'Rajdhani';
-    }
-    .rajdhani_regular {
-      font-family: 'Rajdhani_Regular';
-    }
-    .speda {
-      font-family: 'Speda';
-    }
-  }
-  
-  
-  #footerImg{
-    padding: 0;
-  }
-  
- 
+#footerImg {
+  padding: 0;
+}
 
-  .dark #Instagram-Light-Preview {
-    fill: #fff;  }
+.dark #Instagram-Light-Preview {
+  fill: #fff;
+}
 
-
-#Facebook-Light-Preview:hover  {
-  fill: #fff;  }
+#Facebook-Light-Preview:hover {
+  fill: #fff;
+}
 
 .dark #Facebook-Light-Preview {
-  fill: #fff;  }
+  fill: #fff;
+}
 
 #Fill-1 {
-  fill: #424242;  }
+  fill: #424242;
+}
 
-  .example-2 .icon-content:hover #Fill-1 {
-  fill: #fff !important;  }
+.example-2 .icon-content:hover #Fill-1 {
+  fill: #fff !important;
+}
 
 .dark #Fill-1 {
-  fill: #fff !important;  }
+  fill: #fff !important;
+}
 
+*,
+body {
+  font-family: "Bahij_Plain";
+}
 
+span {
+  background-color: transparent !important;
+}
 
-  *,body{
-    font-family: 'Bahij_Plain';
-  }
+button[aria-label="Dark mode"] {
+  background-color: transparent !important;
+  background: none !important;
+}
+
+.dark button[aria-label="Dark mode"] {
+  background-color: transparent !important;
+  background: none !important;
+}
+
+button[aria-label="Dark mode"]:hover {
+  background-color: transparent !important;
+  background: none !important;
+}
+
+.dark button[aria-label="Dark mode"]:hover {
+  background-color: transparent !important;
+  background: none !important;
+}

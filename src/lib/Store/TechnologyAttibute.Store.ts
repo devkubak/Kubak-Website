@@ -31,7 +31,7 @@ const createTechnologyAttibuteStore = () => {
 
         let dto: TechnologyAttributeDto[] = documents.map((document) => {
           return Dto.ToTechnologyAttributeDto(
-            document
+            document,
           ) as TechnologyAttributeDto;
         });
         set({ data: dto, total: total });

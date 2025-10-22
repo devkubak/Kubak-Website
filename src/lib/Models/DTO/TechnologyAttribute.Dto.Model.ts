@@ -1,6 +1,6 @@
 export interface TechnologyAttributeDto {
-    id: string;
-    techId: string;
-    title: string;
-    image: string;
+  id: string;
+  techId: string;
+  title: string;
+  image: string;
 }

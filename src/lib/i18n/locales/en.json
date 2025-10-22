@@ -19,5 +19,6 @@
   "email": "Email",
   "message": "Message",
   "downloadApp": "Download App",
-  "sentSuccessfully": "Sent Successfully"
+  "sentSuccessfully": "Sent Successfully",
+  "phone": "Phone Number"
 }

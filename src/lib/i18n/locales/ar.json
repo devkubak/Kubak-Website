@@ -18,5 +18,6 @@
   "email": "بريد إلكتروني",
   "message": "رسالة",
   "downloadApp": "تحميل التطبيق",
-  "sentSuccessfully": "أرسل بنجاح"
+  "sentSuccessfully": "أرسل بنجاح",
+  "phone": "رقم الهاتف"
 }

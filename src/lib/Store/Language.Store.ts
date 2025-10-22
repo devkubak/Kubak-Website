@@ -49,7 +49,7 @@ const createLanguageStore = () => {
         }
         const document = await languagesRepository.updateLanguageActivity(
           id,
-          active
+          active,
         );
         if (!document) {
           throw new Error("Language not found");

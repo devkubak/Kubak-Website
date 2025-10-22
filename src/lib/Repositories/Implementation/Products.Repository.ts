@@ -11,7 +11,7 @@ export class ProductsRepository implements IProductsRepository {
       const { documents, total } = (await Appwrite.databases.listDocuments(
         Environment.appwrite_database,
         Environment.appwrite_collection_products,
-        [Query.isNull("deletedAt")]
+        [Query.isNull("deletedAt")],
       )) as AppwriteResponse<Product>;
       return { documents, total };
     } catch (error) {
@@ -24,7 +24,7 @@ export class ProductsRepository implements IProductsRepository {
         Environment.appwrite_database,
         Environment.appwrite_collection_products,
         id,
-        [Query.isNull("deletedAt")]
+        [Query.isNull("deletedAt")],
       )) as Product;
       return product;
     } catch (error) {

@@ -7,15 +7,13 @@ import type { ILanguagesRepository } from "../Interface/I.Languages.Repository";
 
 export class LanguagesRepository implements ILanguagesRepository {
   async getLanguages(
-    options?: GenericListOptions
+    options?: GenericListOptions,
   ): Promise<AppwriteResponse<Languages>> {
     try {
       const { documents, total } = (await Appwrite.databases.listDocuments(
         Environment.appwrite_database,
         Environment.appwrite_collection_languages,
-        [
-          Query.equal("active", true),
-        ]
+        [Query.equal("active", true)],
       )) as AppwriteResponse<Languages>;
 
       return {
@@ -31,7 +29,7 @@ export class LanguagesRepository implements ILanguagesRepository {
       return (await Appwrite.databases.getDocument(
         Environment.appwrite_database,
         Environment.appwrite_collection_languages,
-        id
+        id,
       )) as Languages;
     } catch (error) {
       throw error;
@@ -39,7 +37,7 @@ export class LanguagesRepository implements ILanguagesRepository {
   }
   async updateLanguageActivity(
     id: string,
-    active: boolean
+    active: boolean,
   ): Promise<Languages> {
     try {
       return (await Appwrite.databases.updateDocument(
@@ -48,7 +46,7 @@ export class LanguagesRepository implements ILanguagesRepository {
         id,
         {
           active: active,
-        }
+        },
       )) as Languages;
     } catch (error) {
       throw error;
@@ -59,7 +57,7 @@ export class LanguagesRepository implements ILanguagesRepository {
       return (await Appwrite.databases.deleteDocument(
         Environment.appwrite_database,
         Environment.appwrite_collection_languages,
-        id
+        id,
       )) as Languages;
     } catch (error) {
       throw error;

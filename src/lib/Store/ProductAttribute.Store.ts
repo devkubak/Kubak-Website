@@ -18,7 +18,7 @@ const createProductAttributeStore = () => {
         const { documents, total } =
           await productAttributesRepository.getProductAttributes();
         const dto: ProductAttributeDto[] = documents.map((x) =>
-          Dto.ToProductAttributeDto(x)
+          Dto.ToProductAttributeDto(x),
         );
         set({ data: dto, total });
       } catch (e) {
@@ -27,9 +27,8 @@ const createProductAttributeStore = () => {
     },
     get: async (id: string) => {
       try {
-        const document = await productAttributesRepository.getProductAttribute(
-          id
-        );
+        const document =
+          await productAttributesRepository.getProductAttribute(id);
         if (!document) {
           throw new Error("Product Attribute not found");
         }
@@ -38,7 +37,7 @@ const createProductAttributeStore = () => {
       } catch (error) {
         console.log(error);
       }
-    }
+    },
   };
 };
 

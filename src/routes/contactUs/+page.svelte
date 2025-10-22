@@ -5,11 +5,12 @@
   import { locale, _ } from "svelte-i18n";
   import { Toast } from 'flowbite-svelte';
   import { blur } from 'svelte/transition';
-  import { BellOutline, CheckCircleSolid } from 'flowbite-svelte-icons';
+  import { CheckCircleSolid } from 'flowbite-svelte-icons';
 
   let name = '';
   let email = '';
   let message = '';
+  let phone = '';
   let showToast = false;
 
   const handleSubmit = async () => {
@@ -18,13 +19,15 @@
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ name, emailUser: email, message })
+      body: JSON.stringify({ name, emailUser: email, message, phone })
     });
 
     
     name = '';
     email = '';
+    phone = '';
     message = '';
+
 
  
     showToast = true;
@@ -70,9 +73,9 @@
 </div>
 {/if}
 
-<div class="container mx-auto w-full h-auto pt-24 flex md:grid md:grid-cols-2 flex-col-reverse md:flex-row flex-wrap md:flex-nowrap justify-center items-center gap-3">
+<div class="container mx-auto w-full h-auto pt-32 flex md:grid md:grid-cols-2 flex-col-reverse md:flex-row flex-wrap md:flex-nowrap justify-center items-center gap-3">
 
-  <div class="w-auto px-8 h-[400px] flex justify-center items-center dark:bg-gradient-to-b shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#f6f6f6] via-[#dddddd] to-[#f6f6f6] py-[16.6rem] rounded-2xl" data-aos="fade-down" data-aos-duration="2000">
+  <div class="w-auto px-8 h-[630px] flex justify-center items-center dark:bg-gradient-to-b shadow-inner shadow-[#f17d1868] dark:from-[#2f2f2f] dark:via-[#1c1c1c] dark:o-[#2f2f2f]   bg-gradient-to-b from-[#f6f6f6] via-[#dddddd] to-[#f6f6f6] py-[16.6rem] rounded-2xl" data-aos="fade-down" data-aos-duration="2000">
     <!-- svelte-ignore a11y-missing-attribute -->
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d993.30004546094!2d45.45882525468816!3d35.54655937596223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40002d2bcdf3f049%3A0x6a7b2c0fe21fd3f0!2sKubak!5e0!3m2!1sen!2siq!4v1710654094576!5m2!1sen!2siq" width="800" height="450" style="border:0;" id="map" class="rounded-2xl" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
@@ -87,6 +90,12 @@
         <label for="email" class="flex dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 " style="font-family:Bahij;" >{$_("email")}</label>
         <input type="email" bind:value={email} id="email" class="input w-full  h-12 dark:text-white rounded-full bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "Bahij_Plain" : "kurdish"}" placeholder={$_("email")} required>
       </div>
+
+      <div class="w-full h-auto flex flex-col justify-center items-start" dir={$locale == "en" ? "ltr" : "rtl"}>
+        <label for="phone" class="flex dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 " style="font-family:Bahij;" >{$_("phone")}</label>
+        <input type="text" bind:value={phone} id="phone" class="input w-full  h-12 dark:text-white rounded-full bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "Bahij_Plain" : "kurdish"}" placeholder={$_("phone")} required>
+      </div>
+
       <div class="w-full h-auto" dir={$locale == "en" ? "ltr" : "rtl"}>
         <label for="message" class="flex w-full h-auto  flex-col justify-center items-start dark:text-white {$locale == "en" ? "pl-5" : "pr-5"} mb-2 " style="font-family:Bahij;" >{$_("message")}</label>
         <textarea bind:value={message} id="message" class="textarea w-full h-32 dark:text-white rounded-2xl bg-[#f1f1f1] dark:bg-[#191919] border-0 {$locale == "en" ? "Bahij_Plain" : "kurdish"}" placeholder={$_("message")} required></textarea>

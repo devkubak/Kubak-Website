@@ -1,7 +1,4 @@
 <ul class="example-2">
-   
-
-
     <li class="icon-content">
       <a
         href="https://www.linkedin.com/company/kubak/"
@@ -63,11 +60,9 @@
       <div class="tooltip">Facebook</div>
     </li>
 
-
-
     <li class="icon-content">
       <a
-        href="https://www.instagram.com/kubakapp?igsh=MTlvc2UzcWF4eTJvbg=="
+        href="https://www.instagram.com/kubaktaxi/"
         aria-label="Instagram"
         data-social="instagram"
       >
@@ -92,11 +87,6 @@
       </a>
       <div class="tooltip">Instagram</div>
     </li>
-
-
-
-
-
 
 
     <li class="icon-content">
