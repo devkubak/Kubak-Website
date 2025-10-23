@@ -15,17 +15,18 @@ const createDevelopmentStore = () => {
   return {
     subscribe,
     set: (value: Store<DevelopmentDto>) => set(value),
-    get: async (id: string) => {
+    get: async (_id: string) => {
       try {
+        // TODO: Implement get by id
       } catch (e) {
         console.log("Error :", e);
       }
     },
-    getAll: async (page?: number, filter?: string, ascending?: boolean) => {
+    getAll: async (_page?: number, _filter?: string, _ascending?: boolean) => {
       try {
         let { documents, total } =
           await developmentRepository.getDevelopments();
-        "Hello There Data Card", documents;
+        console.log("Hello There Data Card", documents);
 
         let dto: DevelopmentDto[] = documents.map((document) => {
           return Dto.ToDevelopmentDto(document) as DevelopmentDto;

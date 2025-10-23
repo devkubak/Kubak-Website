@@ -1,4 +1,4 @@
-import type { Language } from "../Common/Language.Common.Model";
+import type { Language } from "$lib/Models/common/Language.Common.Model";
 
 export interface CarouselVideo {
   alt: string;

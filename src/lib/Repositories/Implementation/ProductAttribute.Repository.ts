@@ -1,4 +1,4 @@
-import { Appwrite } from "$lib/Appwrite/appwrite";
+import { databases } from "$lib/Appwrite/appwrite";
 import { Environment } from "$lib/Env/Environment";
 import type { ProductAttribute } from "$lib/Models/Entities/ProductAttribute.Entity.Model";
 import type { IProductAttributesRepository } from "$lib/Repositories/Interface/I.ProductAttributes.Repository";
@@ -8,30 +8,22 @@ export class ProductAttributesRepository
   implements IProductAttributesRepository
 {
   async getProductAttributes(): Promise<AppwriteResponse<ProductAttribute>> {
-    try {
-      const query = this.filterQuery([]);
-      const { documents, total } = (await Appwrite.databases.listDocuments(
-        Environment.appwrite_database,
-        Environment.appwrite_collection_product_attributes,
-        query,
-      )) as AppwriteResponse<ProductAttribute>;
-      return { documents, total };
-    } catch (error) {
-      throw error;
-    }
+    const query = this.filterQuery([]);
+    const { documents, total } = (await databases.listDocuments(
+      Environment.appwrite_database,
+      Environment.appwrite_collection_product_attributes,
+      query,
+    )) as AppwriteResponse<ProductAttribute>;
+    return { documents, total };
   }
   async getProductAttribute(id: string): Promise<ProductAttribute> {
-    try {
-      const productAttribute = (await Appwrite.databases.getDocument(
-        Environment.appwrite_database,
-        Environment.appwrite_collection_product_attributes,
-        id,
-        [Query.isNull("deletedAt")],
-      )) as ProductAttribute;
-      return productAttribute;
-    } catch (error) {
-      throw error;
-    }
+    const productAttribute = (await databases.getDocument(
+      Environment.appwrite_database,
+      Environment.appwrite_collection_product_attributes,
+      id,
+      [Query.isNull("deletedAt")],
+    )) as ProductAttribute;
+    return productAttribute;
   }
 
   private filterQuery(query: string[]): string[] {

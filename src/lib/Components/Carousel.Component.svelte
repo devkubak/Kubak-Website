@@ -1,15 +1,12 @@
 <script lang="ts">
-  //@ts-ignore
   import Carousel from "svelte-carousel";
   import { browser } from "$app/environment";
   import { carouselStore } from "$lib/Store/Carousel.Store";
-  import type { Language } from "$lib/Models/Common/Language.Common.Model";
+  import type { Language } from "$lib/Models/common/Language.Common.Model";
   import { locale, _ } from "svelte-i18n";
 
   function checkLanguage(text: Language, lang?: string | null): string {
-    text;
     if (Object.keys(text).includes(lang as string)) {
-      text;
       return text[lang as keyof typeof text] as string;
     } else {
       return text.en;

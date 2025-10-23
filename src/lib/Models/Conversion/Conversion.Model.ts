@@ -231,48 +231,36 @@ export class Dto {
   }
 
   static ToLanguageDto(langauge: Languages): LanguagesDto {
-    try {
-      return {
-        id: langauge.$id,
-        title: langauge.title,
-        abbreviation: langauge.abbreviation,
-        active: langauge.active,
-        createdAt: langauge.$createdAt as Date,
-        updatedAt: langauge.$updatedAt as Date,
-        deletedAt: null,
-      };
-    } catch (error) {
-      throw error;
-    }
+    return {
+      id: langauge.$id,
+      title: langauge.title,
+      abbreviation: langauge.abbreviation,
+      active: langauge.active,
+      createdAt: langauge.$createdAt as Date,
+      updatedAt: langauge.$updatedAt as Date,
+      deletedAt: null,
+    };
   }
   static ToPrivacyDto(privacy: Privacies): PrivaciesDto {
-    try {
-      const data = {
-        id: privacy.$id,
-        name: privacy.name,
-        lastUpdatedAt: privacy.lastUpdatedAt,
-        informations: privacy.informations.map((info) => {
-          return this.ToPrivacyInformationDto(info);
-        }),
-      };
-      return data;
-    } catch (error) {
-      throw error;
-    }
+    const data = {
+      id: privacy.$id,
+      name: privacy.name,
+      lastUpdatedAt: privacy.lastUpdatedAt,
+      informations: privacy.informations.map((info) => {
+        return this.ToPrivacyInformationDto(info);
+      }),
+    };
+    return data;
   }
   static ToPrivacyInformationDto(
     info: PrivacyInformations,
   ): PrivacyInformationDto {
-    try {
-      const data = {
-        id: info.$id,
-        title: info.title,
-        description: info.description,
-        privacyId: info.privacyId,
-      };
-      return data;
-    } catch (error) {
-      throw error;
-    }
+    const data = {
+      id: info.$id,
+      title: info.title,
+      description: info.description,
+      privacyId: info.privacyId,
+    };
+    return data;
   }
 }

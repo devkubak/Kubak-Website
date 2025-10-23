@@ -20,8 +20,8 @@
     }
   });
 
-  $: {
-    "Language", $locale;
+  $: if ($locale) {
+    console.log("Language changed:", $locale);
   }
 </script>
 

@@ -26,7 +26,6 @@ const createTechnologyStore = () => {
         let dto: TechnologyDto[] = documents.map((document) => {
           return Dto.ToTechnologyDto(document) as TechnologyDto;
         });
-        dto;
 
         set({ data: dto, total: total });
         return dto;

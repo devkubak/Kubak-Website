@@ -1,4 +1,4 @@
-import type { Language } from "$lib/Models/Common/Language.Common.Model";
+import type { Language } from "$lib/Models/common/Language.Common.Model";
 
 export interface AboutUsDto {
   id: string;

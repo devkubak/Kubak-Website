@@ -15,13 +15,14 @@ const createCarouselStore = () => {
   return {
     subscribe,
     set: (value: Store<CarouselDto>) => set(value),
-    get: async (id: string) => {
+    get: async (_id: string) => {
       try {
+        // TODO: Implement get by id
       } catch (e) {
         console.log("Error :", e);
       }
     },
-    getAll: async (page?: number, filter?: string, ascending?: boolean) => {
+    getAll: async (_page?: number, _filter?: string, _ascending?: boolean) => {
       try {
         let { documents, total } = await carouselRepository.getCarousels();
 

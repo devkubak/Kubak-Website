@@ -1,4 +1,4 @@
-import type { GenericListOptions } from "$lib/Models/Common/ListOptions.Common.Model";
+import type { GenericListOptions } from "$lib/Models/common/ListOptions.Common.Model";
 import { Dto } from "$lib/Models/Conversion/Conversion.Model";
 import type { PrivacyInformationDto } from "$lib/Models/DTO/PrivacyInformation.DTO.Model";
 import type { Store } from "$lib/Models/Response/Store.Response";

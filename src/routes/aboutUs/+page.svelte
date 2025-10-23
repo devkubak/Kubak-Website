@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Language } from "$lib/Models/Common/Language.Common.Model";
+  import type { Language } from "$lib/Models/common/Language.Common.Model";
   import { aboutUsStore } from "$lib/Store/AboutUs.Store";
   import { Img } from "flowbite-svelte";
   import { onMount } from "svelte";
@@ -19,12 +19,9 @@
 
   function checkLanguage(
     text: Language,
-    lang?:string | null
+    _lang?:string | null
   ): string {
     if (Object.keys(text).includes($locale as string)) {
-       (text);
-       (text[$locale as keyof typeof text] as string);
-      
       return text[$locale as keyof typeof text] as string;
     } else {
       return text.en;

@@ -13,8 +13,7 @@ const createProductStore = () => {
     set: (value: ProductDto) => set(value),
     get: async () => {
       try {
-        const { documents, total } = await productsRepository.getProducts();
-        documents;
+        const { documents } = await productsRepository.getProducts();
         const dto: ProductDto = Dto.ToProductDto(documents[0]);
         set(dto);
       } catch (e) {

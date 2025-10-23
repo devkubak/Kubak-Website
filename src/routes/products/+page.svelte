@@ -3,7 +3,7 @@
   import { Img } from "flowbite-svelte";
   import { onMount } from "svelte";
   import { ImagePosition } from "$lib/Models/Enums/Image-Position.Enum.Model";
-  import type { Language } from "$lib/Models/Common/Language.Common.Model";
+  import type { Language } from "$lib/Models/common/Language.Common.Model";
   import { locale } from "svelte-i18n";
   import Appstore from "$lib/Components/Icons/Appstore.Component.svelte";
   import PlayStore from "$lib/Components/Icons/PlayStore.Component.svelte";
@@ -23,9 +23,7 @@
     text: Language,
     lang?: string | null,
   ): string {
-     (text);
     if (Object.keys(text).includes(lang as string)) {
-       (text);
       return text[
         lang as keyof typeof text
       ] as string;
@@ -35,8 +33,8 @@
     
   }
 
-  $:{
-     ($locale);
+  $: if ($locale) {
+    console.log("Locale changed:", $locale);
   }
 </script>
 {#if loading}

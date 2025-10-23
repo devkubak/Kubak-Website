@@ -1,42 +1,34 @@
-import { Appwrite } from "$lib/Appwrite/appwrite";
+import { databases } from "$lib/Appwrite/appwrite";
 import { Environment } from "$lib/Env/Environment";
 import { Query } from "appwrite";
 import { Privacies } from "$lib/Models/Entities/Privacies.Entity.Model";
-import type { GenericListOptions } from "$lib/Models/Common/ListOptions.Common.Model";
+import type { GenericListOptions } from "$lib/Models/common/ListOptions.Common.Model";
 import type { IPrivaciesRepository } from "../Interface/I.Privacies.Repository";
 
 export class PrivaciesRepository implements IPrivaciesRepository {
   async getPrivacies(
     options?: GenericListOptions | undefined,
   ): Promise<AppwriteResponse<Privacies>> {
-    try {
-      const query = this.filterQuery([], options);
-      const { documents, total } = (await Appwrite.databases.listDocuments(
-        Environment.appwrite_database,
-        Environment.appwrite_collection_privacies,
-        query,
-      )) as AppwriteResponse<Privacies>;
-      return { documents, total };
-    } catch (error) {
-      throw error;
-    }
+    const query = this.filterQuery([], options);
+    const { documents, total } = (await databases.listDocuments(
+      Environment.appwrite_database,
+      Environment.appwrite_collection_privacies,
+      query,
+    )) as AppwriteResponse<Privacies>;
+    return { documents, total };
   }
   async getPrivacy(id: string): Promise<Privacies> {
-    try {
-      return (await Appwrite.databases.getDocument(
-        Environment.appwrite_database,
-        Environment.appwrite_collection_privacies,
-        id,
-      )) as Privacies;
-    } catch (error) {
-      throw error;
-    }
+    return (await databases.getDocument(
+      Environment.appwrite_database,
+      Environment.appwrite_collection_privacies,
+      id,
+    )) as Privacies;
   }
   private filterQuery(query: string[], options?: GenericListOptions): string[] {
     query = [
       Query.orderDesc(options?.sortField || "$createdAt"),
       Query.limit(options?.limit || 8),
-      Query.offset((options?.page! - 1 || 0) * (options?.limit || 8)),
+      Query.offset(((options?.page || 1) - 1) * (options?.limit || 8)),
       Query.isNull("deletedAt"),
     ];
     if (options?.search) {

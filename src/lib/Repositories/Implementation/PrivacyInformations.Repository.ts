@@ -1,8 +1,8 @@
-import { Appwrite } from "$lib/Appwrite/appwrite";
+import { databases } from "$lib/Appwrite/appwrite";
 import { Environment } from "$lib/Env/Environment";
 import { PrivacyInformations } from "$lib/Models/Entities/PrivacyInformations.Entity.Model";
-import { ID, Query } from "appwrite";
-import type { GenericListOptions } from "$lib/Models/Common/ListOptions.Common.Model";
+import { Query } from "appwrite";
+import type { GenericListOptions } from "$lib/Models/common/ListOptions.Common.Model";
 import type { IPrivacyInformationsRepository } from "../Interface/I.PrivacyInformations.Repository";
 
 export class PrivacyInformationsRepository
@@ -11,35 +11,27 @@ export class PrivacyInformationsRepository
   async getPrivacyInformations(
     options?: GenericListOptions | undefined,
   ): Promise<AppwriteResponse<PrivacyInformations>> {
-    try {
-      const query = this.filterQuery([], options);
-      const { documents, total } = (await Appwrite.databases.listDocuments(
-        Environment.appwrite_database,
-        Environment.appwrite_collection_privacyInformations,
-        query,
-      )) as AppwriteResponse<PrivacyInformations>;
+    const query = this.filterQuery([], options);
+    const { documents, total } = (await databases.listDocuments(
+      Environment.appwrite_database,
+      Environment.appwrite_collection_privacyInformations,
+      query,
+    )) as AppwriteResponse<PrivacyInformations>;
 
-      return { documents, total };
-    } catch (error) {
-      throw error;
-    }
+    return { documents, total };
   }
   async getPrivacyInformation(id: string): Promise<PrivacyInformations> {
-    try {
-      return (await Appwrite.databases.getDocument(
-        Environment.appwrite_database,
-        Environment.appwrite_collection_privacyInformations,
-        id,
-      )) as PrivacyInformations;
-    } catch (error) {
-      throw error;
-    }
+    return (await databases.getDocument(
+      Environment.appwrite_database,
+      Environment.appwrite_collection_privacyInformations,
+      id,
+    )) as PrivacyInformations;
   }
   private filterQuery(query: string[], options?: GenericListOptions): string[] {
     query = [
       Query.orderDesc(options?.sortField || "$createdAt"),
       Query.limit(options?.limit || 8),
-      Query.offset((options?.page! - 1 || 0) * (options?.limit || 8)),
+      Query.offset(((options?.page || 1) - 1) * (options?.limit || 8)),
       Query.isNull("deletedAt"),
     ];
     if (options?.search) {

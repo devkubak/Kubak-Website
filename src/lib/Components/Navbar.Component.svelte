@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores";
-  import type { LanguageIndex } from "$lib/Models/Common/Language.Common.Model";
+  import type { LanguageIndex } from "$lib/Models/common/Language.Common.Model";
   import { languageStore } from "$lib/Store/Language.Store";
   import {
     Navbar,

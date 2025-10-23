@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Language } from "$lib/Models/Common/Language.Common.Model";
+  import type { Language } from "$lib/Models/common/Language.Common.Model";
   import type { TechnologyDto } from "$lib/Models/DTO/Technology.Dto.Model";
   import { technologyStore } from "$lib/Store/Technology.Store";
   import { Tabs, TabItem } from "flowbite-svelte";
@@ -8,7 +8,7 @@
 
 
   let technologies: TechnologyDto[] = [];
-  let isLoading:Boolean = true;
+  let isLoading:boolean = true;
   onMount(async () => {
     try {
      technologies = await technologyStore.getAll() as TechnologyDto[];
@@ -24,9 +24,7 @@
     selectedLanguage: string,
     text: Language
   ): string {
-     (text);
     if (Object.keys(text).includes(selectedLanguage)) {
-       (text);
       return text[
         selectedLanguage as keyof typeof text
       ] as string;

@@ -7,13 +7,12 @@
   import { _, locale } from "svelte-i18n";
 
   let technologies: TechnologyDto[] = [];
-  let isLoading: Boolean = true;
+  let isLoading: boolean = true;
   let currentTechnologyIndex = 0;
 
   onMount(async () => {
     try {
       technologies = (await technologyStore.getAll()) as TechnologyDto[];
-      $technologyStore.data;
     } catch (e) {
       console.log(e);
     } finally {
@@ -22,7 +21,7 @@
     AOS.init(); // Initialize AOS here
   });
 
-  $: currentTechnologyIndex, AOS.refresh(); // Refresh AOS whenever currentTechnologyIndex changes
+  $: if (currentTechnologyIndex !== undefined) AOS.refresh(); // Refresh AOS whenever currentTechnologyIndex changes
 
   function goToNextTechnology() {
     if (currentTechnologyIndex < technologies.length - 1) {

@@ -8,7 +8,7 @@
   } from "flowbite-svelte";
   import { onMount } from "svelte";
   import { footerStore } from "$lib/Store/Footer.Store";
-  import type { Language } from "$lib/Models/Common/Language.Common.Model";
+  import type { Language } from "$lib/Models/common/Language.Common.Model";
   import { locale } from "svelte-i18n";
   import SocialMediaTab from "$lib/Components/SocialMediaTab.Component.svelte"
 
