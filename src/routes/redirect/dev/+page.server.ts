@@ -7,7 +7,7 @@ export const load: PageServerLoad = async ({ url, request }) => {
 
 	// Function to generate deep link with query parameter
 	function generateDeepLinkWithParams() {
-		return `tiptop-taxi-dev://trytiptop.app/taxi/dev?${devParam}`;
+		return `kubak-dev://kubak.co/redirect/dev?${devParam}`;
 	}
 
 	// Get user agent from request headers
@@ -28,8 +28,8 @@ export const load: PageServerLoad = async ({ url, request }) => {
 	// Additional deep link methods for better compatibility
 	const deepLinkMethods = {
 		primary: deepLinkUrl,
-		fallback: `kubak-dev://kubak.co/taxi/dev?${devParam}`,
-		universal: `https://kubak.co/taxi/dev?${devParam}`
+		fallback: `kubak-dev://kubak.co/redirect/dev?${devParam}`,
+		universal: `https://kubak.co/redirect/dev?${devParam}`
 	};
 
 	console.log('Server-side Detection:', {

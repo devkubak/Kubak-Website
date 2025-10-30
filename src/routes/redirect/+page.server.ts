@@ -7,7 +7,7 @@ export const load: PageServerLoad = async ({ url, request }) => {
 
 	// Function to generate deep link with query parameter
 	function generateDeepLinkWithParams() {
-		return `kubak-prod://kubak.co/taxi/prod?${prodParam}`;
+		return `kubak-prod://kubak.co/redirect?${prodParam}`;
 	}
 
 	function getAppStoreUrl(isAndroid: boolean, isIOS: boolean) {
@@ -44,10 +44,10 @@ export const load: PageServerLoad = async ({ url, request }) => {
 	// Additional deep link methods for better compatibility
 	const deepLinkMethods = {
 		primary: deepLinkUrl,
-		fallback: `kubak-prod://kubak.co/taxi/prod?${prodParam}`,
-		universal: `https://kubak.co/taxi/prod?${prodParam}`,
+		fallback: `kubak-prod://kubak.co/redirect?${prodParam}`,
+		universal: `https://kubak.co/redirect?${prodParam}`,
 		intent: isAndroid
-			? `intent://kubak.co/taxi/prod?${prodParam}#Intent;scheme=kubak-prod;package=co.kubak.city;end`
+			? `intent://kubak.co/redirect?${prodParam}#Intent;scheme=kubak-prod;package=co.kubak.city;end`
 			: null
 	};
 
