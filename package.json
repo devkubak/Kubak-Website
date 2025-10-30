@@ -43,6 +43,11 @@
     "vite": "^4.5.3"
   },
   "type": "module",
+  "engines": {
+    "node": "20.x",
+    "pnpm": "10.x"
+  },
+  "packageManager": "pnpm@10.11.0",
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "aos": "^3.0.0-beta.6",
